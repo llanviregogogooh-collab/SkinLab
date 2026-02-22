@@ -23,28 +23,38 @@ export function matchIngredients(ocrTexts: string[]): MatchedIngredient[] {
 
 /**
  * 成分名テキストからDBを検索する
- * 完全一致 → alias一致 → INCI一致 → 部分一致
+ * 完全一致（化粧品名/医薬部外品名） → alias一致 → INCI一致 → 部分一致
  */
 function findIngredient(text: string): IngredientEntry | null {
   const normalized = normalizeText(text);
 
-  const exactMatch = INGREDIENTS_DB.find(
-    (entry) => normalizeText(entry.name_ja) === normalized
+  // 化粧品表示名称で完全一致
+  const cosmeticMatch = INGREDIENTS_DB.find(
+    (entry) => normalizeText(entry.name_cosmetic) === normalized
   );
-  if (exactMatch) return exactMatch;
+  if (cosmeticMatch) return cosmeticMatch;
 
+  // 医薬部外品名で完全一致
+  const quasiDrugMatch = INGREDIENTS_DB.find(
+    (entry) => entry.name_quasi_drug && normalizeText(entry.name_quasi_drug) === normalized
+  );
+  if (quasiDrugMatch) return quasiDrugMatch;
+
+  // alias一致
   const aliasMatch = INGREDIENTS_DB.find((entry) =>
     entry.aliases.some((alias) => normalizeText(alias) === normalized)
   );
   if (aliasMatch) return aliasMatch;
 
+  // INCI名一致
   const inciMatch = INGREDIENTS_DB.find(
     (entry) => normalizeText(entry.name_inci) === normalized
   );
   if (inciMatch) return inciMatch;
 
+  // 化粧品名で部分一致
   const partialMatch = INGREDIENTS_DB.find((entry) => {
-    const entryName = normalizeText(entry.name_ja);
+    const entryName = normalizeText(entry.name_cosmetic);
     return (
       (entryName.length >= 3 && normalized.includes(entryName)) ||
       (normalized.length >= 3 && entryName.includes(normalized))
@@ -52,6 +62,18 @@ function findIngredient(text: string): IngredientEntry | null {
   });
   if (partialMatch) return partialMatch;
 
+  // 医薬部外品名で部分一致
+  const partialQuasiMatch = INGREDIENTS_DB.find((entry) => {
+    if (!entry.name_quasi_drug) return false;
+    const entryName = normalizeText(entry.name_quasi_drug);
+    return (
+      (entryName.length >= 3 && normalized.includes(entryName)) ||
+      (normalized.length >= 3 && entryName.includes(normalized))
+    );
+  });
+  if (partialQuasiMatch) return partialQuasiMatch;
+
+  // aliasで部分一致
   const partialAliasMatch = INGREDIENTS_DB.find((entry) =>
     entry.aliases.some((alias) => {
       const normalizedAlias = normalizeText(alias);

@@ -18,14 +18,18 @@ export const CATEGORY_LABELS: Record<CategoryKey, string> = {
   anti_aging: 'エイジング',
 };
 
+/** 成分分類 */
+export type IngredientType = '水性成分' | '油性成分' | '界面活性剤' | '有効成分' | 'その他';
+
 /** 成分DBの1エントリ */
 export interface IngredientEntry {
   id: string;
-  name_ja: string;
+  name_cosmetic: string;
+  name_quasi_drug: string;
   name_inci: string;
   aliases: string[];
+  ingredient_type: IngredientType;
   categories: CategoryKey[];
-  scores: Record<CategoryKey, number>; // DB内部のみ使用（UIには表示しない）
   safety: {
     irritation: 'low' | 'medium' | 'high';
     photosensitivity: boolean;

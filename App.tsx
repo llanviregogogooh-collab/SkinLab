@@ -24,30 +24,33 @@ import {
 
 // ── テーマカラー ──
 const C = {
-  bg: '#FAFAFA',
+  bg: '#F8FAFD',
   card: '#FFFFFF',
-  border: '#EEEEEE',
-  text: '#1A1A1A',
-  textSub: '#666666',
-  textMuted: '#999999',
-  accent: '#2D9D6E',
-  accentSoft: '#E8F5EE',
+  border: '#E4EBF5',
+  text: '#1A1A2E',
+  textSub: '#5A6478',
+  textMuted: '#94A3B8',
+  accent: '#2B7DE9',
+  accentSoft: '#E8F1FD',
+  accentDark: '#1D5FB8',
   pink: '#E85D75',
   pinkSoft: '#FDE8EC',
   purple: '#7C5CFC',
   purpleSoft: '#EEEAFF',
   gold: '#D4930D',
   goldSoft: '#FFF3DB',
-  blue: '#3B82F6',
-  blueSoft: '#E8F0FE',
+  blue: '#38BDF8',
+  blueSoft: '#E0F4FE',
   orange: '#E67E22',
   orangeSoft: '#FEF0E0',
+  cyan: '#06B6D4',
+  cyanSoft: '#DFFBFE',
 };
 
 const CATEGORY_COLORS: Record<CategoryKey, string> = {
   brightening: C.pink,
   moisturizing: C.blue,
-  anti_inflammatory: C.accent,
+  anti_inflammatory: C.cyan,
   antioxidant: C.gold,
   exfoliating: C.orange,
   anti_aging: C.purple,
@@ -56,7 +59,7 @@ const CATEGORY_COLORS: Record<CategoryKey, string> = {
 const CATEGORY_BG: Record<CategoryKey, string> = {
   brightening: C.pinkSoft,
   moisturizing: C.blueSoft,
-  anti_inflammatory: C.accentSoft,
+  anti_inflammatory: C.cyanSoft,
   antioxidant: C.goldSoft,
   exfoliating: C.orangeSoft,
   anti_aging: C.purpleSoft,
@@ -173,16 +176,75 @@ export default function App() {
   };
 
   const saveResult = () => {
-    if (scanResult) {
-      // 同じIDの重複保存を防止
-      setSavedResults((prev) => {
-        if (prev.some((r) => r.id === scanResult.id)) return prev;
-        const next = [scanResult, ...prev];
-        persistShelf(next);
-        return next;
-      });
-      setTab('shelf');
+    if (!scanResult) return;
+
+    // 製品名が空なら入力を求める
+    if (!scanResult.product_name.trim()) {
+      Alert.prompt(
+        '製品名を入力',
+        'シェルフに保存するために製品名を入力してください。',
+        [
+          { text: 'キャンセル', style: 'cancel' },
+          {
+            text: '保存',
+            onPress: (name?: string) => {
+              if (!name?.trim()) {
+                Alert.alert('入力エラー', '製品名を入力してください。');
+                return;
+              }
+              const updated = { ...scanResult, product_name: name.trim() };
+              setScanResult(updated);
+              doSave(updated);
+            },
+          },
+        ],
+        'plain-text',
+        '',
+        'default'
+      );
+      return;
     }
+
+    doSave(scanResult);
+  };
+
+  const doSave = (result: ScanResult) => {
+    setSavedResults((prev) => {
+      if (prev.some((r) => r.id === result.id)) return prev;
+      const next = [result, ...prev];
+      persistShelf(next);
+      return next;
+    });
+    setTab('shelf');
+  };
+
+  const renameProduct = (id: string, currentName: string) => {
+    Alert.prompt(
+      '製品名を編集',
+      '',
+      [
+        { text: 'キャンセル', style: 'cancel' },
+        {
+          text: '保存',
+          onPress: (name?: string) => {
+            if (!name?.trim()) {
+              Alert.alert('入力エラー', '製品名を入力してください。');
+              return;
+            }
+            setSavedResults((prev) => {
+              const next = prev.map((r) =>
+                r.id === id ? { ...r, product_name: name.trim() } : r
+              );
+              persistShelf(next);
+              return next;
+            });
+          },
+        },
+      ],
+      'plain-text',
+      currentName,
+      'default'
+    );
   };
 
   const deleteResult = (id: string) => {
@@ -213,7 +275,7 @@ export default function App() {
           <ScrollView contentContainerStyle={{ padding: 20, paddingBottom: 40 }}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
               <View style={{ flex: 1 }}>
-                <Text style={st.modalTitle}>{ing.name_ja}</Text>
+                <Text style={st.modalTitle}>{ing.name_cosmetic}</Text>
                 <Text style={st.modalSubtitle}>{ing.name_inci}</Text>
               </View>
               <TouchableOpacity style={st.closeBtn} onPress={() => setSelectedIngredient(null)}>
@@ -399,7 +461,7 @@ export default function App() {
                   activeOpacity={0.7}
                 >
                   <View style={{ flex: 1 }}>
-                    <Text style={st.ingredientName}>{item.entry!.name_ja}</Text>
+                    <Text style={st.ingredientName}>{item.entry!.name_cosmetic}</Text>
                     <Text style={st.ingredientInci}>{item.entry!.name_inci}</Text>
                   </View>
                   <Text style={st.ingredientOrder}>#{item.order}</Text>
@@ -416,7 +478,7 @@ export default function App() {
             {uncategorized.map((item, i) => (
               <TouchableOpacity key={i} style={st.ingredientCard} onPress={() => setSelectedIngredient(item.entry)} activeOpacity={0.7}>
                 <View style={{ flex: 1 }}>
-                  <Text style={st.ingredientName}>{item.entry!.name_ja}</Text>
+                  <Text style={st.ingredientName}>{item.entry!.name_cosmetic}</Text>
                   <Text style={st.ingredientInci}>{item.entry!.name_inci}</Text>
                 </View>
                 <Text style={st.ingredientOrder}>#{item.order}</Text>
@@ -473,16 +535,22 @@ export default function App() {
               <Text style={st.productName}>{result.product_name || '無題の製品'}</Text>
               <Text style={st.productCount}>{result.ingredients.filter((x) => x.entry).length}成分マッチ</Text>
             </View>
-            <View style={{ alignItems: 'flex-end', flexDirection: 'row', gap: 12 }}>
+            <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
               <View style={{ alignItems: 'flex-end' }}>
                 <Text style={{ color: C.textMuted, fontSize: 10 }}>{new Date(result.scanned_at).toLocaleDateString('ja-JP')}</Text>
                 <Text style={{ color: C.accent, fontSize: 12, marginTop: 4 }}>詳細 →</Text>
               </View>
               <TouchableOpacity
+                onPress={(e) => { e.stopPropagation(); renameProduct(result.id, result.product_name); }}
+                hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
+              >
+                <Text style={{ color: C.accent, fontSize: 14 }}>✏️</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
                 onPress={(e) => { e.stopPropagation(); deleteResult(result.id); }}
                 hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
               >
-                <Text style={{ color: C.textMuted, fontSize: 16 }}>🗑</Text>
+                <Text style={{ color: C.textMuted, fontSize: 14 }}>🗑</Text>
               </TouchableOpacity>
             </View>
           </TouchableOpacity>
@@ -515,53 +583,53 @@ export default function App() {
 }
 
 const st = StyleSheet.create({
-  pageTitle: { fontSize: 24, fontWeight: '800', color: '#1A1A1A' },
-  pageSubtitle: { fontSize: 13, color: '#999', marginTop: 2, marginBottom: 16 },
-  sectionTitle: { fontSize: 16, fontWeight: '700', color: '#1A1A1A', marginBottom: 10 },
-  emptyText: { color: '#666', fontSize: 14 },
-  ctaCard: { backgroundColor: '#E8F5EE', borderRadius: 16, padding: 24, alignItems: 'center', borderWidth: 1, borderColor: '#2D9D6E30' },
-  ctaTitle: { fontSize: 17, fontWeight: '700', color: '#1A1A1A', marginBottom: 6 },
-  ctaSubtitle: { fontSize: 12, color: '#666', textAlign: 'center', lineHeight: 18 },
-  card: { backgroundColor: '#FFF', borderRadius: 14, padding: 16, marginBottom: 12, borderWidth: 1, borderColor: '#EEE' },
-  cardTitle: { fontSize: 14, fontWeight: '700', color: '#1A1A1A', marginBottom: 4 },
-  cardBody: { fontSize: 13, color: '#666', lineHeight: 20 },
-  productCard: { backgroundColor: '#FFF', borderRadius: 12, padding: 16, marginBottom: 8, borderWidth: 1, borderColor: '#EEE', flexDirection: 'row', alignItems: 'center' },
-  productName: { fontSize: 14, fontWeight: '600', color: '#1A1A1A' },
-  productCount: { fontSize: 11, color: '#999', marginTop: 2 },
-  categorySection: { marginBottom: 16, borderLeftWidth: 3, borderRadius: 12, overflow: 'hidden', backgroundColor: '#FFF', borderWidth: 1, borderColor: '#EEE' },
+  pageTitle: { fontSize: 24, fontWeight: '800', color: '#1A1A2E' },
+  pageSubtitle: { fontSize: 13, color: '#94A3B8', marginTop: 2, marginBottom: 16 },
+  sectionTitle: { fontSize: 16, fontWeight: '700', color: '#1A1A2E', marginBottom: 10 },
+  emptyText: { color: '#5A6478', fontSize: 14 },
+  ctaCard: { backgroundColor: '#E8F1FD', borderRadius: 16, padding: 24, alignItems: 'center', borderWidth: 1, borderColor: '#2B7DE930' },
+  ctaTitle: { fontSize: 17, fontWeight: '700', color: '#1A1A2E', marginBottom: 6 },
+  ctaSubtitle: { fontSize: 12, color: '#5A6478', textAlign: 'center', lineHeight: 18 },
+  card: { backgroundColor: '#FFF', borderRadius: 14, padding: 16, marginBottom: 12, borderWidth: 1, borderColor: '#E4EBF5' },
+  cardTitle: { fontSize: 14, fontWeight: '700', color: '#1A1A2E', marginBottom: 4 },
+  cardBody: { fontSize: 13, color: '#5A6478', lineHeight: 20 },
+  productCard: { backgroundColor: '#FFF', borderRadius: 12, padding: 16, marginBottom: 8, borderWidth: 1, borderColor: '#E4EBF5', flexDirection: 'row', alignItems: 'center' },
+  productName: { fontSize: 14, fontWeight: '600', color: '#1A1A2E' },
+  productCount: { fontSize: 11, color: '#94A3B8', marginTop: 2 },
+  categorySection: { marginBottom: 16, borderLeftWidth: 3, borderRadius: 12, overflow: 'hidden', backgroundColor: '#FFF', borderWidth: 1, borderColor: '#E4EBF5' },
   categoryHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: 14, paddingVertical: 10 },
   categoryTitle: { fontSize: 14, fontWeight: '700' },
   categoryCount: { fontSize: 12, fontWeight: '600' },
-  groupedIngredient: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 14, paddingVertical: 10, borderTopWidth: 1, borderTopColor: '#F5F5F5' },
-  ingredientCard: { backgroundColor: '#FFF', borderRadius: 12, padding: 14, marginBottom: 8, borderWidth: 1, borderColor: '#EEE', flexDirection: 'row', alignItems: 'center' },
-  ingredientOrder: { fontSize: 11, color: '#999', fontWeight: '600' },
-  ingredientName: { fontSize: 13, fontWeight: '700', color: '#1A1A1A' },
-  ingredientInci: { fontSize: 11, color: '#999', marginTop: 1 },
+  groupedIngredient: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 14, paddingVertical: 10, borderTopWidth: 1, borderTopColor: '#EEF2F9' },
+  ingredientCard: { backgroundColor: '#FFF', borderRadius: 12, padding: 14, marginBottom: 8, borderWidth: 1, borderColor: '#E4EBF5', flexDirection: 'row', alignItems: 'center' },
+  ingredientOrder: { fontSize: 11, color: '#94A3B8', fontWeight: '600' },
+  ingredientName: { fontSize: 13, fontWeight: '700', color: '#1A1A2E' },
+  ingredientInci: { fontSize: 11, color: '#94A3B8', marginTop: 1 },
   pill: { paddingHorizontal: 8, paddingVertical: 3, borderRadius: 12, marginRight: 6, marginBottom: 4 },
   pillText: { fontSize: 10, fontWeight: '600' },
-  safetyBox: { flex: 1, backgroundColor: '#FAFAFA', borderRadius: 10, padding: 10, alignItems: 'center' },
-  safetyLabel: { fontSize: 10, color: '#999', marginBottom: 4 },
+  safetyBox: { flex: 1, backgroundColor: '#F3F6FB', borderRadius: 10, padding: 10, alignItems: 'center' },
+  safetyLabel: { fontSize: 10, color: '#94A3B8', marginBottom: 4 },
   safetyValue: { fontSize: 18, fontWeight: '700' },
   cautionBox: { backgroundColor: '#FFF8E8', padding: 10, borderRadius: 8, marginTop: 10 },
   cautionText: { fontSize: 11, color: '#E67E22', lineHeight: 16 },
   paperItem: { marginBottom: 10 },
-  paperTitle: { fontSize: 12, fontWeight: '600', color: '#3B82F6' },
-  paperJournal: { fontSize: 10, color: '#999', marginTop: 2 },
-  paperFinding: { fontSize: 11, color: '#666', marginTop: 4 },
+  paperTitle: { fontSize: 12, fontWeight: '600', color: '#2B7DE9' },
+  paperJournal: { fontSize: 10, color: '#94A3B8', marginTop: 2 },
+  paperFinding: { fontSize: 11, color: '#5A6478', marginTop: 4 },
   unmatchedText: { fontSize: 12, color: '#E67E22', marginBottom: 4 },
-  saveBtn: { backgroundColor: '#2D9D6E', padding: 16, borderRadius: 14, alignItems: 'center', marginTop: 20 },
+  saveBtn: { backgroundColor: '#2B7DE9', padding: 16, borderRadius: 14, alignItems: 'center', marginTop: 20 },
   saveBtnText: { color: '#FFF', fontSize: 15, fontWeight: '700' },
-  inputLabel: { color: '#555', fontSize: 12, fontWeight: '600', marginBottom: 4 },
-  textInputSingle: { backgroundColor: '#FAFAFA', borderWidth: 1, borderColor: '#EEE', borderRadius: 10, paddingHorizontal: 12, paddingVertical: 10, fontSize: 14, color: '#1A1A1A' },
-  textInputMulti: { backgroundColor: '#FAFAFA', borderWidth: 1, borderColor: '#EEE', borderRadius: 10, paddingHorizontal: 12, paddingVertical: 10, fontSize: 14, color: '#1A1A1A', minHeight: 120, maxHeight: 200 },
-  analyzeBtn: { backgroundColor: '#2D9D6E', padding: 14, borderRadius: 12, alignItems: 'center' as const, marginTop: 16 },
+  inputLabel: { color: '#5A6478', fontSize: 12, fontWeight: '600', marginBottom: 4 },
+  textInputSingle: { backgroundColor: '#F3F6FB', borderWidth: 1, borderColor: '#E4EBF5', borderRadius: 10, paddingHorizontal: 12, paddingVertical: 10, fontSize: 14, color: '#1A1A2E' },
+  textInputMulti: { backgroundColor: '#F3F6FB', borderWidth: 1, borderColor: '#E4EBF5', borderRadius: 10, paddingHorizontal: 12, paddingVertical: 10, fontSize: 14, color: '#1A1A2E', minHeight: 120, maxHeight: 200 },
+  analyzeBtn: { backgroundColor: '#2B7DE9', padding: 14, borderRadius: 12, alignItems: 'center' as const, marginTop: 16 },
   analyzeBtnText: { color: '#FFF', fontSize: 15, fontWeight: '700' },
-  shelfCard: { backgroundColor: '#FFF', borderRadius: 12, padding: 16, marginBottom: 8, borderWidth: 1, borderColor: '#EEE', flexDirection: 'row', alignItems: 'center' },
-  modalTitle: { fontSize: 22, fontWeight: '800', color: '#1A1A1A' },
-  modalSubtitle: { fontSize: 13, color: '#999', marginTop: 2 },
-  closeBtn: { width: 36, height: 36, borderRadius: 18, backgroundColor: '#EEE', justifyContent: 'center', alignItems: 'center' },
-  closeBtnText: { fontSize: 16, color: '#666' },
-  tabBar: { flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', paddingTop: 8, paddingBottom: 20, backgroundColor: '#FFF', borderTopWidth: 1, borderTopColor: '#EEE' },
+  shelfCard: { backgroundColor: '#FFF', borderRadius: 12, padding: 16, marginBottom: 8, borderWidth: 1, borderColor: '#E4EBF5', flexDirection: 'row', alignItems: 'center' },
+  modalTitle: { fontSize: 22, fontWeight: '800', color: '#1A1A2E' },
+  modalSubtitle: { fontSize: 13, color: '#94A3B8', marginTop: 2 },
+  closeBtn: { width: 36, height: 36, borderRadius: 18, backgroundColor: '#E4EBF5', justifyContent: 'center', alignItems: 'center' },
+  closeBtnText: { fontSize: 16, color: '#5A6478' },
+  tabBar: { flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', paddingTop: 8, paddingBottom: 20, backgroundColor: '#FFF', borderTopWidth: 1, borderTopColor: '#E4EBF5' },
   tabItem: { alignItems: 'center' },
   tabLabel: { fontSize: 10, fontWeight: '600', marginTop: 2 },
 });
