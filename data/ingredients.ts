@@ -1060,7 +1060,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_cosmetic: 'プロピレングリコール',
     name_quasi_drug: '',
     name_inci: 'Propylene Glycol',
-    aliases: ['PG'],
+    aliases: ['PG', 'プロパンジオール'],
     ingredient_type: '水性成分',
     categories: ['moisturizing'],
     safety: {
@@ -15590,9 +15590,9 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
   {
     id: 'botanical_extract_261',
     name_cosmetic: 'ハトムギ種子エキス',
-    name_quasi_drug: '',
+    name_quasi_drug: 'ヨクイニンエキス',
     name_inci: '',
-    aliases: ['ハトムギエキス', 'ハトムギ'],
+    aliases: ['ハトムギエキス', 'ハトムギ', 'ヨクイニンエキス', 'ヨクイニン'],
     ingredient_type: 'その他',
     categories: [],
     safety: {
@@ -18748,5 +18748,22 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     },
     research: [],
     description: '３－Ｏ－エチルアスコルビン酸はビタミンC誘導体で、透明感ケア・抗酸化・整肌・ハリ・整肌や皮膚コンディショニング目的で配合される成分です。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+  },
+  {
+    id: 'potassium_soap_base',
+    name_cosmetic: 'カリ含有石ケン素地',
+    name_quasi_drug: 'カリ含有石ケン素地',
+    name_inci: 'Potassium Cocoate (etc.)',
+    aliases: ['カリ含有石鹸素地', 'カリ石ケン素地', 'カリ石鹸素地', '石ケン素地', '石鹸素地'],
+    ingredient_type: '界面活性剤',
+    categories: [],
+    safety: {
+      irritation: 'medium',
+      photosensitivity: false,
+      comedogenic: 0,
+      note: '洗浄力が強いため、敏感肌の方は注意が必要です。',
+    },
+    research: [],
+    description: 'カリ含有石ケン素地は脂肪酸のカリウム塩を主成分とする界面活性剤です。液体石鹸や洗顔料のベースとして使用され、泡立ちが良く洗浄力に優れています。',
   },
 ];

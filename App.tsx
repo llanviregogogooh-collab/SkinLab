@@ -12,9 +12,13 @@ import {
   Alert,
   TextInput,
   Keyboard,
+  ActivityIndicator,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createScanResult, getMatchStats, groupByCategory, parseIngredientText } from './services/matcher';
+import { initPurchases, checkPremiumStatus, purchasePremium, restorePurchases } from './services/subscription';
+import { initAds, showInterstitial } from './services/ads';
+import { takePhoto, pickImage, recognizeText, cleanOCRText, isOCRAvailable } from './services/ocr';
 import {
   ScanResult,
   IngredientEntry,
@@ -118,6 +122,13 @@ function CategoryPill({ category }: { category: CategoryKey }) {
 // メインApp
 // ══════════════════════════════════════════
 const STORAGE_KEY = '@skinlab_shelf';
+const SCAN_COUNT_KEY = '@skinlab_scan_count';
+
+// ── 無料プランの制限 ──
+const FREE_DAILY_SCAN_LIMIT = 5;
+const FREE_SHELF_LIMIT = 5;
+const INTERSTITIAL_SCAN_INTERVAL = 2;   // 解析N回ごとに広告
+const INTERSTITIAL_DETAIL_INTERVAL = 5; // 成分詳細N回ごとに広告
 
 export default function App() {
   const [tab, setTab] = useState<'home' | 'scan' | 'shelf'>('home');
@@ -126,6 +137,16 @@ export default function App() {
   const [savedResults, setSavedResults] = useState<ScanResult[]>([]);
   const [ingredientInput, setIngredientInput] = useState('');
   const [productNameInput, setProductNameInput] = useState('');
+
+  // ── OCR ──
+  const [ocrLoading, setOcrLoading] = useState(false);
+
+  // ── プレミアム・広告 ──
+  const [isPremium, setIsPremium] = useState(false);
+  const [showPaywall, setShowPaywall] = useState(false);
+  const [dailyScanCount, setDailyScanCount] = useState(0);
+  const [scanAdCounter, setScanAdCounter] = useState(0);
+  const [detailAdCounter, setDetailAdCounter] = useState(0);
 
   // ── AsyncStorage: 起動時に読み込み ──
   useEffect(() => {
@@ -139,6 +160,44 @@ export default function App() {
     })();
   }, []);
 
+  // ── 課金・広告の初期化 ──
+  useEffect(() => {
+    (async () => {
+      await initPurchases();
+      const premium = await checkPremiumStatus();
+      setIsPremium(premium);
+      if (!premium) {
+        await initAds();
+      }
+      // 日次スキャンカウントの復元
+      try {
+        const json = await AsyncStorage.getItem(SCAN_COUNT_KEY);
+        if (json) {
+          const { count, date } = JSON.parse(json);
+          const today = new Date().toDateString();
+          if (date === today) {
+            setDailyScanCount(count);
+          }
+        }
+      } catch (e) {
+        console.warn('スキャンカウント読み込みエラー:', e);
+      }
+    })();
+  }, []);
+
+  const incrementScanCount = useCallback(async () => {
+    const newCount = dailyScanCount + 1;
+    setDailyScanCount(newCount);
+    try {
+      await AsyncStorage.setItem(SCAN_COUNT_KEY, JSON.stringify({
+        count: newCount,
+        date: new Date().toDateString(),
+      }));
+    } catch (e) {
+      console.warn('スキャンカウント保存エラー:', e);
+    }
+  }, [dailyScanCount]);
+
   // ── AsyncStorage: 保存用ヘルパー ──
   const persistShelf = useCallback(async (results: ScanResult[]) => {
     try {
@@ -148,15 +207,39 @@ export default function App() {
     }
   }, []);
 
+  // ── スキャン制限チェック ──
+  const canScan = (): boolean => {
+    if (isPremium) return true;
+    if (dailyScanCount >= FREE_DAILY_SCAN_LIMIT) {
+      setShowPaywall(true);
+      return false;
+    }
+    return true;
+  };
+
+  // ── スキャン後の広告表示 ──
+  const handlePostScanAd = () => {
+    if (isPremium) return;
+    const newCount = scanAdCounter + 1;
+    setScanAdCounter(newCount);
+    if (newCount % INTERSTITIAL_SCAN_INTERVAL === 0) {
+      showInterstitial();
+    }
+  };
+
   const runDummyScan = (productIndex: number) => {
+    if (!canScan()) return;
     const product = DUMMY_PRODUCTS[productIndex];
     const result = createScanResult(product.ingredients, '', product.name);
     setScanResult(result);
     setTab('scan');
+    incrementScanCount();
+    handlePostScanAd();
   };
 
   // ── テキスト入力から成分解析 ──
   const runTextScan = () => {
+    if (!canScan()) return;
     const trimmed = ingredientInput.trim();
     if (!trimmed) {
       Alert.alert('入力エラー', '成分リストを入力してください。');
@@ -173,6 +256,71 @@ export default function App() {
     setTab('scan');
     setIngredientInput('');
     setProductNameInput('');
+    incrementScanCount();
+    handlePostScanAd();
+  };
+
+  // ── OCRスキャン（カメラ撮影） ──
+  const runCameraScan = async () => {
+    if (!canScan()) return;
+    setOcrLoading(true);
+    try {
+      const uri = await takePhoto();
+      if (!uri) { setOcrLoading(false); return; }
+      await processOCRImage(uri, 'カメラスキャン');
+    } catch (e) {
+      console.warn('Camera scan error:', e);
+      Alert.alert('エラー', 'カメラスキャン中にエラーが発生しました。');
+    } finally {
+      setOcrLoading(false);
+    }
+  };
+
+  // ── OCRスキャン（スクショ・フォトライブラリ） ──
+  const runImageScan = async () => {
+    if (!canScan()) return;
+    setOcrLoading(true);
+    try {
+      const uri = await pickImage();
+      if (!uri) { setOcrLoading(false); return; }
+      await processOCRImage(uri, '画像スキャン');
+    } catch (e) {
+      console.warn('Image scan error:', e);
+      Alert.alert('エラー', '画像スキャン中にエラーが発生しました。');
+    } finally {
+      setOcrLoading(false);
+    }
+  };
+
+  // ── OCR共通処理 ──
+  const processOCRImage = async (imageUri: string, defaultName: string) => {
+    const rawText = await recognizeText(imageUri);
+    if (!rawText) {
+      // Expo Go の場合は recognizeText 内で Alert が出る
+      // OCR失敗時もここに来る
+      return;
+    }
+
+    const cleaned = cleanOCRText(rawText);
+    const parsed = parseIngredientText(cleaned);
+
+    if (parsed.length === 0) {
+      // OCRは成功したがパースで成分が見つからない場合
+      // ユーザーにOCR結果を編集させる
+      setIngredientInput(rawText);
+      setProductNameInput('');
+      Alert.alert(
+        '成分を検出できませんでした',
+        '認識テキストを入力欄にセットしました。\n手動で修正してから解析してください。'
+      );
+      return;
+    }
+
+    const result = createScanResult(parsed, '', defaultName);
+    setScanResult(result);
+    setTab('scan');
+    incrementScanCount();
+    handlePostScanAd();
   };
 
   const saveResult = () => {
@@ -209,6 +357,11 @@ export default function App() {
   };
 
   const doSave = (result: ScanResult) => {
+    // シェルフ保存数制限チェック
+    if (!isPremium && savedResults.length >= FREE_SHELF_LIMIT) {
+      setShowPaywall(true);
+      return;
+    }
     setSavedResults((prev) => {
       if (prev.some((r) => r.id === result.id)) return prev;
       const next = [result, ...prev];
@@ -263,6 +416,84 @@ export default function App() {
       },
     ]);
   };
+
+  // ── 成分詳細を開く（広告カウント付き） ──
+  const openIngredientDetail = (entry: IngredientEntry | null) => {
+    if (!entry) return;
+    setSelectedIngredient(entry);
+    if (!isPremium) {
+      const newCount = detailAdCounter + 1;
+      setDetailAdCounter(newCount);
+      if (newCount % INTERSTITIAL_DETAIL_INTERVAL === 0) {
+        showInterstitial();
+      }
+    }
+  };
+
+  // ── ペイウォールモーダル ──
+  const renderPaywall = () => (
+    <Modal visible={showPaywall} animationType="slide" presentationStyle="pageSheet">
+      <SafeAreaView style={{ flex: 1, backgroundColor: C.bg }}>
+        <ScrollView contentContainerStyle={{ padding: 24, paddingBottom: 40 }}>
+          <TouchableOpacity style={st.closeBtn} onPress={() => setShowPaywall(false)}>
+            <Text style={st.closeBtnText}>✕</Text>
+          </TouchableOpacity>
+
+          <View style={{ alignItems: 'center', marginTop: 20, marginBottom: 28 }}>
+            <Text style={{ fontSize: 40, marginBottom: 12 }}>💎</Text>
+            <Text style={{ fontSize: 22, fontWeight: '800', color: C.text }}>SkinLab Premium</Text>
+            <Text style={{ fontSize: 13, color: C.textSub, marginTop: 6, textAlign: 'center' }}>
+              すべての機能を制限なく使えます
+            </Text>
+          </View>
+
+          <View style={[st.card, { marginBottom: 16 }]}>
+            {[
+              { icon: '🔍', text: '成分解析 無制限（無料: 1日5回）' },
+              { icon: '📦', text: 'シェルフ保存 無制限（無料: 5件）' },
+              { icon: '🚫', text: '広告を完全非表示' },
+            ].map((item, i) => (
+              <View key={i} style={{ flexDirection: 'row', alignItems: 'center', paddingVertical: 10, borderTopWidth: i > 0 ? 1 : 0, borderTopColor: C.border }}>
+                <Text style={{ fontSize: 20, marginRight: 12 }}>{item.icon}</Text>
+                <Text style={{ fontSize: 14, color: C.text, flex: 1 }}>{item.text}</Text>
+              </View>
+            ))}
+          </View>
+
+          <TouchableOpacity
+            style={[st.saveBtn, { marginTop: 8 }]}
+            onPress={async () => {
+              const success = await purchasePremium();
+              if (success) {
+                setIsPremium(true);
+                setShowPaywall(false);
+                Alert.alert('ありがとうございます！', 'プレミアムプランが有効になりました。');
+              }
+            }}
+            activeOpacity={0.7}
+          >
+            <Text style={st.saveBtnText}>月額380円でプレミアムに登録</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={{ alignItems: 'center', marginTop: 16 }}
+            onPress={async () => {
+              const success = await restorePurchases();
+              if (success) {
+                setIsPremium(true);
+                setShowPaywall(false);
+                Alert.alert('復元完了', 'プレミアムプランが復元されました。');
+              } else {
+                Alert.alert('復元できませんでした', '有効な購入が見つかりませんでした。');
+              }
+            }}
+          >
+            <Text style={{ color: C.accent, fontSize: 13 }}>購入を復元する</Text>
+          </TouchableOpacity>
+        </ScrollView>
+      </SafeAreaView>
+    </Modal>
+  );
 
   // ── 成分詳細モーダル ──
   const renderIngredientModal = () => {
@@ -352,13 +583,59 @@ export default function App() {
       <Text style={st.pageTitle}>SkinLab</Text>
       <Text style={st.pageSubtitle}>成分から、本当の価値を知る</Text>
 
+      {/* ── OCRスキャンセクション ── */}
       <View style={st.ctaCard}>
         <Text style={{ fontSize: 28, marginBottom: 8 }}>📸</Text>
         <Text style={st.ctaTitle}>全成分表をスキャン</Text>
         <Text style={st.ctaSubtitle}>
-          カメラで撮影するだけで成分を即解析{'\n'}（現在はテストデータで動作確認中）
+          カメラで撮影、またはスクリーンショットから成分を自動認識
         </Text>
+
+        {ocrLoading ? (
+          <View style={{ marginTop: 16, alignItems: 'center' }}>
+            <ActivityIndicator size="small" color={C.accent} />
+            <Text style={{ fontSize: 13, color: C.accent, marginTop: 6 }}>テキストを認識中...</Text>
+          </View>
+        ) : (
+          <View style={{ flexDirection: 'row', gap: 10, marginTop: 16, width: '100%' }}>
+            <TouchableOpacity
+              style={[st.analyzeBtn, { flex: 1 }]}
+              onPress={runCameraScan}
+              activeOpacity={0.7}
+            >
+              <Text style={st.analyzeBtnText}>📷 カメラ撮影</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[st.analyzeBtn, { flex: 1, backgroundColor: '#5BA4F5' }]}
+              onPress={runImageScan}
+              activeOpacity={0.7}
+            >
+              <Text style={st.analyzeBtnText}>🖼 スクショ選択</Text>
+            </TouchableOpacity>
+          </View>
+        )}
+
+        {!isOCRAvailable() && (
+          <Text style={{ fontSize: 10, color: C.textMuted, marginTop: 8, textAlign: 'center' }}>
+            ※ Expo Goでは文字認識が利用できません。Development Buildで実行してください。
+          </Text>
+        )}
       </View>
+
+      {/* ── プレミアムバナー（無料ユーザーのみ） ── */}
+      {!isPremium && (
+        <TouchableOpacity
+          style={[st.ctaCard, { marginTop: 12, backgroundColor: '#EBF3FF', borderColor: '#2B7DE920' }]}
+          onPress={() => setShowPaywall(true)}
+          activeOpacity={0.7}
+        >
+          <Text style={{ fontSize: 20, marginBottom: 4 }}>💎</Text>
+          <Text style={{ fontSize: 14, fontWeight: '700', color: C.text }}>プレミアムにアップグレード</Text>
+          <Text style={{ fontSize: 11, color: C.textSub, textAlign: 'center', marginTop: 4 }}>
+            広告なし・解析無制限・シェルフ無制限 — 月額380円
+          </Text>
+        </TouchableOpacity>
+      )}
 
       {/* ── 成分テキスト入力セクション ── */}
       <View style={[st.card, { marginTop: 20 }]}>
@@ -457,7 +734,7 @@ export default function App() {
                 <TouchableOpacity
                   key={i}
                   style={st.groupedIngredient}
-                  onPress={() => setSelectedIngredient(item.entry)}
+                  onPress={() => openIngredientDetail(item.entry)}
                   activeOpacity={0.7}
                 >
                   <View style={{ flex: 1 }}>
@@ -476,7 +753,7 @@ export default function App() {
           <>
             <Text style={[st.sectionTitle, { marginTop: 16 }]}>その他の成分</Text>
             {uncategorized.map((item, i) => (
-              <TouchableOpacity key={i} style={st.ingredientCard} onPress={() => setSelectedIngredient(item.entry)} activeOpacity={0.7}>
+              <TouchableOpacity key={i} style={st.ingredientCard} onPress={() => openIngredientDetail(item.entry)} activeOpacity={0.7}>
                 <View style={{ flex: 1 }}>
                   <Text style={st.ingredientName}>{item.entry!.name_cosmetic}</Text>
                   <Text style={st.ingredientInci}>{item.entry!.name_inci}</Text>
@@ -566,6 +843,15 @@ export default function App() {
       {tab === 'scan' && renderScanResult()}
       {tab === 'shelf' && renderShelf()}
       {renderIngredientModal()}
+      {renderPaywall()}
+
+      {/* ── バナー広告（無料ユーザーのみ） ── */}
+      {!isPremium && (
+        <View style={st.bannerAdContainer}>
+          <Text style={st.bannerAdPlaceholder}>広告スペース (AdMob Banner)</Text>
+        </View>
+      )}
+
       <View style={st.tabBar}>
         {([
           { key: 'home', icon: '🏠', label: 'ホーム' },
@@ -629,6 +915,8 @@ const st = StyleSheet.create({
   modalSubtitle: { fontSize: 13, color: '#94A3B8', marginTop: 2 },
   closeBtn: { width: 36, height: 36, borderRadius: 18, backgroundColor: '#E4EBF5', justifyContent: 'center', alignItems: 'center' },
   closeBtnText: { fontSize: 16, color: '#5A6478' },
+  bannerAdContainer: { backgroundColor: '#F3F6FB', alignItems: 'center', justifyContent: 'center', paddingVertical: 8, borderTopWidth: 1, borderTopColor: '#E4EBF5' },
+  bannerAdPlaceholder: { fontSize: 11, color: '#94A3B8' },
   tabBar: { flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', paddingTop: 8, paddingBottom: 20, backgroundColor: '#FFF', borderTopWidth: 1, borderTopColor: '#E4EBF5' },
   tabItem: { alignItems: 'center' },
   tabLabel: { fontSize: 10, fontWeight: '600', marginTop: 2 },

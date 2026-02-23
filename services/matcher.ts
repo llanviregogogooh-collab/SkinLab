@@ -169,7 +169,8 @@ export function getMatchStats(ingredients: MatchedIngredient[]) {
 
 /**
  * 貼り付けられたテキストから成分名リストをパースする
- * 対応区切り: 、 , ・ ， / 改行
+ * 対応区切り: 、 , ・ ， 改行
+ * ※ / は成分名に含まれることがあるため区切り文字にしない
  */
 export function parseIngredientText(text: string): string[] {
   // 「全成分：水、グリセリン…」のようなプレフィックスを除去
@@ -178,9 +179,9 @@ export function parseIngredientText(text: string): string[] {
     ''
   );
 
-  // 各種区切り文字をカンマに統一
+  // 各種区切り文字をカンマに統一（/ は成分名に含まれるため除外）
   const normalized = cleaned
-    .replace(/[、，・\/]/g, ',')
+    .replace(/[、，・]/g, ',')
     .replace(/\n+/g, ',');
 
   // 分割 → トリム → 空文字除外
