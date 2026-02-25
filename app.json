@@ -16,7 +16,9 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.chekera0239.skinlab",
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSCameraUsageDescription": "化粧品の全成分表を撮影して成分を自動認識するためにカメラを使用します。",
+        "NSPhotoLibraryUsageDescription": "化粧品の全成分表のスクリーンショットや写真を選択して成分を解析するためにフォトライブラリを使用します。"
       }
     },
     "android": {

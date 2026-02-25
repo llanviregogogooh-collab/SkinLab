@@ -22,7 +22,7 @@ function isExpoGo(): boolean {
  */
 export async function initPurchases(): Promise<void> {
   if (isExpoGo()) {
-    console.log('RevenueCat: Expo Go detected — skipping initialization');
+    __DEV__ && console.log('RevenueCat: Expo Go detected — skipping initialization');
     return;
   }
 
@@ -33,9 +33,9 @@ export async function initPurchases(): Promise<void> {
     Purchases = rc.default || rc;
     const apiKey = Platform.OS === 'ios' ? REVENUECAT_API_KEY_IOS : REVENUECAT_API_KEY_ANDROID;
     Purchases.configure({ apiKey });
-    console.log('RevenueCat initialized');
+    __DEV__ && console.log('RevenueCat initialized');
   } catch (e) {
-    console.warn('RevenueCat not available:', e);
+    __DEV__ && console.warn('RevenueCat not available:', e);
     Purchases = null;
   }
 }
@@ -51,7 +51,7 @@ export async function checkPremiumStatus(): Promise<boolean> {
       await AsyncStorage.setItem(PREMIUM_CACHE_KEY, JSON.stringify(isPremium));
       return isPremium;
     } catch (e) {
-      console.warn('Failed to check premium status:', e);
+      __DEV__ && console.warn('Failed to check premium status:', e);
     }
   }
 
@@ -79,13 +79,13 @@ export async function purchasePremium(): Promise<boolean> {
     const offerings = await Purchases.getOfferings();
     const currentOffering = offerings.current;
     if (!currentOffering) {
-      console.warn('No offerings available');
+      __DEV__ && console.warn('No offerings available');
       return false;
     }
 
     const monthlyPackage = currentOffering.monthly;
     if (!monthlyPackage) {
-      console.warn('No monthly package available');
+      __DEV__ && console.warn('No monthly package available');
       return false;
     }
 
@@ -95,9 +95,9 @@ export async function purchasePremium(): Promise<boolean> {
     return isPremium;
   } catch (e: any) {
     if (e.userCancelled) {
-      console.log('User cancelled purchase');
+      __DEV__ && console.log('User cancelled purchase');
     } else {
-      console.warn('Purchase error:', e);
+      __DEV__ && console.warn('Purchase error:', e);
     }
     return false;
   }
@@ -121,7 +121,7 @@ export async function restorePurchases(): Promise<boolean> {
     await AsyncStorage.setItem(PREMIUM_CACHE_KEY, JSON.stringify(isPremium));
     return isPremium;
   } catch (e) {
-    console.warn('Restore error:', e);
+    __DEV__ && console.warn('Restore error:', e);
     return false;
   }
 }

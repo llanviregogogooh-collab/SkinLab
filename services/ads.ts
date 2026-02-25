@@ -42,7 +42,7 @@ function isExpoGo(): boolean {
  */
 export async function initAds(): Promise<void> {
   if (isExpoGo()) {
-    console.log('AdMob: Expo Go detected — skipping initialization');
+    __DEV__ && console.log('AdMob: Expo Go detected — skipping initialization');
     return;
   }
 
@@ -58,9 +58,9 @@ export async function initAds(): Promise<void> {
       await MobileAds.initialize();
     }
     loadInterstitial();
-    console.log('AdMob initialized');
+    __DEV__ && console.log('AdMob initialized');
   } catch (e) {
-    console.warn('AdMob not available:', e);
+    __DEV__ && console.warn('AdMob not available:', e);
     MobileAds = null;
   }
 }
@@ -84,13 +84,13 @@ function loadInterstitial(): void {
     });
 
     interstitialAd.addAdEventListener(AdEventType.ERROR, (error: any) => {
-      console.warn('Interstitial ad error:', error);
+      __DEV__ && console.warn('Interstitial ad error:', error);
       isInterstitialLoaded = false;
     });
 
     interstitialAd.load();
   } catch (e) {
-    console.warn('Failed to load interstitial:', e);
+    __DEV__ && console.warn('Failed to load interstitial:', e);
   }
 }
 
@@ -99,7 +99,7 @@ function loadInterstitial(): void {
  */
 export async function showInterstitial(): Promise<boolean> {
   if (!interstitialAd || !isInterstitialLoaded) {
-    console.log('Interstitial not ready (Expo Go or not loaded)');
+    __DEV__ && console.log('Interstitial not ready (Expo Go or not loaded)');
     return false;
   }
 
@@ -107,7 +107,7 @@ export async function showInterstitial(): Promise<boolean> {
     await interstitialAd.show();
     return true;
   } catch (e) {
-    console.warn('Failed to show interstitial:', e);
+    __DEV__ && console.warn('Failed to show interstitial:', e);
     return false;
   }
 }

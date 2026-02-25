@@ -13,11 +13,12 @@ import {
   TextInput,
   Keyboard,
   ActivityIndicator,
+  Linking,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createScanResult, getMatchStats, groupByCategory, parseIngredientText } from './services/matcher';
 import { initPurchases, checkPremiumStatus, purchasePremium, restorePurchases } from './services/subscription';
-import { initAds, showInterstitial } from './services/ads';
+import { initAds, showInterstitial, BANNER_AD_UNIT_ID, isAdMobAvailable } from './services/ads';
 import { takePhoto, pickImage, recognizeText, cleanOCRText, isOCRAvailable } from './services/ocr';
 import {
   ScanResult,
@@ -70,43 +71,6 @@ const CATEGORY_BG: Record<CategoryKey, string> = {
 };
 
 // ══════════════════════════════════════════
-// ダミーOCRデータ（テスト用）
-// ══════════════════════════════════════════
-const DUMMY_PRODUCTS: { name: string; ingredients: string[] }[] = [
-  {
-    name: 'Obagi C25 セラム NEO',
-    ingredients: [
-      'エトキシジグリコール', 'アスコルビン酸', 'DPG', '水', 'グリセリン',
-      'ナイアシンアミド', 'BG', 'トコフェロール', 'アーチチョーク葉エキス',
-      'ツボクサエキス', 'パンテノール', 'フェノキシエタノール',
-    ],
-  },
-  {
-    name: 'メラノCC 薬用しみ集中対策美容液',
-    ingredients: [
-      'アスコルビン酸', 'トコフェロール', 'グリチルリチン酸2K', 'アルピニアカツマダイ種子エキス',
-      'BG', 'エトキシジグリコール', 'エタノール', 'アルピニアホワイト',
-    ],
-  },
-  {
-    name: 'IPSA ザ・タイムR アクア',
-    ingredients: [
-      '水', 'BG', 'グリセリン', 'DPG', 'ナイアシンアミド',
-      'トラネキサム酸', 'アセチルヒアルロン酸Na', 'ヒアルロン酸Na',
-      'パンテノール', 'グリチルリチン酸2K', 'フェノキシエタノール',
-    ],
-  },
-  {
-    name: 'ドクターシーラボ VC100エッセンスローション',
-    ingredients: [
-      '水', 'DPG', 'グリセリン', 'パルミチン酸アスコルビルリン酸3Na',
-      'ナイアシンアミド', 'ヒアルロン酸Na', 'セラミドNP',
-      'アラントイン', 'BG', 'フェノキシエタノール',
-    ],
-  },
-];
-
-// ══════════════════════════════════════════
 // 成分タグ
 // ══════════════════════════════════════════
 function CategoryPill({ category }: { category: CategoryKey }) {
@@ -114,6 +78,44 @@ function CategoryPill({ category }: { category: CategoryKey }) {
   return (
     <View style={[st.pill, { backgroundColor: `${color}18` }]}>
       <Text style={[st.pillText, { color }]}>{CATEGORY_LABELS[category]}</Text>
+    </View>
+  );
+}
+
+// ══════════════════════════════════════════
+// バナー広告コンポーネント
+// ══════════════════════════════════════════
+function BannerAdView() {
+  const [BannerAd, setBannerAd] = useState<any>(null);
+  const [BannerAdSize, setBannerAdSize] = useState<any>(null);
+
+  useEffect(() => {
+    if (!isAdMobAvailable()) return;
+    try {
+      const moduleName = 'react-native-google-' + 'mobile-ads';
+      const admob = require(moduleName);
+      setBannerAd(() => admob.BannerAd);
+      setBannerAdSize(admob.BannerAdSize);
+    } catch {
+      // AdMob not available
+    }
+  }, []);
+
+  if (!BannerAd || !BannerAdSize || !BANNER_AD_UNIT_ID) {
+    return (
+      <View style={{ backgroundColor: '#F3F6FB', alignItems: 'center', justifyContent: 'center', paddingVertical: 8, borderTopWidth: 1, borderTopColor: '#E4EBF5' }}>
+        <Text style={{ fontSize: 11, color: '#94A3B8' }}>広告スペース</Text>
+      </View>
+    );
+  }
+
+  return (
+    <View style={{ alignItems: 'center', borderTopWidth: 1, borderTopColor: '#E4EBF5' }}>
+      <BannerAd
+        unitId={BANNER_AD_UNIT_ID}
+        size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
+        requestOptions={{ requestNonPersonalizedAdsOnly: true }}
+      />
     </View>
   );
 }
@@ -155,7 +157,7 @@ export default function App() {
         const json = await AsyncStorage.getItem(STORAGE_KEY);
         if (json) setSavedResults(JSON.parse(json));
       } catch (e) {
-        console.warn('シェルフ読み込みエラー:', e);
+        __DEV__ && console.warn('シェルフ読み込みエラー:', e);
       }
     })();
   }, []);
@@ -180,7 +182,7 @@ export default function App() {
           }
         }
       } catch (e) {
-        console.warn('スキャンカウント読み込みエラー:', e);
+        __DEV__ && console.warn('スキャンカウント読み込みエラー:', e);
       }
     })();
   }, []);
@@ -194,7 +196,7 @@ export default function App() {
         date: new Date().toDateString(),
       }));
     } catch (e) {
-      console.warn('スキャンカウント保存エラー:', e);
+      __DEV__ && console.warn('スキャンカウント保存エラー:', e);
     }
   }, [dailyScanCount]);
 
@@ -203,7 +205,7 @@ export default function App() {
     try {
       await AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(results));
     } catch (e) {
-      console.warn('シェルフ保存エラー:', e);
+      __DEV__ && console.warn('シェルフ保存エラー:', e);
     }
   }, []);
 
@@ -225,16 +227,6 @@ export default function App() {
     if (newCount % INTERSTITIAL_SCAN_INTERVAL === 0) {
       showInterstitial();
     }
-  };
-
-  const runDummyScan = (productIndex: number) => {
-    if (!canScan()) return;
-    const product = DUMMY_PRODUCTS[productIndex];
-    const result = createScanResult(product.ingredients, '', product.name);
-    setScanResult(result);
-    setTab('scan');
-    incrementScanCount();
-    handlePostScanAd();
   };
 
   // ── テキスト入力から成分解析 ──
@@ -269,7 +261,7 @@ export default function App() {
       if (!uri) { setOcrLoading(false); return; }
       await processOCRImage(uri, 'カメラスキャン');
     } catch (e) {
-      console.warn('Camera scan error:', e);
+      __DEV__ && console.warn('Camera scan error:', e);
       Alert.alert('エラー', 'カメラスキャン中にエラーが発生しました。');
     } finally {
       setOcrLoading(false);
@@ -285,7 +277,7 @@ export default function App() {
       if (!uri) { setOcrLoading(false); return; }
       await processOCRImage(uri, '画像スキャン');
     } catch (e) {
-      console.warn('Image scan error:', e);
+      __DEV__ && console.warn('Image scan error:', e);
       Alert.alert('エラー', '画像スキャン中にエラーが発生しました。');
     } finally {
       setOcrLoading(false);
@@ -490,6 +482,25 @@ export default function App() {
           >
             <Text style={{ color: C.accent, fontSize: 13 }}>購入を復元する</Text>
           </TouchableOpacity>
+
+          {/* Apple必須: サブスクリプション開示情報 */}
+          <View style={{ marginTop: 24, paddingTop: 16, borderTopWidth: 1, borderTopColor: C.border }}>
+            <Text style={{ fontSize: 11, color: C.textMuted, lineHeight: 18, textAlign: 'center' }}>
+              月額380円（税込）の自動更新サブスクリプションです。{'\n'}
+              購入確認時にApple IDアカウントに課金されます。{'\n'}
+              現在の期間終了の24時間前までにキャンセルしない限り、サブスクリプションは自動的に更新されます。{'\n'}
+              アカウントへの課金は、現在の期間終了前24時間以内に行われます。{'\n'}
+              サブスクリプションの管理・キャンセルは、端末の「設定」→ Apple ID →「サブスクリプション」から行えます。
+            </Text>
+            <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: 12, gap: 16 }}>
+              <TouchableOpacity onPress={() => Linking.openURL('https://llanviregogogooh-collab.github.io/SkinLab/privacy-policy.html')}>
+                <Text style={{ fontSize: 11, color: C.accent, textDecorationLine: 'underline' }}>プライバシーポリシー</Text>
+              </TouchableOpacity>
+              <TouchableOpacity onPress={() => Linking.openURL('https://llanviregogogooh-collab.github.io/SkinLab/terms-of-service.html')}>
+                <Text style={{ fontSize: 11, color: C.accent, textDecorationLine: 'underline' }}>利用規約</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
         </ScrollView>
       </SafeAreaView>
     </Modal>
@@ -675,19 +686,6 @@ export default function App() {
         </TouchableOpacity>
       </View>
 
-      <Text style={[st.sectionTitle, { marginTop: 24 }]}>🧪 テスト用サンプル製品</Text>
-      <Text style={{ color: C.textMuted, fontSize: 12, marginBottom: 12 }}>
-        タップすると成分解析結果を表示します
-      </Text>
-      {DUMMY_PRODUCTS.map((product, i) => (
-        <TouchableOpacity key={i} style={st.productCard} onPress={() => runDummyScan(i)} activeOpacity={0.7}>
-          <View style={{ flex: 1 }}>
-            <Text style={st.productName}>{product.name}</Text>
-            <Text style={st.productCount}>{product.ingredients.length}成分</Text>
-          </View>
-          <Text style={{ color: C.accent, fontSize: 16 }}>→</Text>
-        </TouchableOpacity>
-      ))}
     </ScrollView>
   );
 
@@ -847,9 +845,7 @@ export default function App() {
 
       {/* ── バナー広告（無料ユーザーのみ） ── */}
       {!isPremium && (
-        <View style={st.bannerAdContainer}>
-          <Text style={st.bannerAdPlaceholder}>広告スペース (AdMob Banner)</Text>
-        </View>
+        <BannerAdView />
       )}
 
       <View style={st.tabBar}>
@@ -915,8 +911,6 @@ const st = StyleSheet.create({
   modalSubtitle: { fontSize: 13, color: '#94A3B8', marginTop: 2 },
   closeBtn: { width: 36, height: 36, borderRadius: 18, backgroundColor: '#E4EBF5', justifyContent: 'center', alignItems: 'center' },
   closeBtnText: { fontSize: 16, color: '#5A6478' },
-  bannerAdContainer: { backgroundColor: '#F3F6FB', alignItems: 'center', justifyContent: 'center', paddingVertical: 8, borderTopWidth: 1, borderTopColor: '#E4EBF5' },
-  bannerAdPlaceholder: { fontSize: 11, color: '#94A3B8' },
   tabBar: { flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', paddingTop: 8, paddingBottom: 20, backgroundColor: '#FFF', borderTopWidth: 1, borderTopColor: '#E4EBF5' },
   tabItem: { alignItems: 'center' },
   tabLabel: { fontSize: 10, fontWeight: '600', marginTop: 2 },

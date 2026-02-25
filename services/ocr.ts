@@ -90,7 +90,7 @@ export async function recognizeText(imageUri: string): Promise<string | null> {
 
     return result.text;
   } catch (e) {
-    console.warn('OCR recognition error:', e);
+    __DEV__ && console.warn('OCR recognition error:', e);
     Alert.alert(
       'OCRエラー',
       'テキスト認識に失敗しました。画像が鮮明か確認してください。'
