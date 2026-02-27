@@ -4,7 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import Constants from 'expo-constants';
 import { Alert, Platform } from 'react-native';
 
-const PREMIUM_CACHE_KEY = '@skinlab_premium';
+const PREMIUM_CACHE_KEY = '@clearlab_premium';
 const REVENUECAT_API_KEY_IOS = 'appl_TpeYsPjarNvzuzNKbHxMDrlEQYG';
 const REVENUECAT_API_KEY_ANDROID = 'YOUR_REVENUECAT_ANDROID_API_KEY';
 const ENTITLEMENT_ID = 'premium';
