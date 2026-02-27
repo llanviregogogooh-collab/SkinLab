@@ -5,7 +5,7 @@ import Constants from 'expo-constants';
 import { Alert, Platform } from 'react-native';
 
 const PREMIUM_CACHE_KEY = '@skinlab_premium';
-const REVENUECAT_API_KEY_IOS = 'YOUR_REVENUECAT_IOS_API_KEY'; // TODO: RevenueCatダッシュボードで取得
+const REVENUECAT_API_KEY_IOS = 'appl_TpeYsPjarNvzuzNKbHxMDrlEQYG';
 const REVENUECAT_API_KEY_ANDROID = 'YOUR_REVENUECAT_ANDROID_API_KEY';
 const ENTITLEMENT_ID = 'premium';
 

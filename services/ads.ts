@@ -3,26 +3,22 @@
 import { Platform } from 'react-native';
 import Constants from 'expo-constants';
 
-// Google AdMob テスト用広告ユニットID
-const TEST_BANNER_IOS = 'ca-app-pub-3940256099942544/2934735716';
-const TEST_BANNER_ANDROID = 'ca-app-pub-3940256099942544/6300978111';
-const TEST_INTERSTITIAL_IOS = 'ca-app-pub-3940256099942544/4411468910';
-const TEST_INTERSTITIAL_ANDROID = 'ca-app-pub-3940256099942544/1033173712';
-
-// TODO: 本番用広告ユニットID
-// const PROD_BANNER_IOS = 'ca-app-pub-XXXX/XXXX';
-// const PROD_INTERSTITIAL_IOS = 'ca-app-pub-XXXX/XXXX';
+// Google AdMob 広告ユニットID
+const BANNER_IOS = 'ca-app-pub-3510999862027011/6550435476';
+const BANNER_ANDROID = 'ca-app-pub-3940256099942544/6300978111'; // TODO: Android本番ID取得後に差し替え
+const INTERSTITIAL_IOS = 'ca-app-pub-3510999862027011/5547656635';
+const INTERSTITIAL_ANDROID = 'ca-app-pub-3940256099942544/1033173712'; // TODO: Android本番ID取得後に差し替え
 
 export const BANNER_AD_UNIT_ID = Platform.select({
-  ios: TEST_BANNER_IOS,
-  android: TEST_BANNER_ANDROID,
-  default: TEST_BANNER_IOS,
+  ios: BANNER_IOS,
+  android: BANNER_ANDROID,
+  default: BANNER_IOS,
 });
 
 export const INTERSTITIAL_AD_UNIT_ID = Platform.select({
-  ios: TEST_INTERSTITIAL_IOS,
-  android: TEST_INTERSTITIAL_ANDROID,
-  default: TEST_INTERSTITIAL_IOS,
+  ios: INTERSTITIAL_IOS,
+  android: INTERSTITIAL_ANDROID,
+  default: INTERSTITIAL_IOS,
 });
 
 let MobileAds: any = null;

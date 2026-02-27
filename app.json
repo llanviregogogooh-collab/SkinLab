@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "SkinLab",
-    "slug": "SkinLab",
+    "name": "ClearLab.",
+    "slug": "ClearLab",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -43,7 +43,7 @@
         "react-native-google-mobile-ads",
         {
           "androidAppId": "ca-app-pub-3940256099942544~3347511713",
-          "iosAppId": "ca-app-pub-3940256099942544~1458002511"
+          "iosAppId": "ca-app-pub-3510999862027011~7642832356"
         }
       ]
     ]

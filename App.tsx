@@ -16,6 +16,7 @@ import {
   Linking,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import * as StoreReview from 'expo-store-review';
 import { createScanResult, getMatchStats, groupByCategory, parseIngredientText } from './services/matcher';
 import { initPurchases, checkPremiumStatus, purchasePremium, restorePurchases } from './services/subscription';
 import { initAds, showInterstitial, BANNER_AD_UNIT_ID, isAdMobAvailable } from './services/ads';
@@ -123,8 +124,11 @@ function BannerAdView() {
 // ══════════════════════════════════════════
 // メインApp
 // ══════════════════════════════════════════
-const STORAGE_KEY = '@skinlab_shelf';
-const SCAN_COUNT_KEY = '@skinlab_scan_count';
+const STORAGE_KEY = '@clearlab_shelf';
+const SCAN_COUNT_KEY = '@clearlab_scan_count';
+const LIFETIME_SCAN_KEY = '@clearlab_lifetime_scans';
+const REVIEW_REQUESTED_KEY = '@clearlab_review_requested';
+const REVIEW_TRIGGER_COUNT = 3;
 
 // ── 無料プランの制限 ──
 const FREE_DAILY_SCAN_LIMIT = 5;
@@ -229,6 +233,28 @@ export default function App() {
     }
   };
 
+  // ── レビュー促進（累計3回目のスキャン後） ──
+  const maybeRequestReview = useCallback(async () => {
+    try {
+      const alreadyRequested = await AsyncStorage.getItem(REVIEW_REQUESTED_KEY);
+      if (alreadyRequested) return;
+
+      const raw = await AsyncStorage.getItem(LIFETIME_SCAN_KEY);
+      const lifetimeScans = (raw ? parseInt(raw, 10) : 0) + 1;
+      await AsyncStorage.setItem(LIFETIME_SCAN_KEY, String(lifetimeScans));
+
+      if (lifetimeScans === REVIEW_TRIGGER_COUNT) {
+        const isAvailable = await StoreReview.isAvailableAsync();
+        if (isAvailable) {
+          await StoreReview.requestReview();
+          await AsyncStorage.setItem(REVIEW_REQUESTED_KEY, 'true');
+        }
+      }
+    } catch {
+      // レビューリクエスト失敗は無視
+    }
+  }, []);
+
   // ── テキスト入力から成分解析 ──
   const runTextScan = () => {
     if (!canScan()) return;
@@ -250,6 +276,7 @@ export default function App() {
     setProductNameInput('');
     incrementScanCount();
     handlePostScanAd();
+    maybeRequestReview();
   };
 
   // ── OCRスキャン（カメラ撮影） ──
@@ -313,6 +340,7 @@ export default function App() {
     setTab('scan');
     incrementScanCount();
     handlePostScanAd();
+    maybeRequestReview();
   };
 
   const saveResult = () => {
@@ -433,7 +461,7 @@ export default function App() {
 
           <View style={{ alignItems: 'center', marginTop: 20, marginBottom: 28 }}>
             <Text style={{ fontSize: 40, marginBottom: 12 }}>💎</Text>
-            <Text style={{ fontSize: 22, fontWeight: '800', color: C.text }}>SkinLab Premium</Text>
+            <Text style={{ fontSize: 22, fontWeight: '800', color: C.text }}>ClearLab. Premium</Text>
             <Text style={{ fontSize: 13, color: C.textSub, marginTop: 6, textAlign: 'center' }}>
               すべての機能を制限なく使えます
             </Text>
@@ -591,7 +619,7 @@ export default function App() {
   // ── ホーム画面 ──
   const renderHome = () => (
     <ScrollView contentContainerStyle={{ padding: 20, paddingBottom: 100 }}>
-      <Text style={st.pageTitle}>SkinLab</Text>
+      <Text style={st.pageTitle}>ClearLab.</Text>
       <Text style={st.pageSubtitle}>成分から、本当の価値を知る</Text>
 
       {/* ── OCRスキャンセクション ── */}
