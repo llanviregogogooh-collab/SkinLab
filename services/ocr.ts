@@ -29,7 +29,7 @@ export async function takePhoto(): Promise<string | null> {
   const result = await ImagePicker.launchCameraAsync({
     mediaTypes: ['images'],
     quality: 1,
-    allowsEditing: false,
+    allowsEditing: true,
   });
 
   if (result.canceled || !result.assets?.[0]) return null;
@@ -50,7 +50,7 @@ export async function pickImage(): Promise<string | null> {
   const result = await ImagePicker.launchImageLibraryAsync({
     mediaTypes: ['images'],
     quality: 1,
-    allowsEditing: false,
+    allowsEditing: true,
   });
 
   if (result.canceled || !result.assets?.[0]) return null;
