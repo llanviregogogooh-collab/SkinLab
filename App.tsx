@@ -30,6 +30,7 @@ import {
   CategoryKey,
   CATEGORY_LABELS,
 } from './types';
+import ImageCropper from './components/ImageCropper';
 
 // ── テーマカラー（洗練されたパレット） ──
 const C = {
@@ -212,6 +213,10 @@ export default function App() {
   // ── OCR ──
   const [ocrLoading, setOcrLoading] = useState(false);
 
+  // ── 画像クロップ ──
+  const [cropImageUri, setCropImageUri] = useState<string | null>(null);
+  const [cropDefaultName, setCropDefaultName] = useState('');
+
   // ── プレミアム・広告 ──
   const [isPremium, setIsPremium] = useState(false);
   const [showPaywall, setShowPaywall] = useState(false);
@@ -344,36 +349,48 @@ export default function App() {
     maybeRequestReview();
   };
 
-  // ── OCRスキャン（カメラ撮影） ──
+  // ── OCRスキャン（カメラ撮影） → クロッパー表示 ──
   const runCameraScan = async () => {
     if (!canScan()) return;
-    setOcrLoading(true);
     try {
       const uri = await takePhoto();
-      if (!uri) { setOcrLoading(false); return; }
-      await processOCRImage(uri, 'カメラスキャン');
+      if (!uri) return;
+      setCropImageUri(uri);
+      setCropDefaultName('カメラスキャン');
     } catch (e) {
       __DEV__ && console.warn('Camera scan error:', e);
       Alert.alert('エラー', 'カメラスキャン中にエラーが発生しました。');
+    }
+  };
+
+  // ── OCRスキャン（スクショ・フォトライブラリ） → クロッパー表示 ──
+  const runImageScan = async () => {
+    if (!canScan()) return;
+    try {
+      const uri = await pickImage();
+      if (!uri) return;
+      setCropImageUri(uri);
+      setCropDefaultName('画像スキャン');
+    } catch (e) {
+      __DEV__ && console.warn('Image scan error:', e);
+      Alert.alert('エラー', '画像スキャン中にエラーが発生しました。');
+    }
+  };
+
+  // ── クロップ完了 → OCR処理 ──
+  const handleCropDone = async (croppedUri: string) => {
+    const name = cropDefaultName;
+    setCropImageUri(null);
+    setOcrLoading(true);
+    try {
+      await processOCRImage(croppedUri, name);
     } finally {
       setOcrLoading(false);
     }
   };
 
-  // ── OCRスキャン（スクショ・フォトライブラリ） ──
-  const runImageScan = async () => {
-    if (!canScan()) return;
-    setOcrLoading(true);
-    try {
-      const uri = await pickImage();
-      if (!uri) { setOcrLoading(false); return; }
-      await processOCRImage(uri, '画像スキャン');
-    } catch (e) {
-      __DEV__ && console.warn('Image scan error:', e);
-      Alert.alert('エラー', '画像スキャン中にエラーが発生しました。');
-    } finally {
-      setOcrLoading(false);
-    }
+  const handleCropCancel = () => {
+    setCropImageUri(null);
   };
 
   // ── OCR共通処理 ──
@@ -569,7 +586,7 @@ export default function App() {
                     Alert.alert('ありがとうございます！', 'プレミアムプランが有効になりました。');
                   }
                 }}
-                label="月額300円でプレミアムに登録"
+                label="月額330円でプレミアムに登録"
                 icon="💎"
               />
             </View>
@@ -593,7 +610,7 @@ export default function App() {
             {/* Apple必須: サブスクリプション開示情報 */}
             <View style={{ marginTop: 24, paddingTop: 16, borderTopWidth: 1, borderTopColor: C.border }}>
               <Text style={{ fontSize: 11, color: C.textMuted, lineHeight: 18, textAlign: 'center' }}>
-                月額300円（税込）の自動更新サブスクリプションです。{'\n'}
+                月額330円（税込）の自動更新サブスクリプションです。{'\n'}
                 購入確認時にApple IDアカウントに課金されます。{'\n'}
                 現在の期間終了の24時間前までにキャンセルしない限り、サブスクリプションは自動的に更新されます。{'\n'}
                 アカウントへの課金は、現在の期間終了前24時間以内に行われます。{'\n'}
@@ -814,7 +831,7 @@ export default function App() {
               <View style={{ flex: 1 }}>
                 <Text style={{ fontSize: 14, fontWeight: '700', color: C.text }}>プレミアムにアップグレード</Text>
                 <Text style={{ fontSize: 12, color: C.textSub, marginTop: 2 }}>
-                  広告なし・解析無制限・シェルフ無制限 — 月額300円
+                  広告なし・解析無制限・シェルフ無制限 — 月額330円
                 </Text>
               </View>
               <Text style={{ fontSize: 16, color: C.purple }}>→</Text>
@@ -1098,6 +1115,14 @@ export default function App() {
       {tab === 'shelf' && renderShelf()}
       {renderIngredientModal()}
       {renderPaywall()}
+
+      {/* ── 画像クロップUI ── */}
+      <ImageCropper
+        visible={!!cropImageUri}
+        imageUri={cropImageUri || ''}
+        onCrop={handleCropDone}
+        onCancel={handleCropCancel}
+      />
 
       {/* ── バナー広告（無料ユーザーのみ） ── */}
       {!isPremium && <BannerAdView />}
