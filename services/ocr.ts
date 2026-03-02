@@ -5,6 +5,7 @@
 import Constants from 'expo-constants';
 import * as ImagePicker from 'expo-image-picker';
 import { Alert } from 'react-native';
+import { normalizeOcrText } from './normalizeOcrText';
 
 /** Expo Go かどうか */
 function isExpoGo(): boolean {
@@ -104,7 +105,8 @@ export async function recognizeText(imageUri: string): Promise<string | null> {
  * ML Kitの認識テキストを成分パーサーに渡せる形に整形
  */
 export function cleanOCRText(rawText: string): string {
-  let text = rawText;
+  // 改行起因の分断空白を連結（\n が消える前に実行）
+  let text = normalizeOcrText(rawText);
 
   // よくあるOCR誤認識の修正
   text = text.replace(/\|/g, 'l');       // パイプ → l
