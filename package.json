@@ -1,7 +1,7 @@
 {
   "name": "skinlab",
   "version": "1.0.0",
-  "main": "expo/entry",
+  "main": "entry.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
