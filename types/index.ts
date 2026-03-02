@@ -7,7 +7,9 @@ export type CategoryKey =
   | 'anti_inflammatory'
   | 'antioxidant'
   | 'exfoliating'
-  | 'anti_aging';
+  | 'anti_aging'
+  | 'oil_based'
+  | 'uv_filter';
 
 export const CATEGORY_LABELS: Record<CategoryKey, string> = {
   brightening: '美白',
@@ -16,6 +18,8 @@ export const CATEGORY_LABELS: Record<CategoryKey, string> = {
   antioxidant: '抗酸化',
   exfoliating: '角質ケア',
   anti_aging: 'エイジング',
+  oil_based: '油性成分',
+  uv_filter: '日焼け止め成分',
 };
 
 /** 成分分類 */

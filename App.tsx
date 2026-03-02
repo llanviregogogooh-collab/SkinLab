@@ -58,6 +58,10 @@ const C = {
   orangeSoft: '#FFF7ED',
   cyan: '#06B6D4',
   cyanSoft: '#ECFEFF',
+  emerald: '#10B981',
+  emeraldSoft: '#ECFDF5',
+  amber: '#D97706',
+  amberSoft: '#FFFBEB',
 };
 
 const CATEGORY_COLORS: Record<CategoryKey, string> = {
@@ -67,6 +71,8 @@ const CATEGORY_COLORS: Record<CategoryKey, string> = {
   antioxidant: C.gold,
   exfoliating: C.orange,
   anti_aging: C.purple,
+  oil_based: C.emerald,
+  uv_filter: C.amber,
 };
 
 const CATEGORY_BG: Record<CategoryKey, string> = {
@@ -76,6 +82,8 @@ const CATEGORY_BG: Record<CategoryKey, string> = {
   antioxidant: C.goldSoft,
   exfoliating: C.orangeSoft,
   anti_aging: C.purpleSoft,
+  oil_based: C.emeraldSoft,
+  uv_filter: C.amberSoft,
 };
 
 const CATEGORY_ICONS: Record<CategoryKey, string> = {
@@ -85,6 +93,8 @@ const CATEGORY_ICONS: Record<CategoryKey, string> = {
   antioxidant: '🍇',
   exfoliating: '🧴',
   anti_aging: '⏳',
+  oil_based: '🫧',
+  uv_filter: '☀️',
 };
 
 // ── iOS向けシャドウ ──

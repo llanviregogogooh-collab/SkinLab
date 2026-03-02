@@ -116,6 +116,8 @@ export function groupByCategory(
     antioxidant: [],
     exfoliating: [],
     anti_aging: [],
+    oil_based: [],
+    uv_filter: [],
   };
 
   for (const item of ingredients) {
