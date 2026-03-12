@@ -65,18 +65,24 @@ export async function initAds(): Promise<void> {
   }
 }
 
+/** 広告オブジェクトを安全に破棄 */
+function destroyInterstitial(): void {
+  if (interstitialAd) {
+    try { interstitialAd.removeAllListeners(); } catch {}
+    interstitialAd = null;
+  }
+  isInterstitialLoaded = false;
+}
+
 /**
  * インタースティシャル広告をプリロード
+ * LOADED / ERROR のみ監視。CLOSED は showInterstitial() 側で処理する。
  */
 function loadInterstitial(): void {
   if (!InterstitialAdModule || !INTERSTITIAL_AD_UNIT_ID) return;
 
   try {
-    // 古い広告オブジェクトのリスナーを確実に解放
-    if (interstitialAd) {
-      try { interstitialAd.removeAllListeners(); } catch {}
-      interstitialAd = null;
-    }
+    destroyInterstitial();
 
     interstitialAd = InterstitialAdModule.createForAdRequest(INTERSTITIAL_AD_UNIT_ID);
 
@@ -84,16 +90,9 @@ function loadInterstitial(): void {
       isInterstitialLoaded = true;
     });
 
-    interstitialAd.addAdEventListener(AdEventType.CLOSED, () => {
-      isInterstitialLoaded = false;
-      // ネイティブUIの完全なdismissを待ってから次の広告をロード
-      setTimeout(() => loadInterstitial(), 500);
-    });
-
     interstitialAd.addAdEventListener(AdEventType.ERROR, (error: any) => {
       __DEV__ && console.warn('Interstitial ad error:', error);
       isInterstitialLoaded = false;
-      // エラー時はリトライ
       setTimeout(() => loadInterstitial(), 30000);
     });
 
@@ -104,21 +103,37 @@ function loadInterstitial(): void {
 }
 
 /**
- * インタースティシャル広告を表示
+ * インタースティシャル広告を表示し、閉じられるまで待つ。
+ * 広告が閉じられた後にリスナーを破棄→次の広告をプリロードする。
  */
-export async function showInterstitial(): Promise<boolean> {
+export function showInterstitial(): Promise<boolean> {
   if (!interstitialAd || !isInterstitialLoaded) {
     __DEV__ && console.log('Interstitial not ready (Expo Go or not loaded)');
-    return false;
+    return Promise.resolve(false);
   }
 
-  try {
-    await interstitialAd.show();
-    return true;
-  } catch (e) {
-    __DEV__ && console.warn('Failed to show interstitial:', e);
-    return false;
-  }
+  const ad = interstitialAd;
+
+  return new Promise<boolean>((resolve) => {
+    // 広告が閉じられたら: クリーンアップ → 次をロード → resolve
+    ad.addAdEventListener(AdEventType.CLOSED, () => {
+      destroyInterstitial();
+      // ネイティブUIが完全に消えるのを待ってからリロード
+      setTimeout(() => {
+        loadInterstitial();
+        resolve(true);
+      }, 600);
+    });
+
+    try {
+      ad.show();
+    } catch (e) {
+      __DEV__ && console.warn('Failed to show interstitial:', e);
+      destroyInterstitial();
+      setTimeout(() => loadInterstitial(), 5000);
+      resolve(false);
+    }
+  });
 }
 
 /**
