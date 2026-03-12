@@ -21,6 +21,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as StoreReview from 'expo-store-review';
 import { createScanResult, getMatchStats, groupByCategory, parseIngredientText } from './services/matcher';
+import { initPurchases, checkPremiumStatus, purchasePremium, restorePurchases } from './services/subscription';
 import { initAds, showInterstitial, BANNER_AD_UNIT_ID, isAdMobAvailable } from './services/ads';
 import { takePhoto, pickImage, recognizeText, cleanOCRText, isOCRAvailable } from './services/ocr';
 import {
@@ -200,13 +201,15 @@ function GradientButton({
 // メインApp
 // ══════════════════════════════════════════
 const STORAGE_KEY = '@clearlab_shelf';
+const SCAN_COUNT_KEY = '@clearlab_scan_count';
 const LIFETIME_SCAN_KEY = '@clearlab_lifetime_scans';
 const REVIEW_REQUESTED_KEY = '@clearlab_review_requested';
 const REVIEW_TRIGGER_COUNT = 3;
 
 // ── 無料プランの制限 ──
+const FREE_DAILY_SCAN_LIMIT = 5;
 const FREE_SHELF_LIMIT = 5;
-const INTERSTITIAL_SCAN_INTERVAL = 3;   // 解析N回ごとに広告
+const INTERSTITIAL_SCAN_INTERVAL = 2;   // 解析N回ごとに広告
 const INTERSTITIAL_DETAIL_INTERVAL = 5; // 成分詳細N回ごとに広告
 
 export default function App() {
@@ -224,7 +227,10 @@ export default function App() {
   const [cropImageUri, setCropImageUri] = useState<string | null>(null);
   const [cropDefaultName, setCropDefaultName] = useState('');
 
-  // ── 広告 ──
+  // ── プレミアム・広告 ──
+  const [isPremium, setIsPremium] = useState(false);
+  const [showPaywall, setShowPaywall] = useState(false);
+  const [dailyScanCount, setDailyScanCount] = useState(0);
   const [scanAdCounter, setScanAdCounter] = useState(0);
   const [detailAdCounter, setDetailAdCounter] = useState(0);
 
@@ -240,12 +246,43 @@ export default function App() {
     })();
   }, []);
 
-  // ── 広告の初期化 ──
+  // ── 課金・広告の初期化 ──
   useEffect(() => {
     (async () => {
-      await initAds();
+      await initPurchases();
+      const premium = await checkPremiumStatus();
+      setIsPremium(premium);
+      if (!premium) {
+        await initAds();
+      }
+      // 日次スキャンカウントの復元
+      try {
+        const json = await AsyncStorage.getItem(SCAN_COUNT_KEY);
+        if (json) {
+          const { count, date } = JSON.parse(json);
+          const today = new Date().toDateString();
+          if (date === today) {
+            setDailyScanCount(count);
+          }
+        }
+      } catch (e) {
+        __DEV__ && console.warn('スキャンカウント読み込みエラー:', e);
+      }
     })();
   }, []);
+
+  const incrementScanCount = useCallback(async () => {
+    const newCount = dailyScanCount + 1;
+    setDailyScanCount(newCount);
+    try {
+      await AsyncStorage.setItem(SCAN_COUNT_KEY, JSON.stringify({
+        count: newCount,
+        date: new Date().toDateString(),
+      }));
+    } catch (e) {
+      __DEV__ && console.warn('スキャンカウント保存エラー:', e);
+    }
+  }, [dailyScanCount]);
 
   // ── AsyncStorage: 保存用ヘルパー ──
   const persistShelf = useCallback(async (results: ScanResult[]) => {
@@ -256,8 +293,19 @@ export default function App() {
     }
   }, []);
 
+  // ── スキャン制限チェック ──
+  const canScan = (): boolean => {
+    if (isPremium) return true;
+    if (dailyScanCount >= FREE_DAILY_SCAN_LIMIT) {
+      setShowPaywall(true);
+      return false;
+    }
+    return true;
+  };
+
   // ── スキャン後の広告表示 ──
   const handlePostScanAd = () => {
+    if (isPremium) return;
     const newCount = scanAdCounter + 1;
     setScanAdCounter(newCount);
     if (newCount % INTERSTITIAL_SCAN_INTERVAL === 0) {
@@ -289,6 +337,7 @@ export default function App() {
 
   // ── テキスト入力から成分解析 ──
   const runTextScan = () => {
+    if (!canScan()) return;
     const trimmed = ingredientInput.trim();
     if (!trimmed) {
       Alert.alert('入力エラー', '成分リストを入力してください。');
@@ -305,12 +354,14 @@ export default function App() {
     setTab('scan');
     setIngredientInput('');
     setProductNameInput('');
+    incrementScanCount();
     handlePostScanAd();
     maybeRequestReview();
   };
 
   // ── OCRスキャン（カメラ撮影） → クロッパー表示 ──
   const runCameraScan = async () => {
+    if (!canScan()) return;
     try {
       const uri = await takePhoto();
       if (!uri) return;
@@ -324,6 +375,7 @@ export default function App() {
 
   // ── OCRスキャン（スクショ・フォトライブラリ） → クロッパー表示 ──
   const runImageScan = async () => {
+    if (!canScan()) return;
     try {
       const uri = await pickImage();
       if (!uri) return;
@@ -374,6 +426,7 @@ export default function App() {
     const result = createScanResult(parsed, '', defaultName);
     setScanResult(result);
     setTab('scan');
+    incrementScanCount();
     handlePostScanAd();
     maybeRequestReview();
   };
@@ -411,8 +464,8 @@ export default function App() {
   };
 
   const doSave = (result: ScanResult) => {
-    if (savedResults.length >= FREE_SHELF_LIMIT) {
-      Alert.alert('上限に達しました', '保存できるのは5件までです。');
+    if (!isPremium && savedResults.length >= FREE_SHELF_LIMIT) {
+      setShowPaywall(true);
       return;
     }
     setSavedResults((prev) => {
@@ -474,12 +527,119 @@ export default function App() {
   const openIngredientDetail = (entry: IngredientEntry | null) => {
     if (!entry) return;
     setSelectedIngredient(entry);
-    const newCount = detailAdCounter + 1;
-    setDetailAdCounter(newCount);
-    if (newCount % INTERSTITIAL_DETAIL_INTERVAL === 0) {
-      showInterstitial();
+    if (!isPremium) {
+      const newCount = detailAdCounter + 1;
+      setDetailAdCounter(newCount);
+      if (newCount % INTERSTITIAL_DETAIL_INTERVAL === 0) {
+        showInterstitial();
+      }
     }
   };
+
+  // ══════════════════════════════════════════
+  // ペイウォールモーダル
+  // ══════════════════════════════════════════
+  const renderPaywall = () => (
+    <Modal visible={showPaywall} animationType="slide" presentationStyle="pageSheet">
+      <View style={{ flex: 1, backgroundColor: C.bg }}>
+        <ScrollView contentContainerStyle={{ paddingBottom: 40 }} bounces={false}>
+          {/* グラデーションヘッダー */}
+          <LinearGradient
+            colors={[C.gradStart, C.gradEnd]}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 1 }}
+            style={{ paddingTop: 60, paddingBottom: 40, paddingHorizontal: 24, alignItems: 'center' }}
+          >
+            <TouchableOpacity
+              style={{ position: 'absolute', top: 16, right: 16, width: 36, height: 36, borderRadius: 18, backgroundColor: 'rgba(255,255,255,0.25)', justifyContent: 'center', alignItems: 'center' }}
+              onPress={() => setShowPaywall(false)}
+            >
+              <Text style={{ fontSize: 16, color: '#FFF', fontWeight: '600' }}>✕</Text>
+            </TouchableOpacity>
+            <View style={{ width: 72, height: 72, borderRadius: 36, backgroundColor: 'rgba(255,255,255,0.2)', justifyContent: 'center', alignItems: 'center', marginBottom: 16 }}>
+              <Text style={{ fontSize: 36 }}>💎</Text>
+            </View>
+            <Text style={{ fontSize: 26, fontWeight: '800', color: '#FFF', letterSpacing: 0.5 }}>Premium</Text>
+            <Text style={{ fontSize: 14, color: 'rgba(255,255,255,0.85)', marginTop: 6 }}>
+              すべての機能を制限なく使えます
+            </Text>
+          </LinearGradient>
+
+          <View style={{ padding: 24, marginTop: -16 }}>
+            {/* ベネフィットカード */}
+            <View style={[st.card, { padding: 0, overflow: 'hidden' }]}>
+              {[
+                { icon: '🔍', color: C.accent, text: '成分解析 無制限', sub: '無料: 1日5回まで' },
+                { icon: '📦', color: C.purple, text: 'シェルフ保存 無制限', sub: '無料: 5件まで' },
+                { icon: '🚫', color: C.pink, text: '広告を完全非表示', sub: '快適な使用体験' },
+              ].map((item, i) => (
+                <View key={i} style={{ flexDirection: 'row', alignItems: 'center', padding: 16, borderTopWidth: i > 0 ? 1 : 0, borderTopColor: C.border }}>
+                  <View style={{ width: 44, height: 44, borderRadius: 12, backgroundColor: `${item.color}15`, justifyContent: 'center', alignItems: 'center', marginRight: 14 }}>
+                    <Text style={{ fontSize: 20 }}>{item.icon}</Text>
+                  </View>
+                  <View style={{ flex: 1 }}>
+                    <Text style={{ fontSize: 15, fontWeight: '700', color: C.text }}>{item.text}</Text>
+                    <Text style={{ fontSize: 12, color: C.textMuted, marginTop: 2 }}>{item.sub}</Text>
+                  </View>
+                </View>
+              ))}
+            </View>
+
+            {/* 購入ボタン */}
+            <View style={{ marginTop: 20 }}>
+              <GradientButton
+                onPress={async () => {
+                  const success = await purchasePremium();
+                  if (success) {
+                    setIsPremium(true);
+                    setShowPaywall(false);
+                    Alert.alert('ありがとうございます！', 'プレミアムプランが有効になりました。');
+                  }
+                }}
+                label="月額330円でプレミアムに登録"
+                icon="💎"
+              />
+            </View>
+
+            <TouchableOpacity
+              style={{ alignItems: 'center', marginTop: 16, paddingVertical: 8 }}
+              onPress={async () => {
+                const success = await restorePurchases();
+                if (success) {
+                  setIsPremium(true);
+                  setShowPaywall(false);
+                  Alert.alert('復元完了', 'プレミアムプランが復元されました。');
+                } else {
+                  Alert.alert('復元できませんでした', '有効な購入が見つかりませんでした。');
+                }
+              }}
+            >
+              <Text style={{ color: C.accent, fontSize: 13, fontWeight: '600' }}>購入を復元する</Text>
+            </TouchableOpacity>
+
+            {/* Apple必須: サブスクリプション開示情報 */}
+            <View style={{ marginTop: 24, paddingTop: 16, borderTopWidth: 1, borderTopColor: C.border }}>
+              <Text style={{ fontSize: 11, color: C.textMuted, lineHeight: 18, textAlign: 'center' }}>
+                月額330円（税込）の自動更新サブスクリプションです。{'\n'}
+                購入確認時にApple IDアカウントに課金されます。{'\n'}
+                現在の期間終了の24時間前までにキャンセルしない限り、サブスクリプションは自動的に更新されます。{'\n'}
+                アカウントへの課金は、現在の期間終了前24時間以内に行われます。{'\n'}
+                サブスクリプションの管理・キャンセルは、端末の「設定」→ Apple ID →「サブスクリプション」から行えます。
+              </Text>
+              <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: 12, gap: 16 }}>
+                <TouchableOpacity onPress={() => Linking.openURL('https://llanviregogogooh-collab.github.io/SkinLab/privacy-policy.html')}>
+                  <Text style={{ fontSize: 11, color: C.accent, textDecorationLine: 'underline' }}>プライバシーポリシー</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => Linking.openURL('https://llanviregogogooh-collab.github.io/SkinLab/terms-of-service.html')}>
+                  <Text style={{ fontSize: 11, color: C.accent, textDecorationLine: 'underline' }}>利用規約</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          </View>
+        </ScrollView>
+      </View>
+    </Modal>
+  );
 
   // ══════════════════════════════════════════
   // 成分詳細モーダル
@@ -662,6 +822,32 @@ export default function App() {
           )}
         </View>
 
+        {/* ── プレミアムバナー（無料ユーザーのみ） ── */}
+        {!isPremium && (
+          <TouchableOpacity
+            style={{ marginTop: 12, borderRadius: 16, overflow: 'hidden', ...shadow(0.1, 8, 3) }}
+            onPress={() => setShowPaywall(true)}
+            activeOpacity={0.8}
+          >
+            <LinearGradient
+              colors={['#EEF2FF', '#F5F3FF']}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 0 }}
+              style={{ padding: 18, flexDirection: 'row', alignItems: 'center' }}
+            >
+              <View style={{ width: 44, height: 44, borderRadius: 22, backgroundColor: 'rgba(139,92,252,0.12)', justifyContent: 'center', alignItems: 'center', marginRight: 14 }}>
+                <Text style={{ fontSize: 22 }}>💎</Text>
+              </View>
+              <View style={{ flex: 1 }}>
+                <Text style={{ fontSize: 14, fontWeight: '700', color: C.text }}>プレミアムにアップグレード</Text>
+                <Text style={{ fontSize: 12, color: C.textSub, marginTop: 2 }}>
+                  広告なし・解析無制限・シェルフ無制限 — 月額330円
+                </Text>
+              </View>
+              <Text style={{ fontSize: 16, color: C.purple }}>→</Text>
+            </LinearGradient>
+          </TouchableOpacity>
+        )}
 
         {/* ── 成分テキスト入力セクション ── */}
         <View style={[st.card, { marginTop: 16 }]}>
@@ -938,6 +1124,8 @@ export default function App() {
       {tab === 'scan' && renderScanResult()}
       {tab === 'shelf' && renderShelf()}
       {renderIngredientModal()}
+      {renderPaywall()}
+
       {/* ── 画像クロップUI ── */}
       <ImageCropper
         visible={!!cropImageUri}
@@ -946,8 +1134,8 @@ export default function App() {
         onCancel={handleCropCancel}
       />
 
-      {/* ── バナー広告 ── */}
-      <BannerAdView />
+      {/* ── バナー広告（無料ユーザーのみ） ── */}
+      {!isPremium && <BannerAdView />}
 
       {/* ── タブバー ── */}
       <View style={st.tabBar}>
