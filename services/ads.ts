@@ -72,6 +72,12 @@ function loadInterstitial(): void {
   if (!InterstitialAdModule || !INTERSTITIAL_AD_UNIT_ID) return;
 
   try {
+    // 古い広告オブジェクトのリスナーを確実に解放
+    if (interstitialAd) {
+      try { interstitialAd.removeAllListeners(); } catch {}
+      interstitialAd = null;
+    }
+
     interstitialAd = InterstitialAdModule.createForAdRequest(INTERSTITIAL_AD_UNIT_ID);
 
     interstitialAd.addAdEventListener(AdEventType.LOADED, () => {
@@ -80,12 +86,15 @@ function loadInterstitial(): void {
 
     interstitialAd.addAdEventListener(AdEventType.CLOSED, () => {
       isInterstitialLoaded = false;
-      loadInterstitial();
+      // ネイティブUIの完全なdismissを待ってから次の広告をロード
+      setTimeout(() => loadInterstitial(), 500);
     });
 
     interstitialAd.addAdEventListener(AdEventType.ERROR, (error: any) => {
       __DEV__ && console.warn('Interstitial ad error:', error);
       isInterstitialLoaded = false;
+      // エラー時はリトライ
+      setTimeout(() => loadInterstitial(), 30000);
     });
 
     interstitialAd.load();

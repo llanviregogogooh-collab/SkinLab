@@ -304,12 +304,12 @@ export default function App() {
   };
 
   // ── スキャン後の広告表示 ──
-  const handlePostScanAd = () => {
+  const handlePostScanAd = async () => {
     if (isPremium) return;
     const newCount = scanAdCounter + 1;
     setScanAdCounter(newCount);
     if (newCount % INTERSTITIAL_SCAN_INTERVAL === 0) {
-      showInterstitial();
+      await showInterstitial();
     }
   };
 
@@ -524,14 +524,14 @@ export default function App() {
   };
 
   // ── 成分詳細を開く（広告カウント付き） ──
-  const openIngredientDetail = (entry: IngredientEntry | null) => {
+  const openIngredientDetail = async (entry: IngredientEntry | null) => {
     if (!entry) return;
     setSelectedIngredient(entry);
     if (!isPremium) {
       const newCount = detailAdCounter + 1;
       setDetailAdCounter(newCount);
       if (newCount % INTERSTITIAL_DETAIL_INTERVAL === 0) {
-        showInterstitial();
+        await showInterstitial();
       }
     }
   };
