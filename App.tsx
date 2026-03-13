@@ -287,8 +287,8 @@ export default function App() {
       const premium = await checkPremiumStatus();
       setIsPremium(premium);
       if (!premium) {
-        await initAds();
-        setAdsReady(true);
+        const adsInitialized = await initAds();
+        setAdsReady(adsInitialized);
       }
     })();
   }, []);
@@ -326,6 +326,22 @@ export default function App() {
     }
   }, []);
 
+  const resetDevScanLimits = useCallback(async () => {
+    if (!__DEV__) return;
+    const today = new Date().toDateString();
+    try {
+      await AsyncStorage.removeItem(SCAN_COUNT_KEY);
+      setDailyScanCount(0);
+      setScanDate(today);
+      setShowPaywall(false);
+      scanAdCounterRef.current = 0;
+      detailAdCounterRef.current = 0;
+      Alert.alert('開発用', '解析上限をリセットしました。');
+    } catch (e) {
+      __DEV__ && console.warn('開発用リセットエラー:', e);
+      Alert.alert('開発用', '解析上限のリセットに失敗しました。');
+    }
+  }, []);
   // ── スキャン制限チェック ──
   const canScan = (): boolean => {
     if (!scanCountReady) return false; // 起動直後はカウント読み込み完了まで不許可
@@ -393,12 +409,12 @@ export default function App() {
     try {
       Keyboard.dismiss();
       const result = createScanResult(parsed, '', productNameInput.trim() || '手入力スキャン');
+      incrementScanCount();
+      await handlePostScanAd();
       setScanResult(result);
       setTab('scan');
       setIngredientInput('');
       setProductNameInput('');
-      incrementScanCount();
-      await handlePostScanAd();
       maybeRequestReview();
     } finally {
       scanningRef.current = false;
@@ -441,16 +457,20 @@ export default function App() {
     }
   };
 
-  // ── クロップ完了 → OCR処理 ──
-  const handleCropDone = async (croppedUri: string) => {
+  // ── クロップ完了 → 少し待ってからOCR処理 ──
+  const handleCropDone = (croppedUri: string) => {
     const name = cropDefaultName;
     setCropImageUri(null);
     setOcrLoading(true);
-    try {
-      await processOCRImage(croppedUri, name);
-    } finally {
-      setOcrLoading(false);
-    }
+    setTimeout(() => {
+      void (async () => {
+        try {
+          await processOCRImage(croppedUri, name);
+        } finally {
+          setOcrLoading(false);
+        }
+      })();
+    }, 400);
   };
 
   const handleCropCancel = () => {
@@ -478,12 +498,13 @@ export default function App() {
     }
 
     const result = createScanResult(parsed, '', defaultName);
-    setScanResult(result);
-    setTab('scan');
     incrementScanCount();
     await handlePostScanAd();
+    setScanResult(result);
+    setTab('scan');
     maybeRequestReview();
   };
+
 
   const saveResult = () => {
     if (!scanResult) return;
@@ -648,6 +669,8 @@ export default function App() {
                     setIsPremium(true);
                     setShowPaywall(false);
                     Alert.alert('ありがとうございます！', 'プレミアムプランが有効になりました。');
+                  } else {
+                    // purchasePremium() 側で userCancelled 以外の失敗アラートを表示する
                   }
                 }}
                 label="月額330円でプレミアムに登録"
@@ -900,6 +923,27 @@ export default function App() {
               </View>
               <Text style={{ fontSize: 16, color: C.purple }}>→</Text>
             </LinearGradient>
+          </TouchableOpacity>
+        )}
+        {__DEV__ && (
+          <TouchableOpacity
+            style={[st.card, { marginTop: 12, borderWidth: 1, borderColor: '#F59E0B', backgroundColor: '#FFFBEB' }]}
+            activeOpacity={0.8}
+            onPress={() => {
+              Alert.alert(
+                '開発用',
+                '解析上限をリセットしますか？',
+                [
+                  { text: 'キャンセル', style: 'cancel' },
+                  { text: 'リセット', style: 'destructive', onPress: () => { void resetDevScanLimits(); } },
+                ]
+              );
+            }}
+          >
+            <Text style={{ fontSize: 14, fontWeight: '700', color: '#92400E' }}>開発用: 解析上限をリセット</Text>
+            <Text style={{ fontSize: 12, color: '#B45309', marginTop: 4 }}>
+              本番ビルドでは表示も実行もされません。
+            </Text>
           </TouchableOpacity>
         )}
 

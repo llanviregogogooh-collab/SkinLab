@@ -186,8 +186,6 @@ export default function ImageCropper({ visible, imageUri, onCrop, onCancel }: Pr
     onCancel();
   };
 
-  if (!visible) return null;
-
   const cornerPositions = [
     { x: crop.x, y: crop.y },
     { x: crop.x + crop.w, y: crop.y },

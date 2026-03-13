@@ -42,6 +42,9 @@ export async function checkPremiumStatus(): Promise<boolean> {
   if (Purchases) {
     try {
       const customerInfo = await Purchases.getCustomerInfo();
+      if (__DEV__) {
+        console.log('[RC] checkPremiumStatus - active entitlements:', Object.keys(customerInfo.entitlements.active));
+      }
       const isPremium = customerInfo.entitlements.active[ENTITLEMENT_ID] !== undefined;
       await AsyncStorage.setItem(PREMIUM_CACHE_KEY, JSON.stringify({
         isPremium,
@@ -82,11 +85,43 @@ export async function purchasePremium(): Promise<boolean> {
   try {
     const offerings = await Purchases.getOfferings();
     const currentOffering = offerings.current;
-    if (!currentOffering) return false;
-    const monthlyPackage = currentOffering.monthly;
-    if (!monthlyPackage) return false;
+
+    if (__DEV__) {
+      console.log('[RC] offerings.current:', currentOffering?.identifier ?? 'null');
+      console.log('[RC] availablePackages:', currentOffering?.availablePackages?.map((p: any) => `${p.identifier}(${p.packageType})`));
+    }
+
+    if (!currentOffering) {
+      Alert.alert('エラー', 'オファリングが取得できませんでした。しばらくしてからもう一度お試しください。');
+      return false;
+    }
+
+    // .monthly ($rc_monthly) 優先。設定次第で null になるためフォールバックあり
+    const monthlyPackage = currentOffering.monthly
+      ?? currentOffering.availablePackages?.[0]
+      ?? null;
+
+    if (__DEV__) {
+      console.log('[RC] selected package:', monthlyPackage?.identifier ?? 'null');
+    }
+
+    if (!monthlyPackage) {
+      Alert.alert('エラー', '購入可能なプランが見つかりませんでした。');
+      return false;
+    }
+
     const { customerInfo } = await Purchases.purchasePackage(monthlyPackage);
+
+    if (__DEV__) {
+      console.log('[RC] active entitlements after purchase:', Object.keys(customerInfo.entitlements.active));
+    }
+
     const isPremium = customerInfo.entitlements.active[ENTITLEMENT_ID] !== undefined;
+
+    if (__DEV__ && !isPremium) {
+      console.warn(`[RC] entitlement "${ENTITLEMENT_ID}" not found. Active:`, Object.keys(customerInfo.entitlements.active));
+    }
+
     await AsyncStorage.setItem(PREMIUM_CACHE_KEY, JSON.stringify({
       isPremium,
       checkedAt: Date.now(),
@@ -97,6 +132,7 @@ export async function purchasePremium(): Promise<boolean> {
       __DEV__ && console.log('User cancelled purchase');
     } else {
       __DEV__ && console.warn('Purchase error:', e);
+      Alert.alert('購入エラー', e?.message ?? '購入処理中にエラーが発生しました。\nしばらくしてからもう一度お試しください。');
     }
     return false;
   }

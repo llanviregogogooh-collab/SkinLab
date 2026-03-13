@@ -28,30 +28,37 @@ let InterstitialAdModule: any = null;
 let AdEventType: any = null;
 let interstitialAd: any = null;
 let isInterstitialLoaded = false;
+let interstitialShowPromise: Promise<boolean> | null = null;
 
 function isExpoGo(): boolean {
   return Constants.appOwnership === 'expo';
 }
 
-export async function initAds(): Promise<void> {
+export async function initAds(): Promise<boolean> {
   if (isExpoGo()) {
     __DEV__ && console.log('AdMob: Expo Go detected — skipping initialization');
-    return;
+    return false;
   }
   try {
     const moduleName = 'react-native-google-' + 'mobile-ads';
     const admob = require(moduleName);
-    MobileAds = admob.default || admob;
+    const mobileAdsFactory = admob.default || admob.MobileAds || admob;
+    MobileAds = typeof mobileAdsFactory === 'function' ? mobileAdsFactory() : mobileAdsFactory;
     InterstitialAdModule = admob.InterstitialAd;
     AdEventType = admob.AdEventType;
-    if (MobileAds.initialize) {
+    if (MobileAds?.initialize) {
       await MobileAds.initialize();
     }
     loadInterstitial();
     __DEV__ && console.log('AdMob initialized');
+    return true;
   } catch (e) {
     __DEV__ && console.warn('AdMob not available:', e);
     MobileAds = null;
+    InterstitialAdModule = null;
+    AdEventType = null;
+    destroyInterstitial();
+    return false;
   }
 }
 
@@ -92,6 +99,10 @@ function loadInterstitial(): void {
  * CLOSED / ERROR の両方で必ず resolve する。タイムアウト付き。
  */
 export function showInterstitial(): Promise<boolean> {
+  if (interstitialShowPromise) {
+    return interstitialShowPromise;
+  }
+
   if (!interstitialAd || !isInterstitialLoaded) {
     __DEV__ && console.log('Interstitial not ready');
     return Promise.resolve(false);
@@ -100,11 +111,21 @@ export function showInterstitial(): Promise<boolean> {
   const ad = interstitialAd;
   let settled = false;
 
-  return new Promise<boolean>((resolve) => {
+  interstitialShowPromise = new Promise<boolean>((resolve) => {
+    let unsubscribeClosed: (() => void) | undefined;
+    let unsubscribeError: (() => void) | undefined;
+
+    const cleanup = () => {
+      clearTimeout(timer);
+      try { unsubscribeClosed?.(); } catch {}
+      try { unsubscribeError?.(); } catch {}
+      interstitialShowPromise = null;
+    };
+
     const settle = (result: boolean) => {
       if (settled) return;
       settled = true;
-      clearTimeout(timer);
+      cleanup();
       destroyInterstitial();
       setTimeout(() => {
         loadInterstitial();
@@ -118,21 +139,19 @@ export function showInterstitial(): Promise<boolean> {
       settle(false);
     }, 15000);
 
-    ad.addAdEventListener(AdEventType.CLOSED, () => settle(true));
-    ad.addAdEventListener(AdEventType.ERROR, (err: any) => {
+    unsubscribeClosed = ad.addAdEventListener(AdEventType.CLOSED, () => settle(true));
+    unsubscribeError = ad.addAdEventListener(AdEventType.ERROR, (err: any) => {
       __DEV__ && console.warn('Interstitial show error:', err);
       settle(false);
     });
 
-    (async () => {
-      try {
-        await ad.show();
-      } catch (e) {
-        __DEV__ && console.warn('ad.show() threw:', e);
-        settle(false);
-      }
-    })();
+    void ad.show().catch((e: any) => {
+      __DEV__ && console.warn('ad.show() threw:', e);
+      settle(false);
+    });
   });
+
+  return interstitialShowPromise;
 }
 
 export function isAdMobAvailable(): boolean {
