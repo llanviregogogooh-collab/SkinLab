@@ -1,5 +1,5 @@
 // App.tsx
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import {
   View,
   Text,
@@ -234,9 +234,11 @@ export default function App() {
   const [showPaywall, setShowPaywall] = useState(false);
   const [dailyScanCount, setDailyScanCount] = useState(0);
   const [scanDate, setScanDate] = useState('');
+  const [scanCountReady, setScanCountReady] = useState(false);
   const [adsReady, setAdsReady] = useState(false);
-  const [scanAdCounter, setScanAdCounter] = useState(0);
-  const [detailAdCounter, setDetailAdCounter] = useState(0);
+  const scanAdCounterRef = useRef(0);
+  const detailAdCounterRef = useRef(0);
+  const scanningRef = useRef(false); // 連打防止用
 
   // ── AsyncStorage: 起動時に読み込み ──
   useEffect(() => {
@@ -247,21 +249,6 @@ export default function App() {
       } catch (e) {
         __DEV__ && console.warn('シェルフ読み込みエラー:', e);
       }
-    })();
-  }, []);
-
-  // ── 課金・広告の初期化 ──
-  useEffect(() => {
-    (async () => {
-      await initPurchases();
-      const premium = await checkPremiumStatus();
-      setIsPremium(premium);
-      if (!premium) {
-        await initAds();
-        setAdsReady(true);
-      }
-      // 日次スキャンカウントの復元
-      await loadScanCount();
     })();
   }, []);
 
@@ -276,7 +263,6 @@ export default function App() {
           setDailyScanCount(count);
           setScanDate(today);
         } else {
-          // 日付が変わっていたらリセット
           setDailyScanCount(0);
           setScanDate(today);
         }
@@ -286,6 +272,25 @@ export default function App() {
     } catch (e) {
       __DEV__ && console.warn('スキャンカウント読み込みエラー:', e);
     }
+    setScanCountReady(true);
+  }, []);
+
+  // ── スキャンカウントを先に読み込み（課金初期化より前） ──
+  useEffect(() => {
+    loadScanCount();
+  }, [loadScanCount]);
+
+  // ── 課金・広告の初期化 ──
+  useEffect(() => {
+    (async () => {
+      await initPurchases();
+      const premium = await checkPremiumStatus();
+      setIsPremium(premium);
+      if (!premium) {
+        await initAds();
+        setAdsReady(true);
+      }
+    })();
   }, []);
 
   // ── フォアグラウンド復帰時に日付チェック ──
@@ -300,20 +305,17 @@ export default function App() {
 
   const incrementScanCount = useCallback(async () => {
     const today = new Date().toDateString();
-    // 日付が変わっていたら0からカウント
-    const base = scanDate === today ? dailyScanCount : 0;
-    const newCount = base + 1;
-    setDailyScanCount(newCount);
-    setScanDate(today);
-    try {
-      await AsyncStorage.setItem(SCAN_COUNT_KEY, JSON.stringify({
+    setDailyScanCount((prev) => {
+      const base = scanDate === today ? prev : 0;
+      const newCount = base + 1;
+      AsyncStorage.setItem(SCAN_COUNT_KEY, JSON.stringify({
         count: newCount,
         date: today,
-      }));
-    } catch (e) {
-      __DEV__ && console.warn('スキャンカウント保存エラー:', e);
-    }
-  }, [dailyScanCount, scanDate]);
+      })).catch((e) => __DEV__ && console.warn('スキャンカウント保存エラー:', e));
+      return newCount;
+    });
+    setScanDate(today);
+  }, [scanDate]);
 
   // ── AsyncStorage: 保存用ヘルパー ──
   const persistShelf = useCallback(async (results: ScanResult[]) => {
@@ -326,9 +328,9 @@ export default function App() {
 
   // ── スキャン制限チェック ──
   const canScan = (): boolean => {
+    if (!scanCountReady) return false; // 起動直後はカウント読み込み完了まで不許可
     if (isPremium) return true;
     const today = new Date().toDateString();
-    // 日付が変わっていればカウントをリセット扱いにする
     const effectiveCount = scanDate === today ? dailyScanCount : 0;
     if (effectiveCount >= FREE_DAILY_SCAN_LIMIT) {
       setShowPaywall(true);
@@ -340,9 +342,8 @@ export default function App() {
   // ── スキャン後の広告表示 ──
   const handlePostScanAd = async () => {
     if (isPremium) return;
-    const newCount = scanAdCounter + 1;
-    setScanAdCounter(newCount);
-    if (newCount % INTERSTITIAL_SCAN_INTERVAL === 0) {
+    scanAdCounterRef.current += 1;
+    if (scanAdCounterRef.current % INTERSTITIAL_SCAN_INTERVAL === 0) {
       await showInterstitial();
     }
   };
@@ -370,7 +371,8 @@ export default function App() {
   }, []);
 
   // ── テキスト入力から成分解析 ──
-  const runTextScan = () => {
+  const runTextScan = async () => {
+    if (scanningRef.current) return;
     if (!canScan()) return;
     const trimmed = ingredientInput.trim();
     if (!trimmed) {
@@ -382,20 +384,27 @@ export default function App() {
       Alert.alert('入力エラー', '成分を検出できませんでした。\n成分名をカンマや改行で区切って入力してください。');
       return;
     }
-    Keyboard.dismiss();
-    const result = createScanResult(parsed, '', productNameInput.trim() || '手入力スキャン');
-    setScanResult(result);
-    setTab('scan');
-    setIngredientInput('');
-    setProductNameInput('');
-    incrementScanCount();
-    handlePostScanAd();
-    maybeRequestReview();
+    scanningRef.current = true;
+    try {
+      Keyboard.dismiss();
+      const result = createScanResult(parsed, '', productNameInput.trim() || '手入力スキャン');
+      setScanResult(result);
+      setTab('scan');
+      setIngredientInput('');
+      setProductNameInput('');
+      incrementScanCount();
+      await handlePostScanAd();
+      maybeRequestReview();
+    } finally {
+      scanningRef.current = false;
+    }
   };
 
   // ── OCRスキャン（カメラ撮影） → クロッパー表示 ──
   const runCameraScan = async () => {
+    if (scanningRef.current) return;
     if (!canScan()) return;
+    scanningRef.current = true;
     try {
       const uri = await takePhoto();
       if (!uri) return;
@@ -404,12 +413,16 @@ export default function App() {
     } catch (e) {
       __DEV__ && console.warn('Camera scan error:', e);
       Alert.alert('エラー', 'カメラスキャン中にエラーが発生しました。');
+    } finally {
+      scanningRef.current = false;
     }
   };
 
   // ── OCRスキャン（スクショ・フォトライブラリ） → クロッパー表示 ──
   const runImageScan = async () => {
+    if (scanningRef.current) return;
     if (!canScan()) return;
+    scanningRef.current = true;
     try {
       const uri = await pickImage();
       if (!uri) return;
@@ -418,6 +431,8 @@ export default function App() {
     } catch (e) {
       __DEV__ && console.warn('Image scan error:', e);
       Alert.alert('エラー', '画像スキャン中にエラーが発生しました。');
+    } finally {
+      scanningRef.current = false;
     }
   };
 
@@ -558,16 +573,16 @@ export default function App() {
   };
 
   // ── 成分詳細を開く（広告カウント付き） ──
+  // 広告対象回は先に広告を出し、閉じてからモーダルを開く
   const openIngredientDetail = async (entry: IngredientEntry | null) => {
     if (!entry) return;
-    setSelectedIngredient(entry);
     if (!isPremium) {
-      const newCount = detailAdCounter + 1;
-      setDetailAdCounter(newCount);
-      if (newCount % INTERSTITIAL_DETAIL_INTERVAL === 0) {
+      detailAdCounterRef.current += 1;
+      if (detailAdCounterRef.current % INTERSTITIAL_DETAIL_INTERVAL === 0) {
         await showInterstitial();
       }
     }
+    setSelectedIngredient(entry);
   };
 
   // ══════════════════════════════════════════

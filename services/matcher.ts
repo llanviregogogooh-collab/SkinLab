@@ -23,10 +23,11 @@ export function matchIngredients(ocrTexts: string[]): MatchedIngredient[] {
 
 /**
  * 成分名テキストからDBを検索する
- * 完全一致（化粧品名/医薬部外品名） → alias一致 → INCI一致 → 部分一致
+ * 完全一致 → alias完全一致 → INCI完全一致 → 部分一致（最長優先・5文字以上）
  */
 function findIngredient(text: string): IngredientEntry | null {
   const normalized = normalizeText(text);
+  if (!normalized) return null;
 
   // 化粧品表示名称で完全一致
   const cosmeticMatch = INGREDIENTS_DB.find(
@@ -40,50 +41,40 @@ function findIngredient(text: string): IngredientEntry | null {
   );
   if (quasiDrugMatch) return quasiDrugMatch;
 
-  // alias一致
+  // alias完全一致
   const aliasMatch = INGREDIENTS_DB.find((entry) =>
     entry.aliases.some((alias) => normalizeText(alias) === normalized)
   );
   if (aliasMatch) return aliasMatch;
 
-  // INCI名一致
+  // INCI名完全一致
   const inciMatch = INGREDIENTS_DB.find(
     (entry) => normalizeText(entry.name_inci) === normalized
   );
   if (inciMatch) return inciMatch;
 
-  // 化粧品名で部分一致
-  const partialMatch = INGREDIENTS_DB.find((entry) => {
-    const entryName = normalizeText(entry.name_cosmetic);
-    return (
-      (entryName.length >= 3 && normalized.includes(entryName)) ||
-      (normalized.length >= 3 && entryName.includes(normalized))
-    );
-  });
-  if (partialMatch) return partialMatch;
+  // 部分一致: 最低5文字以上 & 最長一致を優先（短いクエリの誤爆防止）
+  if (normalized.length >= 5) {
+    const partialCandidates: Array<{ entry: IngredientEntry; matchLen: number }> = [];
 
-  // 医薬部外品名で部分一致
-  const partialQuasiMatch = INGREDIENTS_DB.find((entry) => {
-    if (!entry.name_quasi_drug) return false;
-    const entryName = normalizeText(entry.name_quasi_drug);
-    return (
-      (entryName.length >= 3 && normalized.includes(entryName)) ||
-      (normalized.length >= 3 && entryName.includes(normalized))
-    );
-  });
-  if (partialQuasiMatch) return partialQuasiMatch;
+    for (const entry of INGREDIENTS_DB) {
+      const entryName = normalizeText(entry.name_cosmetic);
+      // DB側の名前がクエリに含まれる（DB名が5文字以上）
+      if (entryName.length >= 5 && normalized.includes(entryName)) {
+        partialCandidates.push({ entry, matchLen: entryName.length });
+      }
+      // クエリがDB名に含まれる（クエリが5文字以上 && DB名がクエリの120%以内）
+      else if (entryName.includes(normalized) && entryName.length <= normalized.length * 1.2) {
+        partialCandidates.push({ entry, matchLen: normalized.length });
+      }
+    }
 
-  // aliasで部分一致
-  const partialAliasMatch = INGREDIENTS_DB.find((entry) =>
-    entry.aliases.some((alias) => {
-      const normalizedAlias = normalizeText(alias);
-      return (
-        (normalizedAlias.length >= 3 && normalized.includes(normalizedAlias)) ||
-        (normalized.length >= 3 && normalizedAlias.includes(normalized))
-      );
-    })
-  );
-  if (partialAliasMatch) return partialAliasMatch;
+    if (partialCandidates.length > 0) {
+      // 最長一致を優先
+      partialCandidates.sort((a, b) => b.matchLen - a.matchLen);
+      return partialCandidates[0].entry;
+    }
+  }
 
   return null;
 }
@@ -104,7 +95,6 @@ function normalizeText(text: string): string {
 
 /**
  * マッチした成分をカテゴリ別にグルーピングする
- * 1つの成分が複数カテゴリに属する場合、それぞれのカテゴリに含まれる
  */
 export function groupByCategory(
   ingredients: MatchedIngredient[]
@@ -171,22 +161,17 @@ export function getMatchStats(ingredients: MatchedIngredient[]) {
 
 /**
  * 貼り付けられたテキストから成分名リストをパースする
- * 対応区切り: 、 , ・ ， 改行
- * ※ / は成分名に含まれることがあるため区切り文字にしない
  */
 export function parseIngredientText(text: string): string[] {
-  // 「全成分：水、グリセリン…」のようなプレフィックスを除去
   let cleaned = text.replace(
     /^[\s\u3000]*(全成分|成分|配合成分|Ingredients)\s*[:：]\s*/i,
     ''
   );
 
-  // 各種区切り文字をカンマに統一（/ は成分名に含まれるため除外）
   const normalized = cleaned
     .replace(/[、，・]/g, ',')
     .replace(/\n+/g, ',');
 
-  // 分割 → トリム → 空文字除外
   return normalized
     .split(',')
     .map((s) => s.replace(/[\s\u3000]+/g, ' ').trim())

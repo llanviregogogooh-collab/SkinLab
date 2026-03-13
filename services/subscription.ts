@@ -8,26 +8,20 @@ const PREMIUM_CACHE_KEY = '@clearlab_premium';
 const REVENUECAT_API_KEY_IOS = 'appl_TpeYsPjarNvzuzNKbHxMDrlEQYG';
 const REVENUECAT_API_KEY_ANDROID = 'YOUR_REVENUECAT_ANDROID_API_KEY';
 const ENTITLEMENT_ID = 'premium';
+const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 24時間
 
 let Purchases: any = null;
 
-/** Expo Go かどうか */
 function isExpoGo(): boolean {
   return Constants.appOwnership === 'expo';
 }
 
-/**
- * RevenueCat SDKの初期化
- * Development Buildでのみ動作。Expo Goではスキップ
- */
 export async function initPurchases(): Promise<void> {
   if (isExpoGo()) {
     __DEV__ && console.log('RevenueCat: Expo Go detected — skipping initialization');
     return;
   }
-
   try {
-    // Metro の静的解析を回避するためモジュール名を変数化
     const moduleName = 'react-native-' + 'purchases';
     const rc = require(moduleName);
     Purchases = rc.default || rc;
@@ -42,30 +36,41 @@ export async function initPurchases(): Promise<void> {
 
 /**
  * プレミアムステータスを確認
+ * RevenueCat 確認失敗時はキャッシュを使うが、24時間で期限切れにする
  */
 export async function checkPremiumStatus(): Promise<boolean> {
   if (Purchases) {
     try {
       const customerInfo = await Purchases.getCustomerInfo();
       const isPremium = customerInfo.entitlements.active[ENTITLEMENT_ID] !== undefined;
-      await AsyncStorage.setItem(PREMIUM_CACHE_KEY, JSON.stringify(isPremium));
+      await AsyncStorage.setItem(PREMIUM_CACHE_KEY, JSON.stringify({
+        isPremium,
+        checkedAt: Date.now(),
+      }));
       return isPremium;
     } catch (e) {
       __DEV__ && console.warn('Failed to check premium status:', e);
     }
   }
 
+  // フォールバック: 期限付きキャッシュ
   try {
-    const cached = await AsyncStorage.getItem(PREMIUM_CACHE_KEY);
-    return cached ? JSON.parse(cached) : false;
-  } catch {
-    return false;
-  }
+    const raw = await AsyncStorage.getItem(PREMIUM_CACHE_KEY);
+    if (raw) {
+      const cached = JSON.parse(raw);
+      // 旧形式（boolean直接）への後方互換
+      if (typeof cached === 'boolean') return false;
+      const { isPremium, checkedAt } = cached;
+      if (isPremium && Date.now() - checkedAt > CACHE_TTL_MS) {
+        __DEV__ && console.log('Premium cache expired');
+        return false;
+      }
+      return isPremium;
+    }
+  } catch {}
+  return false;
 }
 
-/**
- * プレミアムプランを購入
- */
 export async function purchasePremium(): Promise<boolean> {
   if (!Purchases) {
     Alert.alert(
@@ -74,24 +79,18 @@ export async function purchasePremium(): Promise<boolean> {
     );
     return false;
   }
-
   try {
     const offerings = await Purchases.getOfferings();
     const currentOffering = offerings.current;
-    if (!currentOffering) {
-      __DEV__ && console.warn('No offerings available');
-      return false;
-    }
-
+    if (!currentOffering) return false;
     const monthlyPackage = currentOffering.monthly;
-    if (!monthlyPackage) {
-      __DEV__ && console.warn('No monthly package available');
-      return false;
-    }
-
+    if (!monthlyPackage) return false;
     const { customerInfo } = await Purchases.purchasePackage(monthlyPackage);
     const isPremium = customerInfo.entitlements.active[ENTITLEMENT_ID] !== undefined;
-    await AsyncStorage.setItem(PREMIUM_CACHE_KEY, JSON.stringify(isPremium));
+    await AsyncStorage.setItem(PREMIUM_CACHE_KEY, JSON.stringify({
+      isPremium,
+      checkedAt: Date.now(),
+    }));
     return isPremium;
   } catch (e: any) {
     if (e.userCancelled) {
@@ -103,9 +102,6 @@ export async function purchasePremium(): Promise<boolean> {
   }
 }
 
-/**
- * 購入を復元
- */
 export async function restorePurchases(): Promise<boolean> {
   if (!Purchases) {
     Alert.alert(
@@ -114,11 +110,13 @@ export async function restorePurchases(): Promise<boolean> {
     );
     return false;
   }
-
   try {
     const customerInfo = await Purchases.restorePurchases();
     const isPremium = customerInfo.entitlements.active[ENTITLEMENT_ID] !== undefined;
-    await AsyncStorage.setItem(PREMIUM_CACHE_KEY, JSON.stringify(isPremium));
+    await AsyncStorage.setItem(PREMIUM_CACHE_KEY, JSON.stringify({
+      isPremium,
+      checkedAt: Date.now(),
+    }));
     return isPremium;
   } catch (e) {
     __DEV__ && console.warn('Restore error:', e);

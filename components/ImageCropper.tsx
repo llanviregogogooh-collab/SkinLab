@@ -1,8 +1,5 @@
 // components/ImageCropper.tsx
 // フリーフォーム画像クロップUI
-// - 自由なサイズ・位置の矩形選択
-// - 四隅ドラッグでリサイズ、内部ドラッグで移動
-// - expo-image-manipulatorで実際のクロップ処理
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import {
   View,
@@ -35,11 +32,13 @@ const clamp = (v: number, min: number, max: number) => Math.max(min, Math.min(ma
 interface Box { x: number; y: number; w: number; h: number }
 
 export default function ImageCropper({ visible, imageUri, onCrop, onCancel }: Props) {
-  const [natural, setNatural] = useState({ w: 1, h: 1 });
+  const [natural, setNatural] = useState({ w: 0, h: 0 });
+  const [container, setContainer] = useState({ w: 0, h: 0 });
   const [disp, setDisp] = useState({ w: 0, h: 0 });
   const [crop, setCrop] = useState<Box>({ x: 0, y: 0, w: 0, h: 0 });
   const [busy, setBusy] = useState(false);
   const [ready, setReady] = useState(false);
+  const cancelledRef = useRef(false);
 
   const cropR = useRef<Box>({ x: 0, y: 0, w: 0, h: 0 });
   const startC = useRef<Box>({ x: 0, y: 0, w: 0, h: 0 });
@@ -48,18 +47,22 @@ export default function ImageCropper({ visible, imageUri, onCrop, onCancel }: Pr
 
   // 元画像のサイズ取得
   useEffect(() => {
-    if (!visible || !imageUri) { setReady(false); return; }
+    if (!visible || !imageUri) {
+      setReady(false);
+      setNatural({ w: 0, h: 0 });
+      return;
+    }
     setReady(false);
+    cancelledRef.current = false;
     Image.getSize(imageUri, (w, h) => {
       setNatural({ w, h });
     }, () => {});
   }, [visible, imageUri]);
 
-  // コンテナサイズ確定時に表示サイズとクロップ初期値を計算
-  const handleContainerLayout = (e: any) => {
-    const { width: cw, height: ch } = e.nativeEvent.layout;
-    if (natural.w <= 1 || natural.h <= 1) return;
-    const scale = Math.min(cw / natural.w, ch / natural.h);
+  // natural + container の両方が揃ったら disp/crop/ready を計算
+  useEffect(() => {
+    if (natural.w <= 1 || natural.h <= 1 || container.w <= 0 || container.h <= 0) return;
+    const scale = Math.min(container.w / natural.w, container.h / natural.h);
     const dw = natural.w * scale;
     const dh = natural.h * scale;
     setDisp({ w: dw, h: dh });
@@ -70,6 +73,11 @@ export default function ImageCropper({ visible, imageUri, onCrop, onCancel }: Pr
     setCrop(init);
     cropR.current = init;
     setReady(true);
+  }, [natural, container]);
+
+  const handleContainerLayout = (e: any) => {
+    const { width: cw, height: ch } = e.nativeEvent.layout;
+    setContainer({ w: cw, h: ch });
   };
 
   const panResponder = useMemo(() => PanResponder.create({
@@ -142,6 +150,7 @@ export default function ImageCropper({ visible, imageUri, onCrop, onCancel }: Pr
 
   const doCrop = async () => {
     setBusy(true);
+    cancelledRef.current = false;
     try {
       const sx = natural.w / disp.w;
       const sy = natural.h / disp.h;
@@ -158,14 +167,23 @@ export default function ImageCropper({ visible, imageUri, onCrop, onCancel }: Pr
         }],
         { format: SaveFormat.JPEG, compress: 0.9 }
       );
-      onCrop(result.uri);
+      // キャンセルされていなければコールバック
+      if (!cancelledRef.current) {
+        onCrop(result.uri);
+      }
     } catch (e) {
       __DEV__ && console.warn('Crop error:', e);
-      // クロップ失敗時は元画像でそのまま進む
-      onCrop(imageUri);
+      if (!cancelledRef.current) {
+        onCrop(imageUri);
+      }
     } finally {
       setBusy(false);
     }
+  };
+
+  const handleCancel = () => {
+    cancelledRef.current = true;
+    onCancel();
   };
 
   if (!visible) return null;
@@ -180,7 +198,6 @@ export default function ImageCropper({ visible, imageUri, onCrop, onCancel }: Pr
   return (
     <Modal visible={visible} animationType="fade" statusBarTranslucent>
       <View style={s.root}>
-        {/* ヘッダー */}
         <SafeAreaView style={{ backgroundColor: 'rgba(0,0,0,0.5)' }}>
           <View style={s.header}>
             <Text style={s.headerText}>成分表の範囲を選択してください</Text>
@@ -188,7 +205,6 @@ export default function ImageCropper({ visible, imageUri, onCrop, onCancel }: Pr
           </View>
         </SafeAreaView>
 
-        {/* 画像エリア */}
         <View style={s.imageArea} onLayout={handleContainerLayout}>
           {disp.w > 0 && (
             <View
@@ -203,25 +219,21 @@ export default function ImageCropper({ visible, imageUri, onCrop, onCancel }: Pr
 
               {ready && (
                 <>
-                  {/* 暗いオーバーレイ（クロップ外の4領域） */}
                   <View style={[s.overlay, { top: 0, left: 0, right: 0, height: crop.y }]} />
                   <View style={[s.overlay, { top: crop.y + crop.h, left: 0, right: 0, bottom: 0 }]} />
                   <View style={[s.overlay, { top: crop.y, left: 0, width: crop.x, height: crop.h }]} />
                   <View style={[s.overlay, { top: crop.y, left: crop.x + crop.w, right: 0, height: crop.h }]} />
 
-                  {/* クロップ枠 */}
                   <View
                     style={[s.cropBorder, { left: crop.x, top: crop.y, width: crop.w, height: crop.h }]}
                     pointerEvents="none"
                   >
-                    {/* 三分割ガイドライン */}
                     <View style={[s.gridH, { top: '33.3%' }]} />
                     <View style={[s.gridH, { top: '66.6%' }]} />
                     <View style={[s.gridV, { left: '33.3%' }]} />
                     <View style={[s.gridV, { left: '66.6%' }]} />
                   </View>
 
-                  {/* 四隅のハンドル */}
                   {cornerPositions.map((pos, i) => (
                     <View
                       key={i}
@@ -235,17 +247,26 @@ export default function ImageCropper({ visible, imageUri, onCrop, onCancel }: Pr
           )}
         </View>
 
-        {/* フッターボタン */}
         <SafeAreaView style={{ backgroundColor: 'rgba(0,0,0,0.7)' }}>
           <View style={s.footer}>
-            <TouchableOpacity style={s.cancelBtn} onPress={onCancel} activeOpacity={0.7}>
+            <TouchableOpacity
+              style={[s.cancelBtn, busy && { opacity: 0.4 }]}
+              onPress={handleCancel}
+              disabled={busy}
+              activeOpacity={0.7}
+            >
               <Text style={s.cancelText}>キャンセル</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={s.cropBtn} onPress={doCrop} disabled={busy} activeOpacity={0.7}>
+            <TouchableOpacity
+              style={s.cropBtn}
+              onPress={doCrop}
+              disabled={busy || !ready}
+              activeOpacity={0.7}
+            >
               {busy ? (
                 <ActivityIndicator color="#FFF" size="small" />
               ) : (
-                <Text style={s.cropText}>切り取って認識</Text>
+                <Text style={[s.cropText, !ready && { opacity: 0.4 }]}>切り取って認識</Text>
               )}
             </TouchableOpacity>
           </View>
