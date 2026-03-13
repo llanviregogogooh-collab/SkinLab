@@ -340,11 +340,16 @@ export default function App() {
   };
 
   // ── スキャン後の広告表示 ──
+  // 広告が実際に表示できたときだけカウントをリセットする
   const handlePostScanAd = async () => {
     if (isPremium) return;
     scanAdCounterRef.current += 1;
-    if (scanAdCounterRef.current % INTERSTITIAL_SCAN_INTERVAL === 0) {
-      await showInterstitial();
+    if (scanAdCounterRef.current >= INTERSTITIAL_SCAN_INTERVAL) {
+      const shown = await showInterstitial();
+      if (shown) {
+        scanAdCounterRef.current = 0;
+      }
+      // shown === false: カウントは保持し、次回また挑戦
     }
   };
 
@@ -476,7 +481,7 @@ export default function App() {
     setScanResult(result);
     setTab('scan');
     incrementScanCount();
-    handlePostScanAd();
+    await handlePostScanAd();
     maybeRequestReview();
   };
 
