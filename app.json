@@ -1,12 +1,15 @@
 {
   "expo": {
-    "name": "SkinLab",
+    "name": "ClearLab.",
     "slug": "SkinLab",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+    "updates": {
+      "enabled": false
+    },
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
@@ -16,7 +19,9 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.chekera0239.skinlab",
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSCameraUsageDescription": "化粧品の全成分表を撮影して成分を自動認識するためにカメラを使用します。",
+        "NSPhotoLibraryUsageDescription": "化粧品の全成分表のスクリーンショットや写真を選択して成分を解析するためにフォトライブラリを使用します。"
       }
     },
     "android": {
@@ -36,12 +41,19 @@
       }
     },
     "plugins": [
-      "expo-router",
       [
         "react-native-google-mobile-ads",
         {
           "androidAppId": "ca-app-pub-3940256099942544~3347511713",
-          "iosAppId": "ca-app-pub-3940256099942544~1458002511"
+          "iosAppId": "ca-app-pub-3510999862027011~7642832356"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "16.0"
+          }
         }
       ]
     ]
