@@ -16,6 +16,7 @@ import {
   Linking,
   Platform,
   Animated,
+  AppState,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -131,14 +132,15 @@ function BannerAdView() {
   const [BannerAdSize, setBannerAdSize] = useState<any>(null);
 
   useEffect(() => {
-    if (!isAdMobAvailable()) return;
+    // isAdMobAvailable() はここで見ない（非同期初期化との競合を避けるため）
+    // Expo Go では require が throw するので try/catch で吸収
     try {
       const moduleName = 'react-native-google-' + 'mobile-ads';
       const admob = require(moduleName);
       setBannerAd(() => admob.BannerAd);
       setBannerAdSize(admob.BannerAdSize);
     } catch {
-      // AdMob not available
+      // Expo Go / AdMob not available
     }
   }, []);
 
@@ -231,6 +233,8 @@ export default function App() {
   const [isPremium, setIsPremium] = useState(false);
   const [showPaywall, setShowPaywall] = useState(false);
   const [dailyScanCount, setDailyScanCount] = useState(0);
+  const [scanDate, setScanDate] = useState('');
+  const [adsReady, setAdsReady] = useState(false);
   const [scanAdCounter, setScanAdCounter] = useState(0);
   const [detailAdCounter, setDetailAdCounter] = useState(0);
 
@@ -254,35 +258,62 @@ export default function App() {
       setIsPremium(premium);
       if (!premium) {
         await initAds();
+        setAdsReady(true);
       }
       // 日次スキャンカウントの復元
-      try {
-        const json = await AsyncStorage.getItem(SCAN_COUNT_KEY);
-        if (json) {
-          const { count, date } = JSON.parse(json);
-          const today = new Date().toDateString();
-          if (date === today) {
-            setDailyScanCount(count);
-          }
-        }
-      } catch (e) {
-        __DEV__ && console.warn('スキャンカウント読み込みエラー:', e);
-      }
+      await loadScanCount();
     })();
   }, []);
 
+  // 日次スキャンカウントを AsyncStorage から読み込み・日付チェック
+  const loadScanCount = useCallback(async () => {
+    try {
+      const json = await AsyncStorage.getItem(SCAN_COUNT_KEY);
+      const today = new Date().toDateString();
+      if (json) {
+        const { count, date } = JSON.parse(json);
+        if (date === today) {
+          setDailyScanCount(count);
+          setScanDate(today);
+        } else {
+          // 日付が変わっていたらリセット
+          setDailyScanCount(0);
+          setScanDate(today);
+        }
+      } else {
+        setScanDate(today);
+      }
+    } catch (e) {
+      __DEV__ && console.warn('スキャンカウント読み込みエラー:', e);
+    }
+  }, []);
+
+  // ── フォアグラウンド復帰時に日付チェック ──
+  useEffect(() => {
+    const subscription = AppState.addEventListener('change', (nextState) => {
+      if (nextState === 'active') {
+        loadScanCount();
+      }
+    });
+    return () => subscription.remove();
+  }, [loadScanCount]);
+
   const incrementScanCount = useCallback(async () => {
-    const newCount = dailyScanCount + 1;
+    const today = new Date().toDateString();
+    // 日付が変わっていたら0からカウント
+    const base = scanDate === today ? dailyScanCount : 0;
+    const newCount = base + 1;
     setDailyScanCount(newCount);
+    setScanDate(today);
     try {
       await AsyncStorage.setItem(SCAN_COUNT_KEY, JSON.stringify({
         count: newCount,
-        date: new Date().toDateString(),
+        date: today,
       }));
     } catch (e) {
       __DEV__ && console.warn('スキャンカウント保存エラー:', e);
     }
-  }, [dailyScanCount]);
+  }, [dailyScanCount, scanDate]);
 
   // ── AsyncStorage: 保存用ヘルパー ──
   const persistShelf = useCallback(async (results: ScanResult[]) => {
@@ -296,7 +327,10 @@ export default function App() {
   // ── スキャン制限チェック ──
   const canScan = (): boolean => {
     if (isPremium) return true;
-    if (dailyScanCount >= FREE_DAILY_SCAN_LIMIT) {
+    const today = new Date().toDateString();
+    // 日付が変わっていればカウントをリセット扱いにする
+    const effectiveCount = scanDate === today ? dailyScanCount : 0;
+    if (effectiveCount >= FREE_DAILY_SCAN_LIMIT) {
       setShowPaywall(true);
       return false;
     }
@@ -1135,7 +1169,8 @@ export default function App() {
       />
 
       {/* ── バナー広告（無料ユーザーのみ） ── */}
-      {!isPremium && <BannerAdView />}
+      {/* key={adsReady} により initAds() 完了後に再マウントして確実に表示 */}
+      {!isPremium && <BannerAdView key={String(adsReady)} />}
 
       {/* ── タブバー ── */}
       <View style={st.tabBar}>
