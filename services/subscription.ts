@@ -1,8 +1,8 @@
 // services/subscription.ts
 // RevenueCat連携 — Development Build時のみ動作、Expo Goではモック
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import Constants from 'expo-constants';
 import { Alert, Platform } from 'react-native';
+import { isExpoGo } from '../utils/platform';
 
 const PREMIUM_CACHE_KEY = '@clearlab_premium';
 const REVENUECAT_API_KEY_IOS = 'appl_TpeYsPjarNvzuzNKbHxMDrlEQYG';
@@ -11,10 +11,6 @@ const ENTITLEMENT_ID = 'premium';
 const CACHE_TTL_MS = 24 * 60 * 60 * 1000; // 24時間
 
 let Purchases: any = null;
-
-function isExpoGo(): boolean {
-  return Constants.appOwnership === 'expo';
-}
 
 export async function initPurchases(): Promise<void> {
   if (isExpoGo()) {

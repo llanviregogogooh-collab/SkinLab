@@ -2,15 +2,11 @@
 // OCR（文字認識）サービス
 // - カメラ撮影 / フォトライブラリ選択 → ML Kit Text Recognition で日本語テキスト抽出
 // - ML Kit は Development Build 必須。Expo Go ではフォールバックUI
-import Constants from 'expo-constants';
 import * as ImagePicker from 'expo-image-picker';
 import { Alert } from 'react-native';
 import { normalizeOcrText } from './normalizeOcrText';
-
-/** Expo Go かどうか */
-function isExpoGo(): boolean {
-  return Constants.appOwnership === 'expo';
-}
+import { isExpoGo } from '../utils/platform';
+import { toHalfWidth } from '../utils/normalize';
 
 /** ML Kit が使えるか */
 export function isOCRAvailable(): boolean {
@@ -110,16 +106,7 @@ export function cleanOCRText(rawText: string): string {
 
   // よくあるOCR誤認識の修正
   text = text.replace(/\|/g, 'l');       // パイプ → l
-  text = text.replace(/０/g, '0');       // 全角数字→半角
-  text = text.replace(/１/g, '1');
-  text = text.replace(/２/g, '2');
-  text = text.replace(/３/g, '3');
-  text = text.replace(/４/g, '4');
-  text = text.replace(/５/g, '5');
-  text = text.replace(/６/g, '6');
-  text = text.replace(/７/g, '7');
-  text = text.replace(/８/g, '8');
-  text = text.replace(/９/g, '9');
+  text = toHalfWidth(text);              // 全角英数記号→半角（０-９含む）
 
   // 連続空白の正規化
   text = text.replace(/[\s\u3000]+/g, ' ');

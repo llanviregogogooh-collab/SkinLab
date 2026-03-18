@@ -1,7 +1,7 @@
 // services/ads.ts
 // AdMob連携 — Development Build時のみ動作、Expo Goではモック
 import { Platform } from 'react-native';
-import Constants from 'expo-constants';
+import { isExpoGo } from '../utils/platform';
 
 // Google AdMob 広告ユニットID
 const BANNER_IOS_PROD = 'ca-app-pub-3510999862027011/6550435476';
@@ -29,10 +29,6 @@ let AdEventType: any = null;
 let interstitialAd: any = null;
 let isInterstitialLoaded = false;
 let interstitialShowPromise: Promise<boolean> | null = null;
-
-function isExpoGo(): boolean {
-  return Constants.appOwnership === 'expo';
-}
 
 export async function initAds(): Promise<boolean> {
   if (isExpoGo()) {

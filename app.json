@@ -16,7 +16,7 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true,
+      "supportsTablet": false,
       "bundleIdentifier": "com.chekera0239.skinlab",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,

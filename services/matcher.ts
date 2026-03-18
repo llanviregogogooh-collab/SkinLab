@@ -6,6 +6,7 @@ import {
   CategoryKey,
   ScanResult,
 } from '../types';
+import { toHalfWidth } from '../utils/normalize';
 
 /**
  * OCRで取得した成分名リストをDBとマッチングする
@@ -21,56 +22,73 @@ export function matchIngredients(ocrTexts: string[]): MatchedIngredient[] {
   });
 }
 
+// ── 検索用インデックス（初回アクセス時に構築、以降 O(1) ルックアップ） ──
+let exactIndex: Map<string, IngredientEntry> | null = null;
+let partialIndex: Array<{ normalized: string; entry: IngredientEntry }> | null = null;
+
+function buildIndex(): void {
+  exactIndex = new Map();
+  partialIndex = [];
+
+  for (const entry of INGREDIENTS_DB) {
+    // 化粧品表示名称
+    const cosmetic = normalizeText(entry.name_cosmetic);
+    if (cosmetic && !exactIndex.has(cosmetic)) {
+      exactIndex.set(cosmetic, entry);
+    }
+    // 医薬部外品名
+    if (entry.name_quasi_drug) {
+      const quasi = normalizeText(entry.name_quasi_drug);
+      if (quasi && !exactIndex.has(quasi)) {
+        exactIndex.set(quasi, entry);
+      }
+    }
+    // INCI名
+    const inci = normalizeText(entry.name_inci);
+    if (inci && !exactIndex.has(inci)) {
+      exactIndex.set(inci, entry);
+    }
+    // aliases
+    for (const alias of entry.aliases) {
+      const norm = normalizeText(alias);
+      if (norm && !exactIndex.has(norm)) {
+        exactIndex.set(norm, entry);
+      }
+    }
+    // 部分一致用
+    if (cosmetic.length >= 5) {
+      partialIndex.push({ normalized: cosmetic, entry });
+    }
+  }
+}
+
 /**
  * 成分名テキストからDBを検索する
- * 完全一致 → alias完全一致 → INCI完全一致 → 部分一致（最長優先・5文字以上）
+ * 完全一致（Map O(1)） → 部分一致（最長優先・5文字以上）
  */
 function findIngredient(text: string): IngredientEntry | null {
+  if (!exactIndex || !partialIndex) buildIndex();
+
   const normalized = normalizeText(text);
   if (!normalized) return null;
 
-  // 化粧品表示名称で完全一致
-  const cosmeticMatch = INGREDIENTS_DB.find(
-    (entry) => normalizeText(entry.name_cosmetic) === normalized
-  );
-  if (cosmeticMatch) return cosmeticMatch;
+  // 完全一致（化粧品名・医薬部外品名・INCI・aliases すべてインデックス済み）
+  const exact = exactIndex!.get(normalized);
+  if (exact) return exact;
 
-  // 医薬部外品名で完全一致
-  const quasiDrugMatch = INGREDIENTS_DB.find(
-    (entry) => entry.name_quasi_drug && normalizeText(entry.name_quasi_drug) === normalized
-  );
-  if (quasiDrugMatch) return quasiDrugMatch;
-
-  // alias完全一致
-  const aliasMatch = INGREDIENTS_DB.find((entry) =>
-    entry.aliases.some((alias) => normalizeText(alias) === normalized)
-  );
-  if (aliasMatch) return aliasMatch;
-
-  // INCI名完全一致
-  const inciMatch = INGREDIENTS_DB.find(
-    (entry) => normalizeText(entry.name_inci) === normalized
-  );
-  if (inciMatch) return inciMatch;
-
-  // 部分一致: 最低5文字以上 & 最長一致を優先（短いクエリの誤爆防止）
+  // 部分一致: 最低5文字以上 & 最長一致を優先
   if (normalized.length >= 5) {
     const partialCandidates: Array<{ entry: IngredientEntry; matchLen: number }> = [];
 
-    for (const entry of INGREDIENTS_DB) {
-      const entryName = normalizeText(entry.name_cosmetic);
-      // DB側の名前がクエリに含まれる（DB名が5文字以上）
-      if (entryName.length >= 5 && normalized.includes(entryName)) {
+    for (const { normalized: entryName, entry } of partialIndex!) {
+      if (normalized.includes(entryName)) {
         partialCandidates.push({ entry, matchLen: entryName.length });
-      }
-      // クエリがDB名に含まれる（クエリが5文字以上 && DB名がクエリの120%以内）
-      else if (entryName.includes(normalized) && entryName.length <= normalized.length * 1.2) {
+      } else if (entryName.includes(normalized) && entryName.length <= normalized.length * 1.2) {
         partialCandidates.push({ entry, matchLen: normalized.length });
       }
     }
 
     if (partialCandidates.length > 0) {
-      // 最長一致を優先
       partialCandidates.sort((a, b) => b.matchLen - a.matchLen);
       return partialCandidates[0].entry;
     }
@@ -83,11 +101,7 @@ function findIngredient(text: string): IngredientEntry | null {
  * テキスト正規化
  */
 function normalizeText(text: string): string {
-  return text
-    .replace(/[\uff01-\uff5e]/g, (ch) =>
-      String.fromCharCode(ch.charCodeAt(0) - 0xfee0)
-    )
-    .replace(/\u3000/g, ' ')
+  return toHalfWidth(text)
     .toLowerCase()
     .replace(/\s+/g, '')
     .trim();
@@ -133,7 +147,7 @@ export function createScanResult(
   const ingredients = matchIngredients(ocrTexts);
 
   return {
-    id: Date.now().toString(),
+    id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
     product_name: productName,
     scanned_at: new Date().toISOString(),
     image_uri: imageUri,
