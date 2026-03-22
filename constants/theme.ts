@@ -80,15 +80,13 @@ export const shadow = (opacity = 0.08, radius = 12, offsetY = 4) =>
     default: {},
   }) as Record<string, unknown>;
 
-// ── 無料プランの制限 ──
-export const FREE_DAILY_SCAN_LIMIT = 5;
+// ── 制限 ──
 export const FREE_SHELF_LIMIT = 5;
-export const INTERSTITIAL_SCAN_INTERVAL = 2;
+export const INTERSTITIAL_SCAN_INTERVAL = 3;
 export const INTERSTITIAL_DETAIL_INTERVAL = 5;
 
 // ── AsyncStorage キー ──
 export const STORAGE_KEY = '@clearlab_shelf';
-export const SCAN_COUNT_KEY = '@clearlab_scan_count';
 export const LIFETIME_SCAN_KEY = '@clearlab_lifetime_scans';
 export const REVIEW_REQUESTED_KEY = '@clearlab_review_requested';
 export const REVIEW_TRIGGER_COUNT = 3;

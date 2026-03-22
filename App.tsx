@@ -12,14 +12,12 @@ import {
   TextInput,
   Keyboard,
   ActivityIndicator,
-  AppState,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as StoreReview from 'expo-store-review';
 
 import { createScanResult, getMatchStats, groupByCategory, parseIngredientText } from './services/matcher';
-import { initPurchases, checkPremiumStatus } from './services/subscription';
 import { initAds, showInterstitial, isAdMobAvailable } from './services/ads';
 import { takePhoto, pickImage, recognizeText, cleanOCRText, isOCRAvailable } from './services/ocr';
 import { ScanResult, IngredientEntry, CategoryKey, CATEGORY_LABELS } from './types';
@@ -27,16 +25,15 @@ import { ScanResult, IngredientEntry, CategoryKey, CATEGORY_LABELS } from './typ
 import {
   C, shadow,
   CATEGORY_COLORS, CATEGORY_BG, CATEGORY_ICONS,
-  FREE_DAILY_SCAN_LIMIT, FREE_SHELF_LIMIT,
+  FREE_SHELF_LIMIT,
   INTERSTITIAL_SCAN_INTERVAL, INTERSTITIAL_DETAIL_INTERVAL,
-  STORAGE_KEY, SCAN_COUNT_KEY, LIFETIME_SCAN_KEY,
+  STORAGE_KEY, LIFETIME_SCAN_KEY,
   REVIEW_REQUESTED_KEY, REVIEW_TRIGGER_COUNT,
 } from './constants/theme';
 
 import ImageCropper from './components/ImageCropper';
 import GradientButton from './components/GradientButton';
 import BannerAdView from './components/BannerAdView';
-import PaywallModal from './components/PaywallModal';
 import IngredientDetailModal from './components/IngredientDetailModal';
 import CategoryPill from './components/CategoryPill';
 
@@ -58,12 +55,7 @@ export default function App() {
   const [cropImageUri, setCropImageUri] = useState<string | null>(null);
   const [cropDefaultName, setCropDefaultName] = useState('');
 
-  // ── プレミアム・広告 ──
-  const [isPremium, setIsPremium] = useState(false);
-  const [showPaywall, setShowPaywall] = useState(false);
-  const [dailyScanCount, setDailyScanCount] = useState(0);
-  const [scanDate, setScanDate] = useState('');
-  const [scanCountReady, setScanCountReady] = useState(false);
+  // ── 広告 ──
   const [adsReady, setAdsReady] = useState(false);
   const scanAdCounterRef = useRef(0);
   const detailAdCounterRef = useRef(0);
@@ -81,50 +73,12 @@ export default function App() {
     })();
   }, []);
 
-  const loadScanCount = useCallback(async () => {
-    try {
-      const json = await AsyncStorage.getItem(SCAN_COUNT_KEY);
-      const today = new Date().toDateString();
-      if (json) {
-        const { count, date } = JSON.parse(json);
-        setDailyScanCount(date === today ? count : 0);
-      }
-      setScanDate(today);
-    } catch (e) {
-      __DEV__ && console.warn('スキャンカウント読み込みエラー:', e);
-    }
-    setScanCountReady(true);
-  }, []);
-
-  useEffect(() => { loadScanCount(); }, [loadScanCount]);
-
   useEffect(() => {
     (async () => {
-      await initPurchases();
-      const premium = await checkPremiumStatus();
-      setIsPremium(premium);
-      if (!premium) {
-        const adsInitialized = await initAds();
-        setAdsReady(adsInitialized);
-      }
+      const adsInitialized = await initAds();
+      setAdsReady(adsInitialized);
     })();
   }, []);
-
-  useEffect(() => {
-    const subscription = AppState.addEventListener('change', (nextState) => {
-      if (nextState === 'active') loadScanCount();
-    });
-    return () => subscription.remove();
-  }, [loadScanCount]);
-
-  const incrementScanCount = useCallback(async () => {
-    const today = new Date().toDateString();
-    const newCount = (scanDate === today ? dailyScanCount : 0) + 1;
-    setDailyScanCount(newCount);
-    setScanDate(today);
-    AsyncStorage.setItem(SCAN_COUNT_KEY, JSON.stringify({ count: newCount, date: today }))
-      .catch((e) => __DEV__ && console.warn('スキャンカウント保存エラー:', e));
-  }, [scanDate, dailyScanCount]);
 
   const persistShelf = useCallback(async (results: ScanResult[]) => {
     try {
@@ -134,37 +88,7 @@ export default function App() {
     }
   }, []);
 
-  const resetDevScanLimits = useCallback(async () => {
-    if (!__DEV__) return;
-    const today = new Date().toDateString();
-    try {
-      await AsyncStorage.removeItem(SCAN_COUNT_KEY);
-      setDailyScanCount(0);
-      setScanDate(today);
-      setShowPaywall(false);
-      scanAdCounterRef.current = 0;
-      detailAdCounterRef.current = 0;
-      Alert.alert('開発用', '解析上限をリセットしました。');
-    } catch (e) {
-      __DEV__ && console.warn('開発用リセットエラー:', e);
-      Alert.alert('開発用', '解析上限のリセットに失敗しました。');
-    }
-  }, []);
-
-  const canScan = (): boolean => {
-    if (!scanCountReady) return false;
-    if (isPremium) return true;
-    const today = new Date().toDateString();
-    const effectiveCount = scanDate === today ? dailyScanCount : 0;
-    if (effectiveCount >= FREE_DAILY_SCAN_LIMIT) {
-      setShowPaywall(true);
-      return false;
-    }
-    return true;
-  };
-
   const handlePostScanAd = async () => {
-    if (isPremium) return;
     scanAdCounterRef.current += 1;
     if (scanAdCounterRef.current >= INTERSTITIAL_SCAN_INTERVAL) {
       const shown = await showInterstitial();
@@ -194,7 +118,6 @@ export default function App() {
   // ── スキャン関数 ──
   const runTextScan = async () => {
     if (scanningRef.current) return;
-    if (!canScan()) return;
     const trimmed = ingredientInput.trim();
     if (!trimmed) { Alert.alert('入力エラー', '成分リストを入力してください。'); return; }
     const parsed = parseIngredientText(trimmed);
@@ -203,7 +126,6 @@ export default function App() {
     try {
       Keyboard.dismiss();
       const result = createScanResult(parsed, '', productNameInput.trim() || '手入力スキャン');
-      incrementScanCount();
       await handlePostScanAd();
       setScanResult(result);
       setTab('scan');
@@ -217,7 +139,6 @@ export default function App() {
 
   const runCameraScan = async () => {
     if (scanningRef.current) return;
-    if (!canScan()) return;
     scanningRef.current = true;
     try {
       const uri = await takePhoto();
@@ -234,7 +155,6 @@ export default function App() {
 
   const runImageScan = async () => {
     if (scanningRef.current) return;
-    if (!canScan()) return;
     scanningRef.current = true;
     try {
       const uri = await pickImage();
@@ -272,7 +192,6 @@ export default function App() {
       return;
     }
     const result = createScanResult(parsed, '', defaultName);
-    incrementScanCount();
     await handlePostScanAd();
     setScanResult(result);
     setTab('scan');
@@ -281,7 +200,7 @@ export default function App() {
 
   // ── 保存・編集・削除 ──
   const doSave = (result: ScanResult) => {
-    if (!isPremium && savedResults.length >= FREE_SHELF_LIMIT) { setShowPaywall(true); return; }
+    if (savedResults.length >= FREE_SHELF_LIMIT) { Alert.alert('上限に達しました', `保存できるのは${FREE_SHELF_LIMIT}件までです。`); return; }
     setSavedResults((prev) => {
       if (prev.some((r) => r.id === result.id)) return prev;
       const next = [result, ...prev];
@@ -337,18 +256,11 @@ export default function App() {
 
   const openIngredientDetail = async (entry: IngredientEntry | null) => {
     if (!entry) return;
-    if (!isPremium) {
-      detailAdCounterRef.current += 1;
-      if (detailAdCounterRef.current % INTERSTITIAL_DETAIL_INTERVAL === 0) {
-        await showInterstitial();
-      }
+    detailAdCounterRef.current += 1;
+    if (detailAdCounterRef.current % INTERSTITIAL_DETAIL_INTERVAL === 0) {
+      await showInterstitial();
     }
     setSelectedIngredient(entry);
-  };
-
-  const handlePremiumActivated = () => {
-    setIsPremium(true);
-    setShowPaywall(false);
   };
 
   // ══════════════════════════════════════════
@@ -406,37 +318,6 @@ export default function App() {
           )}
         </View>
 
-        {/* プレミアムバナー */}
-        {!isPremium && (
-          <TouchableOpacity style={st.premiumBanner} onPress={() => setShowPaywall(true)} activeOpacity={0.8}>
-            <LinearGradient colors={['#EEF2FF', '#F5F3FF']} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }} style={st.premiumBannerInner}>
-              <View style={st.premiumIconWrap}>
-                <Text style={st.premiumIconText}>💎</Text>
-              </View>
-              <View style={st.flex1}>
-                <Text style={st.premiumTitle}>プレミアムにアップグレード</Text>
-                <Text style={st.premiumSub}>広告なし・解析無制限・シェルフ無制限 — 月額330円</Text>
-              </View>
-              <Text style={st.premiumArrow}>→</Text>
-            </LinearGradient>
-          </TouchableOpacity>
-        )}
-
-        {__DEV__ && (
-          <TouchableOpacity
-            style={st.devResetCard}
-            activeOpacity={0.8}
-            onPress={() => {
-              Alert.alert('開発用', '解析上限をリセットしますか？', [
-                { text: 'キャンセル', style: 'cancel' },
-                { text: 'リセット', style: 'destructive', onPress: () => { void resetDevScanLimits(); } },
-              ]);
-            }}
-          >
-            <Text style={st.devResetTitle}>開発用: 解析上限をリセット</Text>
-            <Text style={st.devResetSub}>本番ビルドでは表示も実行もされません。</Text>
-          </TouchableOpacity>
-        )}
 
         {/* 成分テキスト入力 */}
         <View style={[st.card, { marginTop: 16 }]}>
@@ -666,11 +547,10 @@ export default function App() {
       {tab === 'shelf' && renderShelf()}
 
       <IngredientDetailModal ingredient={selectedIngredient} onClose={() => setSelectedIngredient(null)} />
-      <PaywallModal visible={showPaywall} onClose={() => setShowPaywall(false)} onPremiumActivated={handlePremiumActivated} />
 
       <ImageCropper visible={!!cropImageUri} imageUri={cropImageUri || ''} onCrop={handleCropDone} onCancel={() => setCropImageUri(null)} />
 
-      {!isPremium && adsReady && <BannerAdView />}
+      {adsReady && <BannerAdView />}
 
       {/* タブバー */}
       <View style={st.tabBar}>
@@ -735,20 +615,6 @@ const st = StyleSheet.create({
   ocrLoadingText: { fontSize: 13, color: C.accent, marginTop: 8, fontWeight: '600' },
   ocrWarning: { backgroundColor: '#FEF3C7', borderRadius: 8, padding: 10, marginTop: 12, width: '100%' },
   ocrWarningText: { fontSize: 11, color: '#92400E', textAlign: 'center' },
-
-  // ── プレミアムバナー ──
-  premiumBanner: { marginTop: 12, borderRadius: 16, overflow: 'hidden', ...shadow(0.1, 8, 3) },
-  premiumBannerInner: { padding: 18, flexDirection: 'row', alignItems: 'center' },
-  premiumIconWrap: { width: 44, height: 44, borderRadius: 22, backgroundColor: 'rgba(139,92,252,0.12)', justifyContent: 'center', alignItems: 'center', marginRight: 14 },
-  premiumIconText: { fontSize: 22 },
-  premiumTitle: { fontSize: 14, fontWeight: '700', color: C.text },
-  premiumSub: { fontSize: 12, color: C.textSub, marginTop: 2 },
-  premiumArrow: { fontSize: 16, color: C.purple },
-
-  // ── 開発用リセット ──
-  devResetCard: { backgroundColor: C.card, borderRadius: 18, padding: 18, marginTop: 12, borderWidth: 1, borderColor: '#F59E0B', ...shadow(0.06, 10, 3) },
-  devResetTitle: { fontSize: 14, fontWeight: '700', color: '#92400E' },
-  devResetSub: { fontSize: 12, color: '#B45309', marginTop: 4 },
 
   // ── 入力 ──
   inputLabel: { color: C.textSub, fontSize: 12, fontWeight: '600', marginBottom: 6 },
