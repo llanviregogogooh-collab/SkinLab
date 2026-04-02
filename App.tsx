@@ -12,12 +12,14 @@ import {
   TextInput,
   Keyboard,
   ActivityIndicator,
+  AppState,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as StoreReview from 'expo-store-review';
 
 import { createScanResult, getMatchStats, groupByCategory, parseIngredientText } from './services/matcher';
+import { initPurchases, checkPremiumStatus } from './services/subscription';
 import { initAds, showInterstitial, isAdMobAvailable } from './services/ads';
 import { takePhoto, pickImage, recognizeText, cleanOCRText, isOCRAvailable } from './services/ocr';
 import { ScanResult, IngredientEntry, CategoryKey, CATEGORY_LABELS } from './types';
@@ -25,15 +27,16 @@ import { ScanResult, IngredientEntry, CategoryKey, CATEGORY_LABELS } from './typ
 import {
   C, shadow,
   CATEGORY_COLORS, CATEGORY_BG, CATEGORY_ICONS,
-  FREE_SHELF_LIMIT,
+  FREE_DAILY_SCAN_LIMIT, FREE_SHELF_LIMIT,
   INTERSTITIAL_SCAN_INTERVAL, INTERSTITIAL_DETAIL_INTERVAL,
-  STORAGE_KEY, LIFETIME_SCAN_KEY,
+  STORAGE_KEY, SCAN_COUNT_KEY, LIFETIME_SCAN_KEY,
   REVIEW_REQUESTED_KEY, REVIEW_TRIGGER_COUNT,
 } from './constants/theme';
 
 import ImageCropper from './components/ImageCropper';
 import GradientButton from './components/GradientButton';
 import BannerAdView from './components/BannerAdView';
+import PaywallModal from './components/PaywallModal';
 import IngredientDetailModal from './components/IngredientDetailModal';
 import CategoryPill from './components/CategoryPill';
 
@@ -55,7 +58,12 @@ export default function App() {
   const [cropImageUri, setCropImageUri] = useState<string | null>(null);
   const [cropDefaultName, setCropDefaultName] = useState('');
 
-  // ── 広告 ──
+  // ── プレミアム・広告 ──
+  const [isPremium, setIsPremium] = useState(false);
+  const [showPaywall, setShowPaywall] = useState(false);
+  const [dailyScanCount, setDailyScanCount] = useState(0);
+  const [scanDate, setScanDate] = useState('');
+  const [scanCountReady, setScanCountReady] = useState(false);
   const [adsReady, setAdsReady] = useState(false);
   const scanAdCounterRef = useRef(0);
   const detailAdCounterRef = useRef(0);
@@ -73,12 +81,62 @@ export default function App() {
     })();
   }, []);
 
+  const loadScanCount = useCallback(async () => {
+    try {
+      const json = await AsyncStorage.getItem(SCAN_COUNT_KEY);
+      const today = new Date().toDateString();
+      if (json) {
+        const { count, date } = JSON.parse(json);
+        setDailyScanCount(date === today ? count : 0);
+      }
+      setScanDate(today);
+    } catch (e) {
+      __DEV__ && console.warn('スキャンカウント読み込みエラー:', e);
+    }
+    setScanCountReady(true);
+  }, []);
+
+  useEffect(() => { loadScanCount(); }, [loadScanCount]);
+
   useEffect(() => {
     (async () => {
-      const adsInitialized = await initAds();
-      setAdsReady(adsInitialized);
+      await initPurchases();
+      const premium = await checkPremiumStatus();
+      setIsPremium(premium);
+      if (!premium) {
+        const adsInitialized = await initAds();
+        setAdsReady(adsInitialized);
+      }
     })();
   }, []);
+
+  useEffect(() => {
+    const subscription = AppState.addEventListener('change', (nextState) => {
+      if (nextState === 'active') loadScanCount();
+    });
+    return () => subscription.remove();
+  }, [loadScanCount]);
+
+  const incrementScanCount = useCallback(async () => {
+    const today = new Date().toDateString();
+    const newCount = (scanDate === today ? dailyScanCount : 0) + 1;
+    setDailyScanCount(newCount);
+    setScanDate(today);
+    AsyncStorage.setItem(SCAN_COUNT_KEY, JSON.stringify({ count: newCount, date: today }))
+      .catch((e) => __DEV__ && console.warn('スキャンカウント保存エラー:', e));
+  }, [scanDate, dailyScanCount]);
+
+  const canScan = (): boolean => {
+    if (!scanCountReady) return false;
+    if (isPremium) return true;
+    const today = new Date().toDateString();
+    const effectiveCount = scanDate === today ? dailyScanCount : 0;
+    if (effectiveCount >= FREE_DAILY_SCAN_LIMIT) {
+      setShowPaywall(true);
+      return false;
+    }
+    return true;
+  };
 
   const persistShelf = useCallback(async (results: ScanResult[]) => {
     try {
@@ -89,6 +147,7 @@ export default function App() {
   }, []);
 
   const handlePostScanAd = async () => {
+    if (isPremium) return;
     scanAdCounterRef.current += 1;
     if (scanAdCounterRef.current >= INTERSTITIAL_SCAN_INTERVAL) {
       const shown = await showInterstitial();
@@ -118,6 +177,7 @@ export default function App() {
   // ── スキャン関数 ──
   const runTextScan = async () => {
     if (scanningRef.current) return;
+    if (!canScan()) return;
     const trimmed = ingredientInput.trim();
     if (!trimmed) { Alert.alert('入力エラー', '成分リストを入力してください。'); return; }
     const parsed = parseIngredientText(trimmed);
@@ -126,6 +186,7 @@ export default function App() {
     try {
       Keyboard.dismiss();
       const result = createScanResult(parsed, '', productNameInput.trim() || '手入力スキャン');
+      incrementScanCount();
       await handlePostScanAd();
       setScanResult(result);
       setTab('scan');
@@ -139,6 +200,7 @@ export default function App() {
 
   const runCameraScan = async () => {
     if (scanningRef.current) return;
+    if (!canScan()) return;
     scanningRef.current = true;
     try {
       const uri = await takePhoto();
@@ -155,6 +217,7 @@ export default function App() {
 
   const runImageScan = async () => {
     if (scanningRef.current) return;
+    if (!canScan()) return;
     scanningRef.current = true;
     try {
       const uri = await pickImage();
@@ -192,6 +255,7 @@ export default function App() {
       return;
     }
     const result = createScanResult(parsed, '', defaultName);
+    incrementScanCount();
     await handlePostScanAd();
     setScanResult(result);
     setTab('scan');
@@ -200,7 +264,7 @@ export default function App() {
 
   // ── 保存・編集・削除 ──
   const doSave = (result: ScanResult) => {
-    if (savedResults.length >= FREE_SHELF_LIMIT) { Alert.alert('上限に達しました', `保存できるのは${FREE_SHELF_LIMIT}件までです。`); return; }
+    if (!isPremium && savedResults.length >= FREE_SHELF_LIMIT) { Alert.alert('上限に達しました', `保存できるのは${FREE_SHELF_LIMIT}件までです。\nプレミアムプランで無制限に保存できます。`, [{ text: 'キャンセル', style: 'cancel' }, { text: 'プレミアムへ', onPress: () => setShowPaywall(true) }]); return; }
     setSavedResults((prev) => {
       if (prev.some((r) => r.id === result.id)) return prev;
       const next = [result, ...prev];
@@ -550,7 +614,17 @@ export default function App() {
 
       <ImageCropper visible={!!cropImageUri} imageUri={cropImageUri || ''} onCrop={handleCropDone} onCancel={() => setCropImageUri(null)} />
 
-      {adsReady && <BannerAdView />}
+      <PaywallModal
+        visible={showPaywall}
+        onClose={() => setShowPaywall(false)}
+        onPremiumActivated={() => {
+          setIsPremium(true);
+          setShowPaywall(false);
+          setAdsReady(false);
+        }}
+      />
+
+      {adsReady && !isPremium && <BannerAdView />}
 
       {/* タブバー */}
       <View style={st.tabBar}>
