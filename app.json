@@ -2,7 +2,7 @@
   "expo": {
     "name": "ClearLab.",
     "slug": "SkinLab",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -44,11 +44,13 @@
           "iosAppId": "ca-app-pub-3510999862027011~7642832356"
         }
       ],
+      "react-native-purchases",
       [
         "expo-build-properties",
         {
           "ios": {
-            "deploymentTarget": "16.0"
+            "deploymentTarget": "16.0",
+            "useFrameworks": "static"
           }
         }
       ]
