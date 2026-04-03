@@ -41,6 +41,18 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
         year: 2001,
         finding: '処方条件（特にpH）により皮膚への浸透が大きく左右され、濃度約20%付近で皮膚内濃度が最大化することが示された。',
       },
+      {
+        title: 'Topical L-ascorbic acid: percutaneous absorption studies',
+        journal: 'Dermatologic Surgery',
+        year: 2001,
+        finding: '外用L-アスコルビン酸の皮膚への送達条件を検討し、適切な処方条件で角層内VC量が増加。',
+      },
+      {
+        title: 'Topical Vitamin C and the Skin - Mechanisms and Applications',
+        journal: 'J Clin Aesthet Dermatol',
+        year: 2017,
+        finding: '外用ビタミンCの抗酸化・光防御・抗色素沈着・抗老化の機序と臨床応用を総括。',
+      },
     ],
     description: 'アスコルビン酸はビタミンC誘導体として薬用化粧品の有効成分に用いられ、透明感ケア・抗酸化・整肌・ハリ・整肌を目的に配合される成分です。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
@@ -58,7 +70,14 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       comedogenic: 0,
       note: '',
     },
-    research: [],
+    research: [
+      {
+        title: 'Efficacy and tolerability of the investigational topical cream SD-101 6% (allantoin) in patients with epidermolysis bullosa: a phase 3, randomized, double-blind, vehicle-controlled trial',
+        journal: 'Orphanet J Rare Dis',
+        year: 2020,
+        finding: '6%アラントイン外用の安全性・有効性評価を実施（EBの創傷/皮膚病変）。',
+      },
+    ],
     description: 'アラントインは薬用化粧品の有効成分として用いられ、整肌を目的に配合される成分です。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
@@ -82,6 +101,12 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
         year: 1996,
         finding: 'ヒトメラノサイト培養でチロシナーゼ活性を阻害し、メラニン産生が低下することが示された。',
       },
+      {
+        title: 'Arbutin as a Skin Depigmenting Agent with Antimelanogenic and Antioxidant Properties',
+        journal: 'Antioxidants',
+        year: 2021,
+        finding: 'アルブチン/デオキシアルブチンの抗メラニン作用と臨床報告を総括し、有効性と安全性課題を整理。',
+      },
     ],
     description: 'アルブチンは薬用化粧品の有効成分として用いられ、透明感ケアを目的に配合される成分です。原料規格や配合量により、使用感や安定性が調整されます。',
   },
@@ -99,7 +124,14 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       comedogenic: 0,
       note: '',
     },
-    research: [],
+    research: [
+      {
+        title: 'Investigating the efficacy of dipotassium glycyrrhizin emollients in adult atopic dermatitis: A focused randomized parallel-controlled clinical study',
+        journal: 'Pak J Med Sci',
+        year: 2025,
+        finding: 'DPG配合エモリエントの継続使用でAD症状や再燃頻度が低下する可能性。',
+      },
+    ],
     description: 'グリチルリチン酸２Ｋは薬用化粧品の有効成分として用いられ、整肌を目的に配合される成分です。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
@@ -122,6 +154,12 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
         journal: 'Clinical, Cosmetic and Investigational Dermatology',
         year: 2015,
         finding: 'サリチル酸ピーリングはニキビや色素沈着など複数の適応で有用性があるとする総説。',
+      },
+      {
+        title: 'Efficacy and safety of 2% supramolecular salicylic acid compared with 5% benzoyl peroxide/0.1% adapalene in the acne treatment: a randomized, split-face, open-label, single-center study',
+        journal: 'J Cosmet Dermatol',
+        year: 2019,
+        finding: '2%SSAはBPO/アダパレン併用と同程度に皮疹数を減少させ、28日で有効性を示した。',
       },
     ],
     description: 'サリチル酸はサリチル酸誘導体として薬用化粧品の有効成分に用いられ、角質ケアや整肌を目的に配合される成分です。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
@@ -152,6 +190,18 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
         journal: 'Clinical and Experimental Dermatology',
         year: 2016,
         finding: '2%TXA外用で肝斑の臨床改善が示され、ET-1抑制など作用機序の可能性が報告された。',
+      },
+      {
+        title: 'Mechanism of Action of Topical Tranexamic Acid in the Treatment of Melasma and Sun-Induced Skin Hyperpigmentation',
+        journal: 'Cosmetics',
+        year: 2022,
+        finding: '外用TXAの作用機序を整理し、炎症・プラスミン系を介したメラニン過剰産生抑制の可能性を解説。',
+      },
+      {
+        title: 'Topical tranexamic acid as a promising treatment for melasma',
+        journal: 'J Res Med Sci',
+        year: 2014,
+        finding: '外用TXAはメラズマで有効性と安全性が示唆され、治療選択肢となり得る。',
       },
     ],
     description: 'トラネキサム酸はトラネキサム酸誘導体として薬用化粧品の有効成分に用いられ、透明感ケアや整肌を目的に配合される成分です。原料規格や配合量により、使用感や安定性が調整されます。',
@@ -194,6 +244,18 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
         year: 2005,
         finding: 'ナイアシンアミド配合保湿剤でTEWL低下などバリア指標の改善と、酒さ症状の臨床的改善が示された。',
       },
+      {
+        title: 'A single-center, randomized, controlled study on the efficacy of niacinamide-containing body emollients combined with cleansing gel in the treatment of mild atopic dermatitis',
+        journal: 'Skin Research and Technology',
+        year: 2023,
+        finding: 'ナイアシンアミド配合エモリエントで、軽症ADの症状・QOL・皮膚バリア指標が有意に改善。',
+      },
+      {
+        title: 'A Double-Blind, Randomized Clinical Trial of Niacinamide 4% versus Hydroquinone 4% in the Treatment of Melasma',
+        journal: 'Dermatology Research and Practice',
+        year: 2011,
+        finding: '4%ナイアシンアミドはメラズマで色素沈着評価を改善し、安全性も概ね良好。',
+      },
     ],
     description: 'ナイアシンアミドはビタミンB3（ナイアシンアミド）誘導体として薬用化粧品の有効成分に用いられ、透明感ケア・保湿・ハリ・整肌を目的に配合される成分です。原料規格や配合量により、使用感や安定性が調整されます。',
   },
@@ -211,7 +273,20 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       comedogenic: 0,
       note: '',
     },
-    research: [],
+    research: [
+      {
+        title: 'Performance and Tolerability of a New Topical Dexpanthenol-Containing Emollient Line in Subjects with Dry Skin: Results from Three Randomized Studies',
+        journal: 'Cosmetics',
+        year: 2021,
+        finding: 'デキスパンテノール配合エモリエントの複数試験で、保湿・バリア関連指標の改善と忍容性を報告。',
+      },
+      {
+        title: 'Effect of topically applied dexpanthenol on epidermal barrier function and stratum corneum hydration. Results of a randomized, placebo-controlled study in vivo',
+        journal: 'Arzneimittelforschung',
+        year: 2000,
+        finding: '外用デキスパンテノール7日で角層水分が増加し、TEWLが低下。',
+      },
+    ],
     description: 'パンテノールはビタミンB5（パンテノール/パントテン酸）誘導体として薬用化粧品の有効成分に用いられ、保湿や整肌を目的に配合される成分です。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
@@ -235,6 +310,12 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
         year: 2007,
         finding: '0.4%レチノールを24週間外用し、自然老化皮膚で小ジワなどの臨床改善と関連指標の変化が報告された。',
       },
+      {
+        title: 'One-year topical stabilized retinol treatment improves photodamaged skin in a double-blind, vehicle-controlled trial',
+        journal: 'J Drugs Dermatol',
+        year: 2015,
+        finding: '0.1%レチノールを52週使用で、しわ・色ムラなど光老化所見が改善し、組織学的指標も増加。',
+      },
     ],
     description: 'レチノールはビタミンA（レチノイド）誘導体として薬用化粧品の有効成分に用いられ、ハリ・整肌や透明感ケアを目的に配合される成分です。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
@@ -254,7 +335,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: '1,2-ヘキサンジオールは主に水系処方で使われる成分で、基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: '1,2-ヘキサンジオールは主に水系処方で使われる成分で、基剤・保湿・使用感調整などに用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'n_acetyl_glucosamine',
@@ -373,7 +454,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'β-グルカンは主に水系処方で使われる成分で、保湿・肌荒れ防止・整肌や基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'β-グルカンは主に水系処方で使われる成分で、保湿や整肌や基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'sodium_acetylated_hyaluronate',
@@ -407,7 +488,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アデノシンは主に水系処方で使われる成分で、ハリ・弾力感ケアや基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'アデノシンは主に水系処方で使われる成分で、ハリ・整肌や基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'alanine',
@@ -475,7 +556,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '乾燥や刺激を感じる場合があります。敏感肌は配合量に注意してください。',
     },
     research: [],
-    description: 'エタノールは主に水系処方で使われる成分で、基剤・使用感調整に用いられます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'エタノールは主に水系処方で使われる成分で、基剤・保湿・使用感調整などに用いられます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'elastin',
@@ -492,7 +573,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'エラスチンは主に水系処方で使われる成分で、ハリ・弾力感ケアや基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'エラスチンは主に水系処方で使われる成分で、ハリ・整肌や基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'erythritol',
@@ -526,7 +607,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カタツムリ分泌液は主に水系処方で使われる成分で、保湿・ハリ・弾力感ケアや基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'カタツムリ分泌液は主に水系処方で使われる成分で、保湿やハリ・整肌や基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'caffeine',
@@ -543,7 +624,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '肌状態により刺激を感じる場合があります。',
     },
     research: [],
-    description: 'カフェインは主に水系処方で使われる成分で、整肌・製品安定化補助・ハリ・弾力感ケアや基剤・使用感調整に用いられます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'カフェインは主に水系処方で使われる成分で、抗酸化・整肌やハリ・整肌や基剤・使用感調整に用いられます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'caprylyl_glycol',
@@ -577,7 +658,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'キサンタンガムは主に水系処方で使われる成分で、基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'キサンタンガムは主に水系処方で使われる成分で、基剤・保湿・使用感調整などに用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'xylitol',
@@ -627,7 +708,14 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       comedogenic: 0,
       note: '',
     },
-    research: [],
+    research: [
+      {
+        title: 'The effects of locally applied glycerol and xylitol on the hydration, barrier function and morphological parameters of the skin',
+        journal: 'Acta Derm Venereol',
+        year: 2017,
+        finding: 'グリセロール（5%）配合処方の14日使用で皮膚水分とバリア関連指標が改善。',
+      },
+    ],
     description: 'グリセリンは主に水系処方で使われる成分で、保湿や基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
@@ -645,7 +733,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'グルコシルヘスペリジンは主に水系処方で使われる成分で、整肌・製品安定化補助や基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'グルコシルヘスペリジンは主に水系処方で使われる成分で、抗酸化・整肌や基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'glutathione',
@@ -713,7 +801,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'サッカロミセス培養液は主に水系処方で使われる成分で、保湿・ハリ・弾力感ケアや基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'サッカロミセス培養液は主に水系処方で使われる成分で、保湿やハリ・整肌や基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'birch_sap',
@@ -747,7 +835,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'スクレロチウムガムは主に水系処方で使われる成分で、基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'スクレロチウムガムは主に水系処方で使われる成分で、基剤・保湿・使用感調整などに用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'sulisobenzone',
+    name_cosmetic: 'スルイソベンゾン',
+    name_quasi_drug: '',
+    name_inci: 'Sulisobenzone',
+    aliases: ['Benzophenone-4'],
+    ingredient_type: '水性成分',
+    categories: ['uv_filter'],
+    safety: {
+      irritation: 'medium',
+      photosensitivity: false,
+      comedogenic: 0,
+      note: '',
+    },
+    research: [],
+    description: 'スルイソベンゾンは紫外線吸収剤として、主にUVA/UVBをカバーする目的で配合される日焼け止め成分です。単剤ではカバー範囲が限られるため、複数のUVフィルターを組み合わせて広域（UVA/UVB）化することがあります。',
   },
   {
     id: 'serine',
@@ -781,7 +886,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'セルロースガムは主に水系処方で使われる成分で、基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'セルロースガムは主に水系処方で使われる成分で、基剤・保湿・使用感調整などに用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'sorbitol',
@@ -816,6 +921,23 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     },
     research: [],
     description: 'タウリンは主に水系処方で使われる成分で、保湿や基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'ecamsule',
+    name_cosmetic: 'テレフタリリデンジカンフルスルホン酸',
+    name_quasi_drug: '',
+    name_inci: 'Terephthalylidene Dicamphor Sulfonic Acid',
+    aliases: ['メキソリルSX', 'エカムスル'],
+    ingredient_type: '水性成分',
+    categories: ['uv_filter'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 0,
+      note: '',
+    },
+    research: [],
+    description: 'テレフタリリデンジカンフルスルホン酸は紫外線吸収剤として、主にUVAをカバーする目的で配合される日焼け止め成分です。単剤ではカバー範囲が限られるため、複数のUVフィルターを組み合わせて広域（UVA/UVB）化することがあります。',
   },
   {
     id: 'threonine',
@@ -866,7 +988,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ハチミツエキスは植物由来のエキス成分で、保湿・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ハチミツエキスは主に水系処方で使われる成分で、保湿や抗酸化・整肌や基剤・使用感調整に用いられます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'valine',
@@ -899,7 +1021,20 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       comedogenic: 0,
       note: '',
     },
-    research: [],
+    research: [
+      {
+        title: 'Efficacy Evaluation of a Topical Hyaluronic Acid Serum in Facial Photoaging',
+        journal: 'Dermatology and Therapy',
+        year: 2021,
+        finding: 'HA美容液の連用で角層水分量が増加し、ふっくら感・なめらかさ等の評価が改善。',
+      },
+      {
+        title: 'Benefits of topical hyaluronic acid for skin quality and signs of skin aging: From literature review to clinical evidence',
+        journal: 'Dermatologic Therapy',
+        year: 2022,
+        finding: '文献レビューとして、外用HAが保湿・皮膚外観の改善に寄与し得ることを複数試験から総括。',
+      },
+    ],
     description: 'ヒアルロン酸は主に水系処方で使われる成分で、保湿や基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
@@ -985,7 +1120,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヒドロキシプロピルセルロースは主に水系処方で使われる成分で、基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ヒドロキシプロピルセルロースは主に水系処方で使われる成分で、基剤・保湿・使用感調整などに用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'hydroxypropyl_methylcellulose',
@@ -1019,7 +1154,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ビフィズス菌培養溶解質は主に水系処方で使われる成分で、保湿・ハリ・弾力感ケアや基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ビフィズス菌培養溶解質は主に水系処方で使われる成分で、保湿やハリ・整肌や基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'phenylalanine',
@@ -1039,6 +1174,23 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     description: 'フェニルアラニンは主に水系処方で使われる成分で、保湿や基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
+    id: 'ensulizole',
+    name_cosmetic: 'フェニルベンズイミダゾールスルホン酸',
+    name_quasi_drug: '',
+    name_inci: 'Phenylbenzimidazole Sulfonic Acid',
+    aliases: ['エンスリゾール'],
+    ingredient_type: '水性成分',
+    categories: ['uv_filter'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 0,
+      note: '',
+    },
+    research: [],
+    description: 'フェニルベンズイミダゾールスルホン酸は紫外線吸収剤として、主にUVBをカバーする目的で配合される日焼け止め成分です。単剤ではカバー範囲が限られるため、複数のUVフィルターを組み合わせて広域（UVA/UVB）化することがあります。',
+  },
+  {
     id: 'pullulan',
     name_cosmetic: 'プルラン',
     name_quasi_drug: '',
@@ -1053,14 +1205,14 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'プルランは主に水系処方で使われる成分で、基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'プルランは主に水系処方で使われる成分で、基剤・保湿・使用感調整などに用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'propylene_glycol',
     name_cosmetic: 'プロピレングリコール',
     name_quasi_drug: '',
     name_inci: 'Propylene Glycol',
-    aliases: ['PG', 'プロパンジオール'],
+    aliases: ['PG'],
     ingredient_type: '水性成分',
     categories: ['moisturizing'],
     safety: {
@@ -1155,7 +1307,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ポリアクリル酸Naは主に水系処方で使われる成分で、基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ポリアクリル酸Naは主に水系処方で使われる成分で、基剤・保湿・使用感調整などに用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'polyvinyl_alcohol',
@@ -1172,7 +1324,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ポリビニルアルコールは主に水系処方で使われる成分で、基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ポリビニルアルコールは主に水系処方で使われる成分で、基剤・保湿・使用感調整などに用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'polyvinylpyrrolidone',
@@ -1189,7 +1341,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ポリビニルピロリドンは主に水系処方で使われる成分で、基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ポリビニルピロリドンは主に水系処方で使われる成分で、基剤・保湿・使用感調整などに用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'mannitol',
@@ -1257,7 +1409,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: '乳酸桿菌溶解質は主に水系処方で使われる成分で、保湿・肌荒れ防止・整肌や基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: '乳酸桿菌溶解質は主に水系処方で使われる成分で、保湿や整肌や基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'lactobacillus_ferment',
@@ -1274,7 +1426,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: '乳酸桿菌発酵液は主に水系処方で使われる成分で、保湿・肌荒れ防止・整肌や基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: '乳酸桿菌発酵液は主に水系処方で使われる成分で、保湿や整肌や基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'hydrolyzed_elastin',
@@ -1291,7 +1443,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: '加水分解エラスチンは主に水系処方で使われる成分で、ハリ・弾力感ケアや基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: '加水分解エラスチンは主に水系処方で使われる成分で、ハリ・整肌や基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'hydrolyzed_collagen',
@@ -1359,7 +1511,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: '水は主に水系処方で使われる成分で、基剤・使用感調整に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: '水は主に水系処方で使われる成分で、基剤・保湿・使用感調整などに用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'yeast_extract',
@@ -1376,7 +1528,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: '酵母エキスは植物由来のエキス成分で、保湿・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: '酵母エキスは主に水系処方で使われる成分で、保湿やハリ・整肌や基剤・使用感調整に用いられます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'bg',
@@ -1414,13 +1566,13 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
   },
   // ── 油性成分 ──
   {
-    id: 'acai_pulp_oil',
-    name_cosmetic: 'アサイー果実油',
+    id: 'c13_15_alkane',
+    name_cosmetic: '(C13-15)アルカン',
     name_quasi_drug: '',
-    name_inci: 'Euterpe Oleracea Fruit Oil',
-    aliases: ['アサイーオイル'],
+    name_inci: 'C13-15 Alkane',
+    aliases: ['イソパラフィン'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'antioxidant'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1428,7 +1580,245 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アサイー果実油は油性成分として、保湿・整肌・製品安定化補助やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: '(C13-15)アルカンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'c15_19_alkane',
+    name_cosmetic: '(C15-19)アルカン',
+    name_quasi_drug: '',
+    name_inci: 'C15-19 Alkane',
+    aliases: ['イソパラフィン'],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 1,
+      note: '',
+    },
+    research: [],
+    description: '(C15-19)アルカンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'c9_12_alkane',
+    name_cosmetic: '(C9-12)アルカン',
+    name_quasi_drug: '',
+    name_inci: 'C9-12 Alkane',
+    aliases: ['イソパラフィン'],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 1,
+      note: '',
+    },
+    research: [],
+    description: '(C9-12)アルカンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'c12_15_alkyl_ethylhexanoate',
+    name_cosmetic: '2-エチルヘキサン酸C12-15アルキル',
+    name_quasi_drug: '',
+    name_inci: 'C12-15 Alkyl Ethylhexanoate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: '2-エチルヘキサン酸C12-15アルキルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'isostearyl_ethylhexanoate',
+    name_cosmetic: '2-エチルヘキサン酸イソステアリル',
+    name_quasi_drug: '',
+    name_inci: 'Isostearyl Ethylhexanoate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: '2-エチルヘキサン酸イソステアリルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'isononyl_ethylhexanoate',
+    name_cosmetic: '2-エチルヘキサン酸イソノニル',
+    name_quasi_drug: '',
+    name_inci: 'Isononyl Ethylhexanoate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: '2-エチルヘキサン酸イソノニルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'isopropyl_ethylhexanoate',
+    name_cosmetic: '2-エチルヘキサン酸イソプロピル',
+    name_quasi_drug: '',
+    name_inci: 'Isopropyl Ethylhexanoate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: '2-エチルヘキサン酸イソプロピルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'ethylhexyl_ethylhexanoate',
+    name_cosmetic: '2-エチルヘキサン酸エチルヘキシル',
+    name_quasi_drug: '',
+    name_inci: 'Ethylhexyl Ethylhexanoate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: '2-エチルヘキサン酸エチルヘキシルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'octyldodecyl_ethylhexanoate',
+    name_cosmetic: '2-エチルヘキサン酸オクチルドデシル',
+    name_quasi_drug: '',
+    name_inci: 'Octyldodecyl Ethylhexanoate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: '2-エチルヘキサン酸オクチルドデシルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'dipentaerythrityl_ethylhexanoate',
+    name_cosmetic: '2-エチルヘキサン酸ジペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Dipentaerythrityl Ethylhexanoate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: '2-エチルヘキサン酸ジペンタエリスリチルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'stearyl_ethylhexanoate',
+    name_cosmetic: '2-エチルヘキサン酸ステアリル',
+    name_quasi_drug: '',
+    name_inci: 'Stearyl Ethylhexanoate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: '2-エチルヘキサン酸ステアリルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'triethylhexanoin_ethylhexanoate',
+    name_cosmetic: '2-エチルヘキサン酸トリエチルヘキサノイン',
+    name_quasi_drug: '',
+    name_inci: 'Triethylhexanoin Ethylhexanoate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: '2-エチルヘキサン酸トリエチルヘキサノインは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'neopentyl_glycol_ethylhexanoate',
+    name_cosmetic: '2-エチルヘキサン酸ネオペンチルグリコール',
+    name_quasi_drug: '',
+    name_inci: 'Neopentyl Glycol Ethylhexanoate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: '2-エチルヘキサン酸ネオペンチルグリコールは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'pentaerythrityl_ethylhexanoate',
+    name_cosmetic: '2-エチルヘキサン酸ペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Pentaerythrityl Ethylhexanoate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: '2-エチルヘキサン酸ペンタエリスリチルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'acai_pulp_oil',
+    name_cosmetic: 'アサイー果実油',
+    name_quasi_drug: '',
+    name_inci: 'Euterpe Oleracea Fruit Oil',
+    aliases: ['アサイーオイル'],
+    ingredient_type: '油性成分',
+    categories: ['antioxidant', 'oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 1,
+      note: '',
+    },
+    research: [],
+    description: 'アサイー果実油は油性の基剤成分として使われ、抗酸化・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'cannabis_sativa_seed_oil',
@@ -1437,7 +1827,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cannabis Sativa Seed Oil',
     aliases: ['ヘンプシードオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_inflammatory'],
+    categories: ['anti_inflammatory', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1445,7 +1835,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アサ種子油は油性成分として、保湿・肌荒れ防止・整肌やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'アサ種子油は油性の基剤成分として使われ、整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'diisopropyl_adipate',
@@ -1454,7 +1844,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Diisopropyl Adipate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1462,7 +1852,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アジピン酸ジイソプロピルは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'アジピン酸ジイソプロピルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'diethylhexyl_adipate',
@@ -1471,7 +1861,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Diethylhexyl Adipate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1479,7 +1869,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アジピン酸ジエチルヘキシルは機能性誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'アジピン酸ジエチルヘキシルは機能性誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'dibutyl_adipate',
@@ -1488,7 +1878,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Dibutyl Adipate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1496,7 +1886,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アジピン酸ジブチルは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'アジピン酸ジブチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'astaxanthin',
@@ -1505,7 +1895,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Astaxanthin',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['antioxidant', 'anti_aging'],
+    categories: ['antioxidant', 'anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1513,7 +1903,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アスタキサンチンは油性成分として、整肌・製品安定化補助・ハリ・弾力感ケアやエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'アスタキサンチンは油性の基剤成分として使われ、抗酸化・整肌やハリ・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'acetyl_tributyl_citrate',
@@ -1522,7 +1912,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Acetyl Tributyl Citrate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1530,7 +1920,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アセチルトリブチルクエン酸は機能性誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'アセチルトリブチルクエン酸は機能性誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'persea_gratissima_oil',
@@ -1539,7 +1929,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Persea Gratissima (Avocado) Oil',
     aliases: ['アボカドオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1547,7 +1937,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アボカド油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'アボカド油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'linum_usitatissimum_seed_oil',
@@ -1556,7 +1946,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Linum Usitatissimum (Linseed) Seed Oil',
     aliases: ['フラックスシードオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'antioxidant'],
+    categories: ['antioxidant', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1564,7 +1954,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アマニ油は油性成分として、保湿・整肌・製品安定化補助やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'アマニ油は油性の基剤成分として使われ、抗酸化・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'amodimethicone',
@@ -1573,7 +1963,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Amodimethicone',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1581,7 +1971,211 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アモジメチコンは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'アモジメチコンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'c12_15_alkyl_arachidate',
+    name_cosmetic: 'アラキン酸C12-15アルキル',
+    name_quasi_drug: '',
+    name_inci: 'C12-15 Alkyl Arachidate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'アラキン酸C12-15アルキルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'isostearyl_arachidate',
+    name_cosmetic: 'アラキン酸イソステアリル',
+    name_quasi_drug: '',
+    name_inci: 'Isostearyl Arachidate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'アラキン酸イソステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'isononyl_arachidate',
+    name_cosmetic: 'アラキン酸イソノニル',
+    name_quasi_drug: '',
+    name_inci: 'Isononyl Arachidate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'アラキン酸イソノニルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'isopropyl_arachidate',
+    name_cosmetic: 'アラキン酸イソプロピル',
+    name_quasi_drug: '',
+    name_inci: 'Isopropyl Arachidate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'アラキン酸イソプロピルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'ethylhexyl_arachidate',
+    name_cosmetic: 'アラキン酸エチルヘキシル',
+    name_quasi_drug: '',
+    name_inci: 'Ethylhexyl Arachidate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'アラキン酸エチルヘキシルは機能性誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'octyldodecyl_arachidate',
+    name_cosmetic: 'アラキン酸オクチルドデシル',
+    name_quasi_drug: '',
+    name_inci: 'Octyldodecyl Arachidate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'アラキン酸オクチルドデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'dipentaerythrityl_arachidate',
+    name_cosmetic: 'アラキン酸ジペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Dipentaerythrityl Arachidate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'アラキン酸ジペンタエリスリチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'stearyl_arachidate',
+    name_cosmetic: 'アラキン酸ステアリル',
+    name_quasi_drug: '',
+    name_inci: 'Stearyl Arachidate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'アラキン酸ステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'cetyl_arachidate',
+    name_cosmetic: 'アラキン酸セチル',
+    name_quasi_drug: '',
+    name_inci: 'Cetyl Arachidate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'アラキン酸セチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'triethylhexanoin_arachidate',
+    name_cosmetic: 'アラキン酸トリエチルヘキサノイン',
+    name_quasi_drug: '',
+    name_inci: 'Triethylhexanoin Arachidate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'アラキン酸トリエチルヘキサノインは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'neopentyl_glycol_arachidate',
+    name_cosmetic: 'アラキン酸ネオペンチルグリコール',
+    name_quasi_drug: '',
+    name_inci: 'Neopentyl Glycol Arachidate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'アラキン酸ネオペンチルグリコールは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'pentaerythrityl_arachidate',
+    name_cosmetic: 'アラキン酸ペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Pentaerythrityl Arachidate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'アラキン酸ペンタエリスリチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'argan_kernel_oil',
@@ -1590,7 +2184,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Argania Spinosa Kernel Oil',
     aliases: ['アルガンオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'antioxidant'],
+    categories: ['antioxidant', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1598,7 +2192,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アルガニアスピノサ核油は油性成分として、保湿・整肌・製品安定化補助やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'アルガニアスピノサ核油は油性の基剤成分として使われ、抗酸化・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'argania_spinosa_kernel_oil2',
@@ -1607,7 +2201,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Argania Spinosa Kernel Oil',
     aliases: ['アルガンオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'antioxidant'],
+    categories: ['antioxidant', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1615,7 +2209,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アルガニアスピノサ核油は油性成分として、保湿・整肌・製品安定化補助やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'アルガニアスピノサ核油は油性の基剤成分として使われ、抗酸化・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'prunus_armeniaca_kernel_oil',
@@ -1624,7 +2218,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Prunus Armeniaca (Apricot) Kernel Oil',
     aliases: ['アプリコットカーネルオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1632,7 +2226,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アンズ核油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'アンズ核油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'prunus_amygdalus_dulcis_oil',
@@ -1641,7 +2235,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Prunus Amygdalus Dulcis (Sweet Almond) Oil',
     aliases: ['スイートアーモンドオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1649,7 +2243,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アーモンド油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'アーモンド油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'c12_15_alkyl_isostearate',
+    name_cosmetic: 'イソステアリン酸C12-15アルキル',
+    name_quasi_drug: '',
+    name_inci: 'C12-15 Alkyl Isostearate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'イソステアリン酸C12-15アルキルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isostearyl_isostearate',
@@ -1658,7 +2269,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isostearyl Isostearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1666,7 +2277,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'イソステアリン酸イソステアリルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'イソステアリン酸イソステアリルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isostearyl_isostearate2',
@@ -1675,7 +2286,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isostearyl Isostearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1683,7 +2294,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'イソステアリン酸イソステアリルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'イソステアリン酸イソステアリルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'isononyl_isostearate',
+    name_cosmetic: 'イソステアリン酸イソノニル',
+    name_quasi_drug: '',
+    name_inci: 'Isononyl Isostearate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'イソステアリン酸イソノニルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isopropyl_isostearate',
@@ -1692,7 +2320,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isopropyl Isostearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1700,7 +2328,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'イソステアリン酸イソプロピルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'イソステアリン酸イソプロピルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'ethylhexyl_isostearate',
@@ -1709,7 +2337,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ethylhexyl Isostearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1717,7 +2345,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'イソステアリン酸エチルヘキシルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'イソステアリン酸エチルヘキシルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'octyldodecyl_isostearate',
+    name_cosmetic: 'イソステアリン酸オクチルドデシル',
+    name_quasi_drug: '',
+    name_inci: 'Octyldodecyl Isostearate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'イソステアリン酸オクチルドデシルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'cholesteryl_isostearate',
@@ -1726,7 +2371,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cholesteryl Isostearate',
     aliases: ['コレステロールエステル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1734,7 +2379,92 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'イソステアリン酸コレステリルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'イソステアリン酸コレステリルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'dipentaerythrityl_isostearate',
+    name_cosmetic: 'イソステアリン酸ジペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Dipentaerythrityl Isostearate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'イソステアリン酸ジペンタエリスリチルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'stearyl_isostearate',
+    name_cosmetic: 'イソステアリン酸ステアリル',
+    name_quasi_drug: '',
+    name_inci: 'Stearyl Isostearate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'イソステアリン酸ステアリルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'cetyl_isostearate',
+    name_cosmetic: 'イソステアリン酸セチル',
+    name_quasi_drug: '',
+    name_inci: 'Cetyl Isostearate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'イソステアリン酸セチルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'triethylhexanoin_isostearate',
+    name_cosmetic: 'イソステアリン酸トリエチルヘキサノイン',
+    name_quasi_drug: '',
+    name_inci: 'Triethylhexanoin Isostearate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'イソステアリン酸トリエチルヘキサノインは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'neopentyl_glycol_isostearate',
+    name_cosmetic: 'イソステアリン酸ネオペンチルグリコール',
+    name_quasi_drug: '',
+    name_inci: 'Neopentyl Glycol Isostearate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'イソステアリン酸ネオペンチルグリコールは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'propylene_glycol_isostearate',
@@ -1743,7 +2473,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Propylene Glycol Isostearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1751,7 +2481,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'イソステアリン酸プロピレングリコールは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'イソステアリン酸プロピレングリコールは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'pentaerythrityl_isostearate',
+    name_cosmetic: 'イソステアリン酸ペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Pentaerythrityl Isostearate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'イソステアリン酸ペンタエリスリチルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isododecane',
@@ -1760,7 +2507,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isododecane',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1768,7 +2515,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'イソドデカンは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'イソドデカンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'isotridecyl_isononanoate',
@@ -1777,7 +2524,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isotridecyl Isononanoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1785,7 +2532,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'イソノナン酸イソトリデシルは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'イソノナン酸イソトリデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'isononyl_isononanoate',
@@ -1794,7 +2541,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isononyl Isononanoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1802,7 +2549,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'イソノナン酸イソノニルは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'イソノナン酸イソノニルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'cetearyl_isononanoate',
@@ -1811,7 +2558,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cetearyl Isononanoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1819,7 +2566,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'イソノナン酸セテアリルは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'イソノナン酸セテアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isohexadecane',
@@ -1828,7 +2575,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isohexadecane',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1836,7 +2583,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'イソヘキサデカンは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'イソヘキサデカンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'idebenone',
@@ -1845,7 +2592,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Idebenone',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['antioxidant', 'anti_aging'],
+    categories: ['antioxidant', 'anti_aging', 'oil_based'],
     safety: {
       irritation: 'medium',
       photosensitivity: false,
@@ -1853,7 +2600,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '肌状態により刺激を感じる場合があります。',
     },
     research: [],
-    description: 'イデベノンは油性成分として、整肌・製品安定化補助・ハリ・弾力感ケアやエモリエント性・感触調整を目的に配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'イデベノンは油性の基剤成分として使われ、抗酸化・整肌やハリ・整肌や感触調整を目的に配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'heptyl_undecylenate',
@@ -1862,7 +2609,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Heptyl Undecylenate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1870,7 +2617,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ウンデシレン酸ヘプチルは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ウンデシレン酸ヘプチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'cetyl_ethylhexanoate',
@@ -1879,7 +2626,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cetyl Ethylhexanoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1887,7 +2634,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'エチルヘキサン酸セチルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'エチルヘキサン酸セチルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'cetearyl_ethyhexanoate',
@@ -1896,7 +2643,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cetearyl Ethylhexanoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1904,7 +2651,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'エチルヘキサン酸セテアリルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'エチルヘキサン酸セテアリルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'oleyl_erucate',
@@ -1913,7 +2660,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Oleyl Erucate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1921,7 +2668,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'エルカ酸オレイルは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'エルカ酸オレイルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'octyltriazone_old',
+    name_cosmetic: 'オクチルトリアゾン',
+    name_quasi_drug: '',
+    name_inci: 'Ethylhexyl Triazone',
+    aliases: ['旧称'],
+    ingredient_type: '油性成分',
+    categories: ['oil_based', 'uv_filter'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 1,
+      note: '',
+    },
+    research: [],
+    description: 'オクチルトリアゾンは紫外線防御成分として、主にUVA/UVBをカバーする目的で配合される日焼け止め成分です。単剤ではカバー範囲が限られるため、複数のUVフィルターを組み合わせて広域（UVA/UVB）化することがあります。',
   },
   {
     id: 'opuntia_ficus_indica_seed_oil',
@@ -1930,7 +2694,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Opuntia Ficus-Indica Seed Oil',
     aliases: ['ウチワサボテン種子油'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'antioxidant'],
+    categories: ['antioxidant', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1938,7 +2702,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オプンチアフィクスインジカ種子油は油性成分として、保湿・整肌・製品安定化補助やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'オプンチアフィクスインジカ種子油は油性の基剤成分として使われ、抗酸化・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'olea_europaea_fruit_oil2',
@@ -1947,7 +2711,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Olea Europaea (Olive) Fruit Oil',
     aliases: ['オリーブオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1955,7 +2719,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オリーブ果実油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'オリーブ果実油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'olive_fruit_oil',
@@ -1964,7 +2728,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Olea Europaea (Olive) Fruit Oil',
     aliases: ['オリーブオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1972,7 +2736,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オリーブ果実油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'オリーブ果実油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'olea_europaea_unsaponifiables',
@@ -1981,7 +2745,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Olea Europaea (Olive) Oil Unsaponifiables',
     aliases: ['オリーブ不けん化物'],
     ingredient_type: '油性成分',
-    categories: ['anti_aging', 'moisturizing'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -1989,7 +2753,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オリーブ果実油不けん化物は油性成分として、ハリ・弾力感ケア・保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'オリーブ果実油不けん化物は油性の基剤成分として使われ、ハリ・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'ethylhexyl_olivate',
@@ -1998,7 +2762,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ethylhexyl Olivate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2006,7 +2770,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オリーブ油脂肪酸エチルヘキシルは機能性誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'オリーブ油脂肪酸エチルヘキシルは機能性誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'oleic_acid',
@@ -2015,7 +2779,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Oleic Acid',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2023,7 +2787,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オレイン酸は油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'オレイン酸は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'c12_15_alkyl_oleate',
+    name_cosmetic: 'オレイン酸C12-15アルキル',
+    name_quasi_drug: '',
+    name_inci: 'C12-15 Alkyl Oleate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'オレイン酸C12-15アルキルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isostearyl_oleate',
@@ -2032,7 +2813,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isostearyl Oleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2040,7 +2821,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オレイン酸イソステアリルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'オレイン酸イソステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isodecyl_oleate',
@@ -2049,7 +2830,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isodecyl Oleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2057,7 +2838,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オレイン酸イソデシルは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'オレイン酸イソデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isotridecyl_oleate',
@@ -2066,7 +2847,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isotridecyl Oleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2074,7 +2855,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オレイン酸イソトリデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'オレイン酸イソトリデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isononyl_oleate',
@@ -2083,7 +2864,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isononyl Oleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2091,7 +2872,41 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オレイン酸イソノニルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'オレイン酸イソノニルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'isopropyl_oleate',
+    name_cosmetic: 'オレイン酸イソプロピル',
+    name_quasi_drug: '',
+    name_inci: 'Isopropyl Oleate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'オレイン酸イソプロピルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'ethylhexyl_oleate',
+    name_cosmetic: 'オレイン酸エチルヘキシル',
+    name_quasi_drug: '',
+    name_inci: 'Ethylhexyl Oleate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'オレイン酸エチルヘキシルは機能性誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'octyldodecyl_oleate',
@@ -2100,7 +2915,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Octyldodecyl Oleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2108,7 +2923,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オレイン酸オクチルドデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'オレイン酸オクチルドデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'oleyl_oleate',
@@ -2117,7 +2932,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Oleyl Oleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2125,7 +2940,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オレイン酸オレイルは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'オレイン酸オレイルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'dipentaerythrityl_oleate',
+    name_cosmetic: 'オレイン酸ジペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Dipentaerythrityl Oleate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'オレイン酸ジペンタエリスリチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'stearyl_oleate',
@@ -2134,7 +2966,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Stearyl Oleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2142,7 +2974,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オレイン酸ステアリルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'オレイン酸ステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'cetyl_oleate',
@@ -2151,7 +2983,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cetyl Oleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2159,7 +2991,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オレイン酸セチルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'オレイン酸セチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'decyl_oleate',
@@ -2168,7 +3000,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Decyl Oleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2176,7 +3008,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オレイン酸デシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'オレイン酸デシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'triethylhexanoin_oleate',
+    name_cosmetic: 'オレイン酸トリエチルヘキサノイン',
+    name_quasi_drug: '',
+    name_inci: 'Triethylhexanoin Oleate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'オレイン酸トリエチルヘキサノインは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'tridecyl_oleate',
@@ -2185,7 +3034,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Tridecyl Oleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2193,7 +3042,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オレイン酸トリデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'オレイン酸トリデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'dodecyl_oleate',
@@ -2202,7 +3051,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Dodecyl Oleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2210,7 +3059,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オレイン酸ドデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'オレイン酸ドデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'neopentyl_glycol_oleate',
+    name_cosmetic: 'オレイン酸ネオペンチルグリコール',
+    name_quasi_drug: '',
+    name_inci: 'Neopentyl Glycol Oleate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'オレイン酸ネオペンチルグリコールは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'hexyldecyl_oleate',
@@ -2219,7 +3085,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Hexyldecyl Oleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2227,7 +3093,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オレイン酸ヘキシルデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'オレイン酸ヘキシルデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'behenyl_oleate',
@@ -2236,7 +3102,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Behenyl Oleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2244,7 +3110,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オレイン酸ベヘニルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'オレイン酸ベヘニルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'pentaerythrityl_oleate',
+    name_cosmetic: 'オレイン酸ペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Pentaerythrityl Oleate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'オレイン酸ペンタエリスリチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'theobroma_cacao_seed_butter',
@@ -2253,7 +3136,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Theobroma Cacao (Cocoa) Seed Butter',
     aliases: ['ココアバター'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2261,7 +3144,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カカオ脂は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'カカオ脂は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'rosa_canina_fruit_oil2',
@@ -2270,7 +3153,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Rosa Canina Fruit Oil',
     aliases: ['ローズヒップオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'antioxidant'],
+    categories: ['antioxidant', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2278,7 +3161,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カニナバラ果実油は油性成分として、保湿・整肌・製品安定化補助やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'カニナバラ果実油は油性の基剤成分として使われ、抗酸化・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'rosehip_fruit_oil',
@@ -2287,7 +3170,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Rosa Canina Fruit Oil',
     aliases: ['ローズヒップオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'antioxidant'],
+    categories: ['antioxidant', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2295,7 +3178,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カニナバラ果実油は油性成分として、保湿・整肌・製品安定化補助やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'カニナバラ果実油は油性の基剤成分として使われ、抗酸化・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'caprylyl_methicone',
@@ -2304,7 +3187,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Caprylyl Methicone',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2312,7 +3195,109 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カプリリルメチコンは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'カプリリルメチコンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'c12_15_alkyl_caprylate',
+    name_cosmetic: 'カプリル酸C12-15アルキル',
+    name_quasi_drug: '',
+    name_inci: 'C12-15 Alkyl Caprylate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリル酸C12-15アルキルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'isostearyl_caprylate',
+    name_cosmetic: 'カプリル酸イソステアリル',
+    name_quasi_drug: '',
+    name_inci: 'Isostearyl Caprylate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリル酸イソステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'isononyl_caprylate',
+    name_cosmetic: 'カプリル酸イソノニル',
+    name_quasi_drug: '',
+    name_inci: 'Isononyl Caprylate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリル酸イソノニルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'isopropyl_caprylate',
+    name_cosmetic: 'カプリル酸イソプロピル',
+    name_quasi_drug: '',
+    name_inci: 'Isopropyl Caprylate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリル酸イソプロピルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'ethylhexyl_caprylate',
+    name_cosmetic: 'カプリル酸エチルヘキシル',
+    name_quasi_drug: '',
+    name_inci: 'Ethylhexyl Caprylate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリル酸エチルヘキシルは機能性誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'octyldodecyl_caprylate',
+    name_cosmetic: 'カプリル酸オクチルドデシル',
+    name_quasi_drug: '',
+    name_inci: 'Octyldodecyl Caprylate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリル酸オクチルドデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'glyceryl_caprylate',
@@ -2321,7 +3306,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Glyceryl Caprylate',
     aliases: ['防腐補助'],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2329,7 +3314,109 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カプリル酸グリセリルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'カプリル酸グリセリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'dipentaerythrityl_caprylate',
+    name_cosmetic: 'カプリル酸ジペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Dipentaerythrityl Caprylate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリル酸ジペンタエリスリチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'stearyl_caprylate',
+    name_cosmetic: 'カプリル酸ステアリル',
+    name_quasi_drug: '',
+    name_inci: 'Stearyl Caprylate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリル酸ステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'cetyl_caprylate',
+    name_cosmetic: 'カプリル酸セチル',
+    name_quasi_drug: '',
+    name_inci: 'Cetyl Caprylate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリル酸セチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'triethylhexanoin_caprylate',
+    name_cosmetic: 'カプリル酸トリエチルヘキサノイン',
+    name_quasi_drug: '',
+    name_inci: 'Triethylhexanoin Caprylate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリル酸トリエチルヘキサノインは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'neopentyl_glycol_caprylate',
+    name_cosmetic: 'カプリル酸ネオペンチルグリコール',
+    name_quasi_drug: '',
+    name_inci: 'Neopentyl Glycol Caprylate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリル酸ネオペンチルグリコールは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'pentaerythrityl_caprylate',
+    name_cosmetic: 'カプリル酸ペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Pentaerythrityl Caprylate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリル酸ペンタエリスリチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'caprylic_capric_triglyceride',
@@ -2338,7 +3425,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Caprylic/Capric Triglyceride',
     aliases: ['MCT'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2346,7 +3433,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カプリル酸／カプリン酸トリグリセリルは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'カプリル酸／カプリン酸トリグリセリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'caprylic_capric_triglyceride2',
@@ -2355,7 +3442,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Caprylic/Capric Triglyceride',
     aliases: ['MCT'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2363,7 +3450,211 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カプリル酸／カプリン酸トリグリセリルは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'カプリル酸／カプリン酸トリグリセリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'c12_15_alkyl_caprate',
+    name_cosmetic: 'カプリン酸C12-15アルキル',
+    name_quasi_drug: '',
+    name_inci: 'C12-15 Alkyl Caprate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリン酸C12-15アルキルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'isostearyl_caprate',
+    name_cosmetic: 'カプリン酸イソステアリル',
+    name_quasi_drug: '',
+    name_inci: 'Isostearyl Caprate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリン酸イソステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'isononyl_caprate',
+    name_cosmetic: 'カプリン酸イソノニル',
+    name_quasi_drug: '',
+    name_inci: 'Isononyl Caprate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリン酸イソノニルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'isopropyl_caprate',
+    name_cosmetic: 'カプリン酸イソプロピル',
+    name_quasi_drug: '',
+    name_inci: 'Isopropyl Caprate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリン酸イソプロピルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'ethylhexyl_caprate',
+    name_cosmetic: 'カプリン酸エチルヘキシル',
+    name_quasi_drug: '',
+    name_inci: 'Ethylhexyl Caprate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリン酸エチルヘキシルは機能性誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'octyldodecyl_caprate',
+    name_cosmetic: 'カプリン酸オクチルドデシル',
+    name_quasi_drug: '',
+    name_inci: 'Octyldodecyl Caprate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリン酸オクチルドデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'dipentaerythrityl_caprate',
+    name_cosmetic: 'カプリン酸ジペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Dipentaerythrityl Caprate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリン酸ジペンタエリスリチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'stearyl_caprate',
+    name_cosmetic: 'カプリン酸ステアリル',
+    name_quasi_drug: '',
+    name_inci: 'Stearyl Caprate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリン酸ステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'cetyl_caprate',
+    name_cosmetic: 'カプリン酸セチル',
+    name_quasi_drug: '',
+    name_inci: 'Cetyl Caprate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリン酸セチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'triethylhexanoin_caprate',
+    name_cosmetic: 'カプリン酸トリエチルヘキサノイン',
+    name_quasi_drug: '',
+    name_inci: 'Triethylhexanoin Caprate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリン酸トリエチルヘキサノインは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'neopentyl_glycol_caprate',
+    name_cosmetic: 'カプリン酸ネオペンチルグリコール',
+    name_quasi_drug: '',
+    name_inci: 'Neopentyl Glycol Caprate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリン酸ネオペンチルグリコールは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'pentaerythrityl_caprate',
+    name_cosmetic: 'カプリン酸ペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Pentaerythrityl Caprate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'カプリン酸ペンタエリスリチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'cucurbita_pepo_seed_oil',
@@ -2372,7 +3663,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cucurbita Pepo (Pumpkin) Seed Oil',
     aliases: ['パンプキンシードオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'antioxidant'],
+    categories: ['antioxidant', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2380,7 +3671,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カボチャ種子油は油性成分として、保湿・整肌・製品安定化補助やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'カボチャ種子油は油性の基剤成分として使われ、抗酸化・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'carnauba_wax',
@@ -2389,7 +3680,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Carnauba Wax',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2397,7 +3688,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カルナウバロウは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'カルナウバロウは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'garcinia_indica_seed_butter',
@@ -2406,7 +3697,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Garcinia Indica Seed Butter',
     aliases: ['コクムバター'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2414,7 +3705,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ガルシニアインディカ種子脂は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ガルシニアインディカ種子脂は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'candelilla_wax',
@@ -2423,7 +3714,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Candelilla Wax',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2431,7 +3722,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'キャンデリラロウは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'キャンデリラロウは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'triisostearyl_citrate',
@@ -2440,7 +3731,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Triisostearyl Citrate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2448,7 +3739,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'クエン酸トリイソステアリルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'クエン酸トリイソステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'triethyl_citrate',
@@ -2457,7 +3748,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Triethyl Citrate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2465,7 +3756,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'クエン酸トリエチルは機能性誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'クエン酸トリエチルは機能性誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'tributyl_citrate',
@@ -2474,7 +3765,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Tributyl Citrate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2482,7 +3773,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'クエン酸トリブチルは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'クエン酸トリブチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'ribes_nigrum_seed_oil',
@@ -2491,7 +3782,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ribes Nigrum (Black Currant) Seed Oil',
     aliases: ['カシスシードオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2499,7 +3790,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'クロフサスグリ種子油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'クロフサスグリ種子油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'glucosyl_ceramide',
@@ -2508,7 +3799,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Glucosyl Ceramide',
     aliases: ['糖セラミド'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2525,7 +3816,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: '',
     aliases: ['ライスセラミド', '米由来セラミド'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2533,7 +3824,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'コメヌカスフィンゴ糖脂質はセラミド系の前駆体・関連脂質として、保湿や皮膚コンディショニングを目的に配合されます。バリア補助の体感は配合量だけでなく、コレステロールや脂肪酸との組み合わせ設計でも変わります。',
+    description: 'コメヌカスフィンゴ糖脂質は油性の基剤成分として使われ、ハリ・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'rice_bran_oil',
+    name_cosmetic: 'コメヌカ油',
+    name_quasi_drug: '',
+    name_inci: 'Oryza Sativa (Rice) Bran Oil',
+    aliases: ['米ぬか油'],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'コメヌカ油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'oryza_sativa_germ_oil',
@@ -2542,7 +3850,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Oryza Sativa (Rice) Germ Oil',
     aliases: ['ライスジャームオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'antioxidant'],
+    categories: ['antioxidant', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2550,7 +3858,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'コメ胚芽油は油性成分として、保湿・整肌・製品安定化補助やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'コメ胚芽油は油性の基剤成分として使われ、抗酸化・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'cholesterol',
@@ -2559,7 +3867,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cholesterol',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2567,7 +3875,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'コレステロールは油性成分として、保湿・ハリ・弾力感ケアやエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'コレステロールは油性の基剤成分として使われ、ハリ・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'cholesterol_sulfate',
@@ -2576,7 +3884,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Sodium Cholesteryl Sulfate',
     aliases: ['コレステロールサルフェート'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2584,7 +3892,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'コレステロール硫酸Ｎａは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'コレステロール硫酸Ｎａは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'sesamum_indicum_seed_oil',
@@ -2593,7 +3901,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Sesamum Indicum (Sesame) Seed Oil',
     aliases: ['セサミオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'antioxidant'],
+    categories: ['antioxidant', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2601,7 +3909,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ゴマ油は油性成分として、保湿・整肌・製品安定化補助やエモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ゴマ油は油性の基剤成分として使われ、抗酸化・整肌や感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'plukenetia_volubilis_seed_oil',
@@ -2610,7 +3918,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Plukenetia Volubilis Seed Oil',
     aliases: ['サチャインチ種子油'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'antioxidant'],
+    categories: ['antioxidant', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2618,7 +3926,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'サチャインチオイルは油性成分として、保湿・整肌・製品安定化補助やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'サチャインチオイルは油性の基剤成分として使われ、抗酸化・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'carthamus_tinctorius_seed_oil',
@@ -2627,7 +3935,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Carthamus Tinctorius (Safflower) Seed Oil',
     aliases: ['ベニバナ油'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2635,7 +3943,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'サフラワー油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'サフラワー油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'butyloctyl_salicylate',
@@ -2644,7 +3952,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Butyloctyl Salicylate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2652,7 +3960,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'サリチル酸ブチルオクチルはサリチル酸誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'サリチル酸ブチルオクチルはサリチル酸誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'benzyl_salicylate',
@@ -2661,7 +3969,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Benzyl Salicylate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2669,7 +3977,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'サリチル酸ベンジルはサリチル酸誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'サリチル酸ベンジルはサリチル酸誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'punica_granatum_seed_oil',
@@ -2678,7 +3986,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Punica Granatum Seed Oil',
     aliases: ['ポメグラネートシードオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'antioxidant'],
+    categories: ['antioxidant', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2686,7 +3994,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ザクロ種子油は油性成分として、保湿・整肌・製品安定化補助やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ザクロ種子油は油性の基剤成分として使われ、抗酸化・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'butyrospermum_parkii_butter2',
@@ -2695,7 +4003,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Butyrospermum Parkii (Shea) Butter',
     aliases: ['シアバター'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2703,7 +4011,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'シア脂は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'シア脂は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'sheabutter',
@@ -2712,7 +4020,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Butyrospermum Parkii (Shea) Butter',
     aliases: ['シアバター'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2720,7 +4028,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'シア脂は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'シア脂は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'butyrospermum_parkii_unsaponifiables',
@@ -2729,7 +4037,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Butyrospermum Parkii (Shea) Butter Unsaponifiables',
     aliases: ['シア不けん化物'],
     ingredient_type: '油性成分',
-    categories: ['anti_aging', 'moisturizing'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2737,7 +4045,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'シア脂不けん化物は油性成分として、ハリ・弾力感ケア・保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'シア脂不けん化物は油性の基剤成分として使われ、ハリ・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'cyclohexasiloxane',
@@ -2746,7 +4054,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cyclohexasiloxane',
     aliases: ['D6'],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2754,7 +4062,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'シクロヘキサシロキサンは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'シクロヘキサシロキサンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'cyclopentasiloxane',
@@ -2763,7 +4071,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cyclopentasiloxane',
     aliases: ['D5'],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2771,7 +4079,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'シクロペンタシロキサンは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'シクロペンタシロキサンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'cyclomethicone',
@@ -2780,7 +4088,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cyclomethicone',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2788,7 +4096,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'シクロメチコンは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'シクロメチコンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'silicone_resin',
@@ -2797,7 +4105,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Silicone Resin',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2805,7 +4113,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'シリコーンレジンは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'シリコーンレジンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'diethylhexyl_syringylidenemalonate',
@@ -2814,7 +4122,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Diethylhexyl Syringylidenemalonate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2822,7 +4130,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ジエチルヘキシルシリンギリデンマロネートは機能性誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ジエチルヘキシルシリンギリデンマロネートは機能性誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'diethylhexyl_butamido_triazone',
+    name_cosmetic: 'ジエチルヘキシルブタミドトリアゾン',
+    name_quasi_drug: '',
+    name_inci: 'Diethylhexyl Butamido Triazone',
+    aliases: ['Iscotrizinol', 'DBT'],
+    ingredient_type: '油性成分',
+    categories: ['oil_based', 'uv_filter'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 1,
+      note: '',
+    },
+    research: [],
+    description: 'ジエチルヘキシルブタミドトリアゾンは紫外線吸収剤として、主にUVA/UVBをカバーする目的で配合される日焼け止め成分です。単剤ではカバー範囲が限られるため、複数のUVフィルターを組み合わせて広域（UVA/UVB）化することがあります。',
   },
   {
     id: 'dicaprylyl_ether',
@@ -2831,7 +4156,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Dicaprylyl Ether',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2839,7 +4164,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ジカプリリルエーテルは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ジカプリリルエーテルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'dicaprylyl_carbonate',
@@ -2848,7 +4173,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Dicaprylyl Carbonate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2856,7 +4181,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ジカプリリルカーボネートは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ジカプリリルカーボネートは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'neopentyl_glycol_dicaprylate_dicaprate',
@@ -2865,7 +4190,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Neopentyl Glycol Dicaprylate/Dicaprate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2873,7 +4198,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ジカプリル酸／ジカプリン酸ネオペンチルグリコールは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ジカプリル酸／ジカプリン酸ネオペンチルグリコールは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'propylene_glycol_dicaprylate_dicaprate',
@@ -2882,7 +4207,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Propylene Glycol Dicaprylate/Dicaprate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2890,7 +4215,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ジカプリル酸／ジカプリン酸プロピレングリコールは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ジカプリル酸／ジカプリン酸プロピレングリコールは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'butylene_glycol_dicaprylate_dicaprate',
@@ -2899,7 +4224,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Butylene Glycol Dicaprylate/Dicaprate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2907,7 +4232,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ジカプリル酸／ジカプリン酸ＢＧは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ジカプリル酸／ジカプリン酸ＢＧは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'neopentyl_glycol_diheptanoate',
@@ -2916,7 +4241,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Neopentyl Glycol Diheptanoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2924,7 +4249,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ジヘプタン酸ネオペンチルグリコールは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ジヘプタン酸ネオペンチルグリコールは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'dipentaerythrityl_hexahydroxystearate_hexastearate_hexarosinate',
@@ -2933,7 +4258,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Dipentaerythrityl Hexahydroxystearate/Hexastearate/Hexarosinate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2941,7 +4266,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ジペンタエリスリチルヘキサヒドロキシステアリン酸／ヘキサステアリン酸／ヘキサロジン酸ジエステルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ジペンタエリスリチルヘキサヒドロキシステアリン酸／ヘキサステアリン酸／ヘキサロジン酸ジエステルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'dimethiconol',
@@ -2950,7 +4275,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Dimethiconol',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2958,7 +4283,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ジメチコノールは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ジメチコノールは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'dimethicone',
@@ -2967,7 +4292,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Dimethicone',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2975,7 +4300,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ジメチコンは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ジメチコンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'dimethicone_vinyl_dimethicone_crosspolymer',
@@ -2984,7 +4309,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Dimethicone/Vinyl Dimethicone Crosspolymer',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -2992,7 +4317,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ジメチコン／ビニルジメチコンクロスポリマーは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ジメチコン／ビニルジメチコンクロスポリマーは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'citrullus_lanatus_seed_oil',
@@ -3001,7 +4326,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Citrullus Lanatus Seed Oil',
     aliases: ['ウォーターメロンシードオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3009,7 +4334,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'スイカ種子油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'スイカ種子油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'sucrose_acetate_isobutyrate',
@@ -3018,7 +4343,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Sucrose Acetate Isobutyrate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3026,7 +4351,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'スクロース酢酸イソ酪酸エステルは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'スクロース酢酸イソ酪酸エステルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'squalane',
@@ -3035,7 +4360,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Squalane',
     aliases: ['スクワレン水添物'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3043,7 +4368,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'スクワランは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'スクワランは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'stearyl_alcohol',
@@ -3052,7 +4377,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Stearyl Alcohol',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3060,7 +4385,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ステアリルアルコールは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ステアリルアルコールは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'stearic_acid',
@@ -3069,7 +4394,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Stearic Acid',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3077,7 +4402,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ステアリン酸は油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ステアリン酸は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'c12_15_alkyl_stearate',
+    name_cosmetic: 'ステアリン酸C12-15アルキル',
+    name_quasi_drug: '',
+    name_inci: 'C12-15 Alkyl Stearate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'ステアリン酸C12-15アルキルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'ascorbyl_stearate',
@@ -3086,7 +4428,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ascorbyl Stearate',
     aliases: ['ビタミンCステアレート'],
     ingredient_type: '油性成分',
-    categories: ['antioxidant', 'anti_aging'],
+    categories: ['antioxidant', 'anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3094,7 +4436,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ステアリン酸アスコルビルはビタミンC誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ステアリン酸アスコルビルはビタミンC誘導体の油性成分で、抗酸化・整肌やハリ・整肌や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isostearyl_stearate',
@@ -3103,7 +4445,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isostearyl Stearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3111,7 +4453,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ステアリン酸イソステアリルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ステアリン酸イソステアリルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isocetyl_stearate',
@@ -3120,7 +4462,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isocetyl Stearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3128,7 +4470,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ステアリン酸イソセチルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ステアリン酸イソセチルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isodecyl_stearate',
@@ -3137,7 +4479,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isodecyl Stearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3145,7 +4487,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ステアリン酸イソデシルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ステアリン酸イソデシルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isotridecyl_stearate',
@@ -3154,7 +4496,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isotridecyl Stearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3162,7 +4504,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ステアリン酸イソトリデシルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ステアリン酸イソトリデシルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isononyl_stearate',
@@ -3171,7 +4513,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isononyl Stearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3179,7 +4521,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ステアリン酸イソノニルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ステアリン酸イソノニルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isopropyl_stearate',
@@ -3188,7 +4530,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isopropyl Stearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3196,7 +4538,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ステアリン酸イソプロピルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ステアリン酸イソプロピルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'ethylhexyl_stearate',
@@ -3205,7 +4547,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ethylhexyl Stearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3213,7 +4555,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ステアリン酸エチルヘキシルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ステアリン酸エチルヘキシルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'octyldodecyl_stearate',
@@ -3222,7 +4564,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Octyldodecyl Stearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3230,7 +4572,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ステアリン酸オクチルドデシルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ステアリン酸オクチルドデシルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'dipentaerythrityl_stearate',
+    name_cosmetic: 'ステアリン酸ジペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Dipentaerythrityl Stearate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'ステアリン酸ジペンタエリスリチルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'stearyl_stearate',
@@ -3239,7 +4598,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Stearyl Stearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3247,7 +4606,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ステアリン酸ステアリルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ステアリン酸ステアリルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'cetyl_stearate',
@@ -3256,7 +4615,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cetyl Stearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3264,7 +4623,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ステアリン酸セチルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ステアリン酸セチルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'decyl_stearate',
@@ -3273,7 +4632,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Decyl Stearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3281,7 +4640,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ステアリン酸デシルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ステアリン酸デシルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'triethylhexanoin_stearate',
+    name_cosmetic: 'ステアリン酸トリエチルヘキサノイン',
+    name_quasi_drug: '',
+    name_inci: 'Triethylhexanoin Stearate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'ステアリン酸トリエチルヘキサノインは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'tridecyl_stearate',
@@ -3290,7 +4666,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Tridecyl Stearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3298,7 +4674,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ステアリン酸トリデシルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ステアリン酸トリデシルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'dodecyl_stearate',
@@ -3307,7 +4683,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Dodecyl Stearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3315,7 +4691,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ステアリン酸ドデシルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ステアリン酸ドデシルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'neopentyl_glycol_stearate',
+    name_cosmetic: 'ステアリン酸ネオペンチルグリコール',
+    name_quasi_drug: '',
+    name_inci: 'Neopentyl Glycol Stearate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'ステアリン酸ネオペンチルグリコールは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'butyl_steate',
@@ -3324,7 +4717,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Butyl Stearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3332,7 +4725,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ステアリン酸ブチルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ステアリン酸ブチルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'hexyldecyl_stearate',
@@ -3341,7 +4734,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Hexyldecyl Stearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3349,7 +4742,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ステアリン酸ヘキシルデシルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ステアリン酸ヘキシルデシルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'behenyl_stearate',
@@ -3358,7 +4751,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Behenyl Stearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3366,7 +4759,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ステアリン酸ベヘニルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ステアリン酸ベヘニルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'pentaerythrityl_stearate',
+    name_cosmetic: 'ステアリン酸ペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Pentaerythrityl Stearate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 3,
+      note: '',
+    },
+    research: [],
+    description: 'ステアリン酸ペンタエリスリチルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'sphinganine',
@@ -3375,7 +4785,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Sphinganine',
     aliases: ['ジヒドロスフィンゴシン'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3383,7 +4793,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'スフィンガニンはセラミド系の前駆体・関連脂質として、保湿や皮膚コンディショニングを目的に配合されます。バリア補助の体感は配合量だけでなく、コレステロールや脂肪酸との組み合わせ設計でも変わります。',
+    description: 'スフィンガニンは油性の基剤成分として使われ、ハリ・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'sphingosine',
@@ -3392,7 +4802,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Sphingosine',
     aliases: ['スフィンゴシン塩基'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3400,7 +4810,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'スフィンゴシンはセラミド系の前駆体・関連脂質として、保湿や皮膚コンディショニングを目的に配合されます。バリア補助の体感は配合量だけでなく、コレステロールや脂肪酸との組み合わせ設計でも変わります。',
+    description: 'スフィンゴシンは油性の基剤成分として使われ、ハリ・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'cetyl_alcohol',
@@ -3409,7 +4819,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cetyl Alcohol',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3417,7 +4827,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'セチルアルコールは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'セチルアルコールは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'cetylhydroxyproline_palmitamide',
@@ -3426,7 +4836,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cetylhydroxyproline Palmitamide',
     aliases: ['疑似セラミド', 'セラミド類似成分'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3434,7 +4844,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'セチルヒドロキシプロリンパルミタミドはセラミド類似構造をもつ保湿・皮膚コンディショニング成分で、角層バリアの補助や柔軟化を目的に配合されます。バリア補助の体感は配合量だけでなく、コレステロールや脂肪酸との組み合わせ設計でも変わります。',
+    description: 'セチルヒドロキシプロリンパルミタミドは油性の基剤成分として使われ、ハリ・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'cetyl_pg_hydroxyethyl_palmitamide',
@@ -3443,7 +4853,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cetyl PG Hydroxyethyl Palmitamide',
     aliases: ['疑似セラミド', 'セラミド類似成分'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3451,7 +4861,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'セチルＰＧヒドロキシエチルパルミタミドは機能性誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'セチルＰＧヒドロキシエチルパルミタミドは機能性誘導体の油性成分で、ハリ・整肌や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'cetearyl_alcohol',
@@ -3460,7 +4870,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cetearyl Alcohol',
     aliases: ['脂肪アルコール'],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3468,7 +4878,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'セテアリルアルコールは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'セテアリルアルコールは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'diisopropyl_sebacate',
@@ -3477,7 +4887,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Diisopropyl Sebacate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3485,7 +4895,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'セバシン酸ジイソプロピルは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'セバシン酸ジイソプロピルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'diethylhexyl_sebacate',
@@ -3494,7 +4904,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Diethylhexyl Sebacate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3502,7 +4912,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'セバシン酸ジエチルヘキシルは機能性誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'セバシン酸ジエチルヘキシルは機能性誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'ceramide_complex',
@@ -3511,7 +4921,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ceramide Complex',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3528,7 +4938,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ceramide ADS',
     aliases: ['ヒト型セラミド'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3545,7 +4955,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ceramide AG',
     aliases: ['Ceramide 5', 'ヒト型セラミド'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3562,7 +4972,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ceramide AH',
     aliases: ['ヒト型セラミド'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3579,7 +4989,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ceramide AP',
     aliases: ['ヒト型セラミド'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3596,7 +5006,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ceramide AS',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3613,7 +5023,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ceramide EOH',
     aliases: ['ヒト型セラミド'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3630,7 +5040,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ceramide EOP',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3647,7 +5057,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ceramide EOS',
     aliases: ['ヒト型セラミド'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3664,7 +5074,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ceramide NDS',
     aliases: ['ジヒドロセラミド', 'ヒト型セラミド'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3681,7 +5091,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ceramide NG',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3698,7 +5108,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ceramide NH',
     aliases: ['ヒト型セラミド'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3715,14 +5125,39 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ceramide NP',
     aliases: ['ヒト型セラミド', 'セラミドNP'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
       comedogenic: 1,
       note: '',
     },
-    research: [],
+    research: [
+      {
+        title: 'Recent Advances on Topical Application of Ceramides to Restore Barrier Function of Skin',
+        journal: 'Cosmetics',
+        year: 2019,
+        finding: 'セラミド外用のバリア修復文脈と送達課題（角層浸透など）を概説。',
+      },
+      {
+        title: 'The Efficacy of Moisturisers Containing Ceramide Compared with Other Moisturisers in the Management of Atopic Dermatitis: A Systematic Literature Review and Meta-Analysis',
+        journal: 'Indian J Dermatol',
+        year: 2023,
+        finding: 'ADでセラミド配合保湿剤はSCORAD改善で優位の可能性。TEWL改善は他保湿剤と同等の可能性。',
+      },
+      {
+        title: 'Skin hydration is significantly increased by a cream formulated to mimic the skin’s own moisturizing systems',
+        journal: 'Clin Cosmet Investig Dermatol',
+        year: 2018,
+        finding: 'セラミド等を含むクリーム単回塗布で保湿が増加し、24時間TEWLが低下。',
+      },
+      {
+        title: 'Skin hydration is significantly increased by a cream formulated to mimic the skin’s own natural moisturizing systems',
+        journal: 'Clin Cosmet Investig Dermatol',
+        year: 2018,
+        finding: 'セラミド等を含む保湿クリームで角層水分が増加し、TEWLが低下。',
+      },
+    ],
     description: 'セラミドＮＰはセラミド系の脂質成分で、角層バリアを補う保湿・皮膚コンディショニング目的で配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
@@ -3732,7 +5167,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ceramide NS',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3749,7 +5184,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cerebrosides',
     aliases: ['糖セラミド', 'グリコセラミド'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3757,7 +5192,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'セレブロシドはセラミド系の前駆体・関連脂質として、保湿や皮膚コンディショニングを目的に配合されます。バリア補助の体感は配合量だけでなく、コレステロールや脂肪酸との組み合わせ設計でも変わります。',
+    description: 'セレブロシドは油性の基剤成分として使われ、ハリ・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'salvia_hispanica_seed_oil',
@@ -3766,7 +5201,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Salvia Hispanica Seed Oil',
     aliases: ['チアシードオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'antioxidant'],
+    categories: ['antioxidant', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3774,7 +5209,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'チア種子油は油性成分として、保湿・整肌・製品安定化補助やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'チア種子油は油性の基剤成分として使われ、抗酸化・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'camellia_japonica_seed_oil',
@@ -3783,7 +5218,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Camellia Japonica Seed Oil',
     aliases: ['椿油', 'カメリアオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'antioxidant'],
+    categories: ['antioxidant', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3791,7 +5226,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ツバキ種子油は油性成分として、保湿・整肌・製品安定化補助やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ツバキ種子油は油性の基剤成分として使われ、抗酸化・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'pentaerythrityl_tetraisostearate',
@@ -3800,7 +5235,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Pentaerythrityl Tetraisostearate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3808,7 +5243,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'テトライソステアリン酸ペンタエリスリチルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'テトライソステアリン酸ペンタエリスリチルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'pentaerythrityl_tetraethylhexanoate',
@@ -3817,7 +5252,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Pentaerythrityl Tetraethylhexanoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3825,7 +5260,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'テトラエチルヘキサン酸ペンタエリスリチルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'テトラエチルヘキサン酸ペンタエリスリチルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'ascorbyl_tetraisopalmitate',
@@ -3834,7 +5269,12 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Tetrahexyldecyl Ascorbate',
     aliases: ['VC-IP', '油溶性ビタミンC'],
     ingredient_type: '油性成分',
-    categories: ['brightening', 'antioxidant', 'anti_aging'],
+    categories: [
+      'brightening',
+      'antioxidant',
+      'anti_aging',
+      'oil_based',
+    ],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3842,7 +5282,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'テトラヘキシルデカン酸アスコルビルはビタミンC誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'テトラヘキシルデカン酸アスコルビルはビタミンC誘導体の油性成分で、透明感ケア・抗酸化・整肌・ハリ・整肌や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'tocopherol',
@@ -3851,15 +5291,22 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Tocopherol',
     aliases: ['ビタミンE'],
     ingredient_type: '油性成分',
-    categories: ['antioxidant', 'anti_aging'],
+    categories: ['antioxidant', 'anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
       comedogenic: 2,
       note: '',
     },
-    research: [],
-    description: 'トコフェロールはビタミンE誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    research: [
+      {
+        title: 'Vitamin E in dermatology',
+        journal: 'Indian Dermatol Online J',
+        year: 2016,
+        finding: '外用ビタミンEの抗酸化特性と、皮膚疾患・光老化領域での報告を総括。',
+      },
+    ],
+    description: 'トコフェロールはビタミンE誘導体の油性成分で、抗酸化・整肌やハリ・整肌や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'triacetin',
@@ -3868,7 +5315,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Triacetin',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3876,7 +5323,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'トリアセチンは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'トリアセチンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'triethylhexanoin',
@@ -3885,7 +5332,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Triethylhexanoin',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3893,7 +5340,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'トリエチルヘキサノインは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'トリエチルヘキサノインは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'glyceryl_tribenzoate',
@@ -3902,7 +5349,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Glyceryl Tribenzoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3910,7 +5357,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'トリベンゾイン酸グリセリルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'トリベンゾイン酸グリセリルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'trimethylsiloxysilicate',
@@ -3919,7 +5366,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Trimethylsiloxysilicate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3927,7 +5374,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'トリメチルシロキシケイ酸は機能性誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'トリメチルシロキシケイ酸は機能性誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'tridecyl_trimellitate',
@@ -3936,7 +5383,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Tridecyl Trimellitate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3944,7 +5391,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'トリメリット酸トリトリデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'トリメリット酸トリトリデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'drometrizole_trisiloxane',
+    name_cosmetic: 'ドロメトリゾールトリシロキサン',
+    name_quasi_drug: '',
+    name_inci: 'Drometrizole Trisiloxane',
+    aliases: ['メキソリルXL'],
+    ingredient_type: '油性成分',
+    categories: ['oil_based', 'uv_filter'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 1,
+      note: '',
+    },
+    research: [],
+    description: 'ドロメトリゾールトリシロキサンは紫外線吸収剤として、主にUVA/UVBをカバーする目的で配合される日焼け止め成分です。単剤ではカバー範囲が限られるため、複数のUVフィルターを組み合わせて広域（UVA/UVB）化することがあります。',
   },
   {
     id: 'isostearyl_neopentanoate',
@@ -3953,7 +5417,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isostearyl Neopentanoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3961,7 +5425,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ネオペンタン酸イソステアリルは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ネオペンタン酸イソステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isostearyl_neopentanoate2',
@@ -3970,7 +5434,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isostearyl Neopentanoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3978,7 +5442,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ネオペンタン酸イソステアリルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ネオペンタン酸イソステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isodecyl_neopentanoate',
@@ -3987,7 +5451,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isodecyl Neopentanoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -3995,7 +5459,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ネオペンタン酸イソデシルは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ネオペンタン酸イソデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'octyldodecyl_neopentanoate',
@@ -4004,7 +5468,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Octyldodecyl Neopentanoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4012,7 +5476,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ネオペンタン酸オクチルドデシルは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ネオペンタン酸オクチルドデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'cetearyl_nonanoate',
@@ -4021,7 +5485,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cetearyl Nonanoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4029,7 +5493,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ノナン酸セテアリルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ノナン酸セテアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'adansonia_digitata_seed_oil',
@@ -4038,7 +5502,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Adansonia Digitata Seed Oil',
     aliases: ['バオバブオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4046,7 +5510,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'バオバブ種子油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'バオバブ種子油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'bakuchiol',
@@ -4055,7 +5519,12 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Bakuchiol',
     aliases: ['植物性レチノール'],
     ingredient_type: '油性成分',
-    categories: ['anti_aging', 'brightening', 'antioxidant'],
+    categories: [
+      'anti_aging',
+      'brightening',
+      'antioxidant',
+      'oil_based',
+    ],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4070,7 +5539,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
         finding: '0.5%バクチオール（1日2回）と0.5%レチノール（1日1回）でシワ・色素沈着が同程度に改善し、刺激はレチノール群で多かった。',
       },
     ],
-    description: 'バクチオールは油性成分として、ハリ・弾力感ケア・美白・透明感ケア・整肌・製品安定化補助やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'バクチオールは油性の基剤成分として使われ、ハリ・整肌・透明感ケア・抗酸化・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'orbignya_oleifera_seed_oil',
@@ -4079,7 +5548,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Orbignya Oleifera Seed Oil',
     aliases: ['ババスオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4087,7 +5556,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ババス油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ババス油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'paraffin',
@@ -4096,7 +5565,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Paraffin',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4104,7 +5573,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パラフィンは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'パラフィンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'palmitic_acid',
@@ -4113,7 +5582,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Palmitic Acid',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4121,7 +5590,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パルミチン酸は油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'パルミチン酸は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'c12_15_alkyl_palmitate',
+    name_cosmetic: 'パルミチン酸C12-15アルキル',
+    name_quasi_drug: '',
+    name_inci: 'C12-15 Alkyl Palmitate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 4,
+      note: '',
+    },
+    research: [],
+    description: 'パルミチン酸C12-15アルキルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'ascorbyl_palmitate',
@@ -4130,7 +5616,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ascorbyl Palmitate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['antioxidant', 'brightening'],
+    categories: ['antioxidant', 'brightening', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4138,7 +5624,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パルミチン酸アスコルビルはビタミンC誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'パルミチン酸アスコルビルはビタミンC誘導体の油性成分で、抗酸化・整肌や透明感ケアや感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'isostearyl_palmitate',
@@ -4147,7 +5633,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isostearyl Palmitate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4155,7 +5641,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パルミチン酸イソステアリルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'パルミチン酸イソステアリルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isodecyl_palmitate',
@@ -4164,7 +5650,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isodecyl Palmitate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4172,7 +5658,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パルミチン酸イソデシルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'パルミチン酸イソデシルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isotridecyl_palmitate',
@@ -4181,7 +5667,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isotridecyl Palmitate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4189,7 +5675,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パルミチン酸イソトリデシルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'パルミチン酸イソトリデシルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isononyl_palmitate',
@@ -4198,7 +5684,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isononyl Palmitate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4206,7 +5692,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パルミチン酸イソノニルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'パルミチン酸イソノニルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isopropyl_palmitate',
@@ -4215,7 +5701,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isopropyl Palmitate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4223,7 +5709,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パルミチン酸イソプロピルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'パルミチン酸イソプロピルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'ethylhexyl_palmitate',
@@ -4232,7 +5718,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ethylhexyl Palmitate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4240,7 +5726,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パルミチン酸エチルヘキシルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'パルミチン酸エチルヘキシルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'octyldodecyl_palmitate',
@@ -4249,7 +5735,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Octyldodecyl Palmitate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4257,7 +5743,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パルミチン酸オクチルドデシルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'パルミチン酸オクチルドデシルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'dipentaerythrityl_palmitate',
+    name_cosmetic: 'パルミチン酸ジペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Dipentaerythrityl Palmitate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 4,
+      note: '',
+    },
+    research: [],
+    description: 'パルミチン酸ジペンタエリスリチルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'stearyl_palmitate',
@@ -4266,7 +5769,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Stearyl Palmitate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4274,7 +5777,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パルミチン酸ステアリルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'パルミチン酸ステアリルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'cetyl_palmitate',
@@ -4283,7 +5786,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cetyl Palmitate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4291,7 +5794,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パルミチン酸セチルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'パルミチン酸セチルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'decyl_palmitate',
@@ -4300,7 +5803,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Decyl Palmitate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4308,7 +5811,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パルミチン酸デシルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'パルミチン酸デシルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'triethylhexanoin_palmitate',
+    name_cosmetic: 'パルミチン酸トリエチルヘキサノイン',
+    name_quasi_drug: '',
+    name_inci: 'Triethylhexanoin Palmitate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 4,
+      note: '',
+    },
+    research: [],
+    description: 'パルミチン酸トリエチルヘキサノインは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'tridecyl_palmitate',
@@ -4317,7 +5837,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Tridecyl Palmitate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4325,7 +5845,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パルミチン酸トリデシルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'パルミチン酸トリデシルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'dodecyl_palmitate',
@@ -4334,7 +5854,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Dodecyl Palmitate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4342,7 +5862,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パルミチン酸ドデシルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'パルミチン酸ドデシルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'neopentyl_glycol_palmitate',
+    name_cosmetic: 'パルミチン酸ネオペンチルグリコール',
+    name_quasi_drug: '',
+    name_inci: 'Neopentyl Glycol Palmitate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 4,
+      note: '',
+    },
+    research: [],
+    description: 'パルミチン酸ネオペンチルグリコールは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'hexyldecyl_palmitate',
@@ -4351,7 +5888,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Hexyldecyl Palmitate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4359,7 +5896,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パルミチン酸ヘキシルデシルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'パルミチン酸ヘキシルデシルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'behenyl_palmitate',
@@ -4368,7 +5905,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Behenyl Palmitate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4376,7 +5913,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パルミチン酸ベヘニルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'パルミチン酸ベヘニルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'pentaerythrityl_palmitate',
+    name_cosmetic: 'パルミチン酸ペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Pentaerythrityl Palmitate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 4,
+      note: '',
+    },
+    research: [],
+    description: 'パルミチン酸ペンタエリスリチルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'retinyl_palmitate',
@@ -4385,15 +5939,22 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Retinyl Palmitate',
     aliases: ['レチノールパルミテート'],
     ingredient_type: '油性成分',
-    categories: ['anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'medium',
       photosensitivity: true,
       comedogenic: 3,
       note: '刺激や乾燥を感じる場合があります。日中は紫外線対策を推奨します。',
     },
-    research: [],
-    description: 'パルミチン酸レチノールはビタミンA（レチノイド）誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    research: [
+      {
+        title: 'Efficacy and mechanism of retinyl palmitate against UVB-induced photoaging in mice',
+        journal: 'Front Pharmacol',
+        year: 2023,
+        finding: 'RPがUVB誘発光老化モデルで炎症抑制などを通じ改善を示唆。',
+      },
+    ],
+    description: 'パルミチン酸レチノールはビタミンA（レチノイド）誘導体の油性成分で、ハリ・整肌や感触調整、処方安定化を目的に配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'palmitoyl_glutamate_diphytosteryl_octyldodecyl',
@@ -4402,7 +5963,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Palmitoyl Glutamic Acid Di(Phytosteryl/Octyldodecyl)',
     aliases: ['疑似セラミド', 'セラミド類似成分'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4410,7 +5971,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パルミトイルグルタミン酸ジ（フィトステリル／オクチルドデシル）は機能性誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'パルミトイルグルタミン酸ジ（フィトステリル／オクチルドデシル）は機能性誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'cholesteryl_hydroxystearate',
@@ -4419,7 +5980,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cholesteryl Hydroxystearate',
     aliases: ['コレステロールエステル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4427,7 +5988,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヒドロキシステアリン酸コレステリルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ヒドロキシステアリン酸コレステリルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'hydroxypropyl_bispalmitamide_mea',
@@ -4436,7 +5997,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Hydroxypropyl Bispalmitamide MEA',
     aliases: ['疑似セラミド', 'セラミド類似成分'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4444,7 +6005,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヒドロキシプロピルビスパルミタミドＭＥＡはセラミド類似構造をもつ保湿・皮膚コンディショニング成分で、角層バリアの補助や柔軟化を目的に配合されます。バリア補助の体感は配合量だけでなく、コレステロールや脂肪酸との組み合わせ設計でも変わります。',
+    description: 'ヒドロキシプロピルビスパルミタミドＭＥＡは油性の基剤成分として使われ、ハリ・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'hydroxypropyl_bislauramide_mea',
@@ -4453,7 +6014,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Hydroxypropyl Bislauramide MEA',
     aliases: ['疑似セラミド', 'セラミド類似成分'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4461,7 +6022,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヒドロキシプロピルビスラウラミドＭＥＡはセラミド類似構造をもつ保湿・皮膚コンディショニング成分で、角層バリアの補助や柔軟化を目的に配合されます。バリア補助の体感は配合量だけでなく、コレステロールや脂肪酸との組み合わせ設計でも変わります。',
+    description: 'ヒドロキシプロピルビスラウラミドＭＥＡは油性の基剤成分として使われ、ハリ・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'hippophae_rhamnoides_fruit_oil',
@@ -4470,7 +6031,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Hippophae Rhamnoides Fruit Oil',
     aliases: ['シーバックソーンオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'antioxidant'],
+    categories: ['antioxidant', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4478,7 +6039,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヒポファエラムノイデス果実油は油性成分として、保湿・整肌・製品安定化補助やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ヒポファエラムノイデス果実油は油性の基剤成分として使われ、抗酸化・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'ricinus_communis_seed_oil',
@@ -4487,7 +6048,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ricinus Communis (Castor) Seed Oil',
     aliases: ['キャスターオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4495,7 +6056,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヒマシ油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ヒマシ油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'helianthus_annuus_seed_oil2',
@@ -4504,7 +6065,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Helianthus Annuus (Sunflower) Seed Oil',
     aliases: ['サンフラワーオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'antioxidant'],
+    categories: ['antioxidant', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4512,7 +6073,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヒマワリ種子油は油性成分として、保湿・整肌・製品安定化補助やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ヒマワリ種子油は油性の基剤成分として使われ、抗酸化・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'sunflower_seed_oil',
@@ -4521,7 +6082,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Helianthus Annuus (Sunflower) Seed Oil',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4529,7 +6090,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヒマワリ種子油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ヒマワリ種子油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'bisabolol',
@@ -4538,7 +6099,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Bisabolol',
     aliases: ['α-ビサボロール'],
     ingredient_type: '油性成分',
-    categories: ['anti_inflammatory'],
+    categories: ['anti_inflammatory', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4546,7 +6107,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ビサボロールは油性成分として、肌荒れ防止・整肌やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ビサボロールは油性の基剤成分として使われ、整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'phytosterols',
@@ -4555,7 +6116,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Phytosterols',
     aliases: ['植物ステロール'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4563,7 +6124,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'フィトステロールズは油性成分として、保湿・ハリ・弾力感ケアやエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'フィトステロールズは油性の基剤成分として使われ、ハリ・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'phytosphingosine',
@@ -4572,7 +6133,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Phytosphingosine',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_inflammatory'],
+    categories: ['anti_inflammatory', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4580,7 +6141,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'フィトスフィンゴシンはセラミド系の前駆体・関連脂質として、保湿や皮膚コンディショニングを目的に配合されます。バリア補助の体感は配合量だけでなく、コレステロールや脂肪酸との組み合わせ設計でも変わります。',
+    description: 'フィトスフィンゴシンは油性の基剤成分として使われ、整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'phenyl_trimethicone',
@@ -4589,7 +6150,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Phenyl Trimethicone',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4597,7 +6158,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'フェニルトリメチコンは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'フェニルトリメチコンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'phenylpropyldimethylsiloxysilicate',
@@ -4606,7 +6167,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Phenylpropyldimethylsiloxysilicate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4614,7 +6175,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'フェニルプロピルジメチルシロキシケイ酸は機能性誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'フェニルプロピルジメチルシロキシケイ酸は機能性誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'grapeseed_oil',
@@ -4623,7 +6184,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Vitis Vinifera (Grape) Seed Oil',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4631,7 +6192,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ブドウ種子油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ブドウ種子油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'vitis_vinifera_seed_oil',
@@ -4640,7 +6201,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Vitis Vinifera (Grape) Seed Oil',
     aliases: ['グレープシードオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'antioxidant'],
+    categories: ['antioxidant', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4648,7 +6209,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ブドウ種子油は油性成分として、保湿・整肌・製品安定化補助やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ブドウ種子油は油性の基剤成分として使われ、抗酸化・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'dipentaerythrityl_hexacaprylate_hexacaprate',
@@ -4657,7 +6218,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Dipentaerythrityl Hexacaprylate/Hexacaprate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4665,7 +6226,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヘキサカプリル酸／ヘキサカプリン酸ジペンタエリスリチルは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ヘキサカプリル酸／ヘキサカプリン酸ジペンタエリスリチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'stearyl_heptanoate',
@@ -4674,7 +6235,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Stearyl Heptanoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4682,7 +6243,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヘプタン酸ステアリルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ヘプタン酸ステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'corylus_avellana_seed_oil',
@@ -4691,7 +6252,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Corylus Avellana (Hazel) Seed Oil',
     aliases: ['ヘーゼルナッツオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4699,7 +6260,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヘーゼルナッツ種子油はアゼライン酸誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ヘーゼルナッツ種子油はアゼライン酸誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'behenyl_alcohol',
@@ -4708,7 +6269,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Behenyl Alcohol',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4716,7 +6277,211 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ベヘニルアルコールは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ベヘニルアルコールは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'c12_15_alkyl_behenate',
+    name_cosmetic: 'ベヘン酸C12-15アルキル',
+    name_quasi_drug: '',
+    name_inci: 'C12-15 Alkyl Behenate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'ベヘン酸C12-15アルキルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'isostearyl_behenate',
+    name_cosmetic: 'ベヘン酸イソステアリル',
+    name_quasi_drug: '',
+    name_inci: 'Isostearyl Behenate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'ベヘン酸イソステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'isononyl_behenate',
+    name_cosmetic: 'ベヘン酸イソノニル',
+    name_quasi_drug: '',
+    name_inci: 'Isononyl Behenate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'ベヘン酸イソノニルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'isopropyl_behenate',
+    name_cosmetic: 'ベヘン酸イソプロピル',
+    name_quasi_drug: '',
+    name_inci: 'Isopropyl Behenate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'ベヘン酸イソプロピルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'ethylhexyl_behenate',
+    name_cosmetic: 'ベヘン酸エチルヘキシル',
+    name_quasi_drug: '',
+    name_inci: 'Ethylhexyl Behenate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'ベヘン酸エチルヘキシルは機能性誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'octyldodecyl_behenate',
+    name_cosmetic: 'ベヘン酸オクチルドデシル',
+    name_quasi_drug: '',
+    name_inci: 'Octyldodecyl Behenate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'ベヘン酸オクチルドデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'dipentaerythrityl_behenate',
+    name_cosmetic: 'ベヘン酸ジペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Dipentaerythrityl Behenate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'ベヘン酸ジペンタエリスリチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'stearyl_behenate',
+    name_cosmetic: 'ベヘン酸ステアリル',
+    name_quasi_drug: '',
+    name_inci: 'Stearyl Behenate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'ベヘン酸ステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'cetyl_behenate',
+    name_cosmetic: 'ベヘン酸セチル',
+    name_quasi_drug: '',
+    name_inci: 'Cetyl Behenate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'ベヘン酸セチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'triethylhexanoin_behenate',
+    name_cosmetic: 'ベヘン酸トリエチルヘキサノイン',
+    name_quasi_drug: '',
+    name_inci: 'Triethylhexanoin Behenate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'ベヘン酸トリエチルヘキサノインは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'neopentyl_glycol_behenate',
+    name_cosmetic: 'ベヘン酸ネオペンチルグリコール',
+    name_quasi_drug: '',
+    name_inci: 'Neopentyl Glycol Behenate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'ベヘン酸ネオペンチルグリコールは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'pentaerythrityl_behenate',
+    name_cosmetic: 'ベヘン酸ペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Pentaerythrityl Behenate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'ベヘン酸ペンタエリスリチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'jojoba_seed_oil',
@@ -4725,7 +6490,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Simmondsia Chinensis (Jojoba) Seed Oil',
     aliases: ['ホホバオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4733,7 +6498,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ホホバ種子油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ホホバ種子油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'simmondsia_chinensis_seed_oil2',
@@ -4742,7 +6507,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Simmondsia Chinensis (Jojoba) Seed Oil',
     aliases: ['ホホバオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4750,7 +6515,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ホホバ種子油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ホホバ種子油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'shorea_stenoptera_seed_butter',
@@ -4759,7 +6524,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Shorea Stenoptera Seed Butter',
     aliases: ['イリペバター'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4767,7 +6532,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ボルネオタロー脂は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ボルネオタロー脂は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'polyisobutene',
+    name_cosmetic: 'ポリイソブテン',
+    name_quasi_drug: '',
+    name_inci: 'Polyisobutene',
+    aliases: ['PIB'],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'ポリイソブテンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'polysilicone_11',
@@ -4776,7 +6558,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Polysilicone-11',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4784,7 +6566,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ポリシリコーン－１１は油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ポリシリコーン－１１は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'polysilicone_15',
@@ -4793,7 +6575,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Polysilicone-15',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based', 'uv_filter'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4801,7 +6583,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ポリシリコーン－１５は油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ポリシリコーン－１５は紫外線吸収剤として、主にUVBをカバーする目的で配合される日焼け止め成分です。単剤ではカバー範囲が限られるため、複数のUVフィルターを組み合わせて広域（UVA/UVB）化することがあります。',
+  },
+  {
+    id: 'polydecene',
+    name_cosmetic: 'ポリデセン',
+    name_quasi_drug: '',
+    name_inci: 'Polydecene',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'ポリデセンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'polybutene',
@@ -4810,7 +6609,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Polybutene',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4818,7 +6617,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ポリブテンは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ポリブテンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'microcrystalline_wax',
@@ -4827,7 +6626,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Microcrystalline Wax',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4835,7 +6634,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'マイクロクリスタリンワックスは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'マイクロクリスタリンワックスは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'cholesteryl_macadamiate',
@@ -4844,7 +6643,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cholesteryl Macadamiate',
     aliases: ['コレステロールエステル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4852,7 +6651,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'マカデミアナッツ脂肪酸コレステリルは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'マカデミアナッツ脂肪酸コレステリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'macadamia_seed_oil',
@@ -4861,7 +6660,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Macadamia Ternifolia Seed Oil',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4869,7 +6668,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'マカデミア種子油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'マカデミア種子油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'macadamia_ternifolia_seed_oil2',
@@ -4878,7 +6677,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Macadamia Ternifolia Seed Oil',
     aliases: ['マカデミアナッツオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4886,7 +6685,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'マカデミア種子油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'マカデミア種子油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'sclerocarya_birrea_seed_oil',
@@ -4895,7 +6694,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Sclerocarya Birrea Seed Oil',
     aliases: ['マルラオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'antioxidant'],
+    categories: ['antioxidant', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4903,7 +6702,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'マルラ種子油は油性成分として、保湿・整肌・製品安定化補助やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'マルラ種子油は油性の基剤成分として使われ、抗酸化・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'mangifera_indica_seed_butter',
@@ -4912,7 +6711,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Mangifera Indica (Mango) Seed Butter',
     aliases: ['マンゴーバター'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4920,7 +6719,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'マンゴー種子脂は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'マンゴー種子脂は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'beeswax',
@@ -4929,7 +6728,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Beeswax',
     aliases: ['ビーズワックス'],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4937,7 +6736,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミツロウは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ミツロウは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'mineral_oil',
@@ -4946,7 +6745,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Mineral Oil',
     aliases: ['流動パラフィン'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4954,7 +6753,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミネラルオイルは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ミネラルオイルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'myristyl_alcohol',
@@ -4963,7 +6762,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Myristyl Alcohol',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4971,7 +6770,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミリスチルアルコールは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ミリスチルアルコールは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'myristic_acid',
@@ -4980,7 +6779,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Myristic Acid',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -4988,7 +6787,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミリスチン酸は油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ミリスチン酸は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'c12_15_alkyl_myristate',
+    name_cosmetic: 'ミリスチン酸C12-15アルキル',
+    name_quasi_drug: '',
+    name_inci: 'C12-15 Alkyl Myristate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 5,
+      note: '',
+    },
+    research: [],
+    description: 'ミリスチン酸C12-15アルキルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isostearyl_myristate',
@@ -4997,7 +6813,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isostearyl Myristate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5005,7 +6821,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミリスチン酸イソステアリルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ミリスチン酸イソステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isodecyl_myristate',
@@ -5014,7 +6830,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isodecyl Myristate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5022,7 +6838,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミリスチン酸イソデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ミリスチン酸イソデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isotridecyl_myristate',
@@ -5031,7 +6847,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isotridecyl Myristate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5039,7 +6855,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミリスチン酸イソトリデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ミリスチン酸イソトリデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isononyl_myristate',
@@ -5048,7 +6864,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isononyl Myristate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5056,7 +6872,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミリスチン酸イソノニルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ミリスチン酸イソノニルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isopropyl_myristate',
@@ -5065,7 +6881,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isopropyl Myristate',
     aliases: ['IPM'],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5073,7 +6889,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミリスチン酸イソプロピルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ミリスチン酸イソプロピルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'ethylhexyl_myristate',
+    name_cosmetic: 'ミリスチン酸エチルヘキシル',
+    name_quasi_drug: '',
+    name_inci: 'Ethylhexyl Myristate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 5,
+      note: '',
+    },
+    research: [],
+    description: 'ミリスチン酸エチルヘキシルは機能性誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'octyldodecyl_myristate',
@@ -5082,7 +6915,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Octyldodecyl Myristate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5090,7 +6923,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミリスチン酸オクチルドデシルは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ミリスチン酸オクチルドデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'dipentaerythrityl_myristate',
+    name_cosmetic: 'ミリスチン酸ジペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Dipentaerythrityl Myristate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 5,
+      note: '',
+    },
+    research: [],
+    description: 'ミリスチン酸ジペンタエリスリチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'stearyl_myristate',
@@ -5099,7 +6949,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Stearyl Myristate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5107,7 +6957,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミリスチン酸ステアリルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ミリスチン酸ステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'cetyl_myristate',
@@ -5116,7 +6966,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cetyl Myristate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5124,7 +6974,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミリスチン酸セチルは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ミリスチン酸セチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'decyl_myristate',
@@ -5133,7 +6983,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Decyl Myristate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5141,7 +6991,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミリスチン酸デシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ミリスチン酸デシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'triethylhexanoin_myristate',
+    name_cosmetic: 'ミリスチン酸トリエチルヘキサノイン',
+    name_quasi_drug: '',
+    name_inci: 'Triethylhexanoin Myristate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 5,
+      note: '',
+    },
+    research: [],
+    description: 'ミリスチン酸トリエチルヘキサノインは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'tridecyl_myristate',
@@ -5150,7 +7017,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Tridecyl Myristate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5158,7 +7025,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミリスチン酸トリデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ミリスチン酸トリデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'dodecyl_myristate',
@@ -5167,7 +7034,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Dodecyl Myristate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5175,7 +7042,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミリスチン酸ドデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ミリスチン酸ドデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'neopentyl_glycol_myristate',
+    name_cosmetic: 'ミリスチン酸ネオペンチルグリコール',
+    name_quasi_drug: '',
+    name_inci: 'Neopentyl Glycol Myristate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 5,
+      note: '',
+    },
+    research: [],
+    description: 'ミリスチン酸ネオペンチルグリコールは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'hexyldecyl_myristate',
@@ -5184,7 +7068,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Hexyldecyl Myristate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5192,7 +7076,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミリスチン酸ヘキシルデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ミリスチン酸ヘキシルデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'behenyl_myristate',
@@ -5201,7 +7085,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Behenyl Myristate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5209,7 +7093,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミリスチン酸ベヘニルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ミリスチン酸ベヘニルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'pentaerythrityl_myristate',
+    name_cosmetic: 'ミリスチン酸ペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Pentaerythrityl Myristate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 5,
+      note: '',
+    },
+    research: [],
+    description: 'ミリスチン酸ペンタエリスリチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'myristyl_myristate',
@@ -5218,7 +7119,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Myristyl Myristate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5226,7 +7127,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミリスチン酸ミリスチルは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ミリスチン酸ミリスチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'myristoyl_glutamate_diphytosteryl_octyldodecyl',
@@ -5235,7 +7136,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Myristoyl Glutamic Acid Di(Phytosteryl/Octyldodecyl)',
     aliases: ['疑似セラミド', 'セラミド類似成分'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5243,7 +7144,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミリストイルグルタミン酸ジ（フィトステリル／オクチルドデシル）は機能性誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ミリストイルグルタミン酸ジ（フィトステリル／オクチルドデシル）は機能性誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'astrocaryum_murumuru_seed_butter',
@@ -5252,7 +7153,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Astrocaryum Murumuru Seed Butter',
     aliases: ['ムルムル脂'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5260,7 +7161,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ムルムルバターは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ムルムルバターは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'methyl_trimethicone',
@@ -5269,7 +7170,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Methyl Trimethicone',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5277,7 +7178,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'メチルトリメチコンは機能性誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'メチルトリメチコンは機能性誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'limnanthes_alba_seed_oil',
@@ -5286,7 +7187,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Limnanthes Alba (Meadowfoam) Seed Oil',
     aliases: ['メドウフォーム油'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5294,7 +7195,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'メドウフォーム種子油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'メドウフォーム種子油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'coconut_oil',
@@ -5303,7 +7204,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cocos Nucifera (Coconut) Oil',
     aliases: ['ココナッツオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5311,7 +7212,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヤシ油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ヤシ油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'cocos_nucifera_oil2',
@@ -5320,7 +7221,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cocos Nucifera (Coconut) Oil',
     aliases: ['ココナッツオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5328,7 +7229,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヤシ油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ヤシ油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isoamyl_cocoate',
@@ -5337,7 +7238,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isoamyl Cocoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5345,7 +7246,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヤシ油脂肪酸イソアミルは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ヤシ油脂肪酸イソアミルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'isostearyl_cocoate',
@@ -5354,7 +7255,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isostearyl Cocoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5362,7 +7263,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヤシ油脂肪酸イソステアリルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ヤシ油脂肪酸イソステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isodecyl_cocoate',
@@ -5371,7 +7272,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isodecyl Cocoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5379,7 +7280,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヤシ油脂肪酸イソデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ヤシ油脂肪酸イソデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isotridecyl_cocoate',
@@ -5388,7 +7289,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isotridecyl Cocoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5396,7 +7297,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヤシ油脂肪酸イソトリデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ヤシ油脂肪酸イソトリデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isononyl_cocoate',
@@ -5405,7 +7306,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isononyl Cocoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5413,7 +7314,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヤシ油脂肪酸イソノニルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ヤシ油脂肪酸イソノニルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'octyldodecyl_cocoate',
@@ -5422,7 +7323,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Octyldodecyl Cocoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5430,7 +7331,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヤシ油脂肪酸オクチルドデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ヤシ油脂肪酸オクチルドデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'coco_caprylate_caprate',
@@ -5439,7 +7340,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Coco-Caprylate/Caprate',
     aliases: ['植物由来エステル'],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5447,7 +7348,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヤシ油脂肪酸カプリリル／カプリルは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ヤシ油脂肪酸カプリリル／カプリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'stearyl_cocoate',
@@ -5456,7 +7357,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Stearyl Cocoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5464,7 +7365,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヤシ油脂肪酸ステアリルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ヤシ油脂肪酸ステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'cetyl_cocoate',
@@ -5473,7 +7374,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cetyl Cocoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5481,7 +7382,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヤシ油脂肪酸セチルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ヤシ油脂肪酸セチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'decyl_cocoate',
@@ -5490,7 +7391,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Decyl Cocoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5498,7 +7399,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヤシ油脂肪酸デシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ヤシ油脂肪酸デシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'tridecyl_cocoate',
@@ -5507,7 +7408,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Tridecyl Cocoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5515,7 +7416,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヤシ油脂肪酸トリデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ヤシ油脂肪酸トリデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'dodecyl_cocoate',
@@ -5524,7 +7425,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Dodecyl Cocoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5532,7 +7433,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヤシ油脂肪酸ドデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ヤシ油脂肪酸ドデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'hexyldecyl_cocoate',
@@ -5541,7 +7442,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Hexyldecyl Cocoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5549,7 +7450,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヤシ油脂肪酸ヘキシルデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ヤシ油脂肪酸ヘキシルデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'behenyl_cocoate',
@@ -5558,7 +7459,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Behenyl Cocoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5566,7 +7467,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヤシ油脂肪酸ベヘニルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ヤシ油脂肪酸ベヘニルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'ubiquinone',
@@ -5575,7 +7476,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ubiquinone',
     aliases: ['CoQ10'],
     ingredient_type: '油性成分',
-    categories: ['antioxidant', 'anti_aging'],
+    categories: ['antioxidant', 'anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5583,7 +7484,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ユビキノンはコエンザイムQ10誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ユビキノンはコエンザイムQ10誘導体の油性成分で、抗酸化・整肌やハリ・整肌や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'lauric_acid',
@@ -5592,7 +7493,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Lauric Acid',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5600,7 +7501,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ラウリン酸は油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ラウリン酸は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'c12_15_alkyl_laurate',
+    name_cosmetic: 'ラウリン酸C12-15アルキル',
+    name_quasi_drug: '',
+    name_inci: 'C12-15 Alkyl Laurate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 4,
+      note: '',
+    },
+    research: [],
+    description: 'ラウリン酸C12-15アルキルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isoamyl_laurate',
@@ -5609,7 +7527,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isoamyl Laurate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5617,7 +7535,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ラウリン酸イソアミルは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ラウリン酸イソアミルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'isostearyl_laurate',
@@ -5626,7 +7544,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isostearyl Laurate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5634,7 +7552,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ラウリン酸イソステアリルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ラウリン酸イソステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isodecyl_laurate',
@@ -5643,7 +7561,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isodecyl Laurate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5651,7 +7569,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ラウリン酸イソデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ラウリン酸イソデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isotridecyl_laurate',
@@ -5660,7 +7578,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isotridecyl Laurate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5668,7 +7586,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ラウリン酸イソトリデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ラウリン酸イソトリデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isononyl_laurate',
@@ -5677,7 +7595,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isononyl Laurate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5685,7 +7603,41 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ラウリン酸イソノニルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ラウリン酸イソノニルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'isopropyl_laurate',
+    name_cosmetic: 'ラウリン酸イソプロピル',
+    name_quasi_drug: '',
+    name_inci: 'Isopropyl Laurate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 4,
+      note: '',
+    },
+    research: [],
+    description: 'ラウリン酸イソプロピルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'ethylhexyl_laurate',
+    name_cosmetic: 'ラウリン酸エチルヘキシル',
+    name_quasi_drug: '',
+    name_inci: 'Ethylhexyl Laurate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 4,
+      note: '',
+    },
+    research: [],
+    description: 'ラウリン酸エチルヘキシルは機能性誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'octyldodecyl_laurate',
@@ -5694,7 +7646,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Octyldodecyl Laurate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5702,7 +7654,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ラウリン酸オクチルドデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ラウリン酸オクチルドデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'dipentaerythrityl_laurate',
+    name_cosmetic: 'ラウリン酸ジペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Dipentaerythrityl Laurate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 4,
+      note: '',
+    },
+    research: [],
+    description: 'ラウリン酸ジペンタエリスリチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'stearyl_laurate',
@@ -5711,7 +7680,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Stearyl Laurate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5719,7 +7688,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ラウリン酸ステアリルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ラウリン酸ステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'cetyl_laurate',
@@ -5728,7 +7697,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cetyl Laurate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5736,7 +7705,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ラウリン酸セチルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ラウリン酸セチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'decyl_laurate',
@@ -5745,7 +7714,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Decyl Laurate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5753,7 +7722,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ラウリン酸デシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ラウリン酸デシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'triethylhexanoin_laurate',
+    name_cosmetic: 'ラウリン酸トリエチルヘキサノイン',
+    name_quasi_drug: '',
+    name_inci: 'Triethylhexanoin Laurate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 4,
+      note: '',
+    },
+    research: [],
+    description: 'ラウリン酸トリエチルヘキサノインは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'tridecyl_laurate',
@@ -5762,7 +7748,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Tridecyl Laurate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5770,7 +7756,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ラウリン酸トリデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ラウリン酸トリデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'dodecyl_laurate',
@@ -5779,7 +7765,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Dodecyl Laurate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5787,7 +7773,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ラウリン酸ドデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ラウリン酸ドデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'neopentyl_glycol_laurate',
+    name_cosmetic: 'ラウリン酸ネオペンチルグリコール',
+    name_quasi_drug: '',
+    name_inci: 'Neopentyl Glycol Laurate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 4,
+      note: '',
+    },
+    research: [],
+    description: 'ラウリン酸ネオペンチルグリコールは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'hexyldecyl_laurate',
@@ -5796,7 +7799,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Hexyldecyl Laurate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5804,7 +7807,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ラウリン酸ヘキシルデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ラウリン酸ヘキシルデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'behenyl_laurate',
@@ -5813,7 +7816,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Behenyl Laurate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5821,7 +7824,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ラウリン酸ベヘニルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'ラウリン酸ベヘニルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'pentaerythrityl_laurate',
+    name_cosmetic: 'ラウリン酸ペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Pentaerythrityl Laurate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 4,
+      note: '',
+    },
+    research: [],
+    description: 'ラウリン酸ペンタエリスリチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'lauroyl_glutamate_dihexyldecyl',
@@ -5830,7 +7850,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Lauroyl Glutamic Acid Dihexyldecyl',
     aliases: ['疑似セラミド', 'セラミド類似成分'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5838,7 +7858,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ラウロイルグルタミン酸ジヘキシルデシルはセラミド類似構造をもつ保湿・皮膚コンディショニング成分で、角層バリアの補助や柔軟化を目的に配合されます。バリア補助の体感は配合量だけでなく、コレステロールや脂肪酸との組み合わせ設計でも変わります。',
+    description: 'ラウロイルグルタミン酸ジヘキシルデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'lauroyl_glutamate_dicholesteryl_octyldodecyl',
@@ -5847,7 +7867,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Lauroyl Glutamic Acid Di(Cholesteryl/Octyldodecyl)',
     aliases: ['疑似セラミド', 'セラミド類似成分'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5855,7 +7875,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ラウロイルグルタミン酸ジ（コレステリル／オクチルドデシル）はセラミド類似構造をもつ保湿・皮膚コンディショニング成分で、角層バリアの補助や柔軟化を目的に配合されます。バリア補助の体感は配合量だけでなく、コレステロールや脂肪酸との組み合わせ設計でも変わります。',
+    description: 'ラウロイルグルタミン酸ジ（コレステリル／オクチルドデシル）は油性の基剤成分として使われ、ハリ・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'lauroyl_glutamate_dicholesteryl_behenyl_octyldodecyl',
@@ -5864,7 +7884,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Lauroyl Glutamic Acid Di(Cholesteryl/Behenyl/Octyldodecyl)',
     aliases: ['疑似セラミド', 'セラミド類似成分'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5872,7 +7892,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ラウロイルグルタミン酸ジ（コレステリル／ベヘニル／オクチルドデシル）はセラミド類似構造をもつ保湿・皮膚コンディショニング成分で、角層バリアの補助や柔軟化を目的に配合されます。バリア補助の体感は配合量だけでなく、コレステロールや脂肪酸との組み合わせ設計でも変わります。',
+    description: 'ラウロイルグルタミン酸ジ（コレステリル／ベヘニル／オクチルドデシル）は油性の基剤成分として使われ、ハリ・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'lauroyl_glutamate_diphytosteryl_behenyl_octyldodecyl',
@@ -5881,7 +7901,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Lauroyl Glutamic Acid Di(Phytosteryl/Behenyl/Octyldodecyl)',
     aliases: ['疑似セラミド', 'セラミド類似成分'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5889,7 +7909,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ラウロイルグルタミン酸ジ（フィトステリル／ベヘニル／オクチルドデシル）はセラミド類似構造をもつ保湿・皮膚コンディショニング成分で、角層バリアの補助や柔軟化を目的に配合されます。バリア補助の体感は配合量だけでなく、コレステロールや脂肪酸との組み合わせ設計でも変わります。',
+    description: 'ラウロイルグルタミン酸ジ（フィトステリル／ベヘニル／オクチルドデシル）は油性の基剤成分として使われ、ハリ・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'isostearyl_ricinoleate',
@@ -5898,7 +7918,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isostearyl Ricinoleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5906,7 +7926,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リシノール酸イソステアリルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'リシノール酸イソステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'cetyl_ricinoleate',
@@ -5915,7 +7935,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cetyl Ricinoleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5923,7 +7943,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リシノール酸セチルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'リシノール酸セチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'propylene_glycol_ricinoleate',
@@ -5932,7 +7952,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Propylene Glycol Ricinoleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5940,7 +7960,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リシノール酸プロピレングリコールは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'リシノール酸プロピレングリコールは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'linoleic_acid',
@@ -5949,7 +7969,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Linoleic Acid',
     aliases: ['必須脂肪酸'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5957,7 +7977,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リノール酸は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'リノール酸は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'c12_15_alkyl_linoleate',
+    name_cosmetic: 'リノール酸C12-15アルキル',
+    name_quasi_drug: '',
+    name_inci: 'C12-15 Alkyl Linoleate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'リノール酸C12-15アルキルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'isostearyl_linoleate',
@@ -5966,7 +8003,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isostearyl Linoleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5974,7 +8011,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リノール酸イソステアリルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'リノール酸イソステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'isodecyl_linoleate',
@@ -5983,7 +8020,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isodecyl Linoleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -5991,7 +8028,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リノール酸イソデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'リノール酸イソデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'isotridecyl_linoleate',
@@ -6000,7 +8037,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isotridecyl Linoleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6008,7 +8045,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リノール酸イソトリデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'リノール酸イソトリデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'isononyl_linoleate',
@@ -6017,7 +8054,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Isononyl Linoleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6025,7 +8062,41 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リノール酸イソノニルは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'リノール酸イソノニルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'isopropyl_linoleate',
+    name_cosmetic: 'リノール酸イソプロピル',
+    name_quasi_drug: '',
+    name_inci: 'Isopropyl Linoleate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'リノール酸イソプロピルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'ethylhexyl_linoleate',
+    name_cosmetic: 'リノール酸エチルヘキシル',
+    name_quasi_drug: '',
+    name_inci: 'Ethylhexyl Linoleate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'リノール酸エチルヘキシルは機能性誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'octyldodecyl_linoleate',
@@ -6034,7 +8105,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Octyldodecyl Linoleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6042,7 +8113,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リノール酸オクチルドデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'リノール酸オクチルドデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'dipentaerythrityl_linoleate',
+    name_cosmetic: 'リノール酸ジペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Dipentaerythrityl Linoleate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'リノール酸ジペンタエリスリチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'stearyl_linoleate',
@@ -6051,7 +8139,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Stearyl Linoleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6059,7 +8147,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リノール酸ステアリルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'リノール酸ステアリルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'cetyl_linoleate',
@@ -6068,7 +8156,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Cetyl Linoleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6076,7 +8164,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リノール酸セチルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'リノール酸セチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'decyl_linoleate',
@@ -6085,7 +8173,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Decyl Linoleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6093,7 +8181,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リノール酸デシルは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'リノール酸デシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'tocopheryl_linoleate',
@@ -6102,7 +8190,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Tocopheryl Linoleate',
     aliases: ['トコフェロールリノレート'],
     ingredient_type: '油性成分',
-    categories: ['antioxidant', 'anti_aging'],
+    categories: ['antioxidant', 'anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6110,7 +8198,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リノール酸トコフェロールはビタミンE誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'リノール酸トコフェロールはビタミンE誘導体の油性成分で、抗酸化・整肌やハリ・整肌や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'triethylhexanoin_linoleate',
+    name_cosmetic: 'リノール酸トリエチルヘキサノイン',
+    name_quasi_drug: '',
+    name_inci: 'Triethylhexanoin Linoleate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'リノール酸トリエチルヘキサノインは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'tridecyl_linoleate',
@@ -6119,7 +8224,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Tridecyl Linoleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6127,7 +8232,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リノール酸トリデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'リノール酸トリデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'dodecyl_linoleate',
@@ -6136,7 +8241,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Dodecyl Linoleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6144,7 +8249,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リノール酸ドデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'リノール酸ドデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'neopentyl_glycol_linoleate',
+    name_cosmetic: 'リノール酸ネオペンチルグリコール',
+    name_quasi_drug: '',
+    name_inci: 'Neopentyl Glycol Linoleate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'リノール酸ネオペンチルグリコールは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'hexyldecyl_linoleate',
@@ -6153,7 +8275,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Hexyldecyl Linoleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6161,7 +8283,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リノール酸ヘキシルデシルは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'リノール酸ヘキシルデシルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'behenyl_linoleate',
@@ -6170,7 +8292,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Behenyl Linoleate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6178,7 +8300,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リノール酸ベヘニルは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'リノール酸ベヘニルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+  },
+  {
+    id: 'pentaerythrityl_linoleate',
+    name_cosmetic: 'リノール酸ペンタエリスリチル',
+    name_quasi_drug: '',
+    name_inci: 'Pentaerythrityl Linoleate',
+    aliases: [],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: 'リノール酸ペンタエリスリチルは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'diisostearyl_malate',
@@ -6187,7 +8326,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Diisostearyl Malate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6195,7 +8334,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リンゴ酸ジイソステアリルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: 'リンゴ酸ジイソステアリルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   {
     id: 'borago_officinalis_seed_oil',
@@ -6204,7 +8343,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Borago Officinalis Seed Oil',
     aliases: ['ボラージオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6212,7 +8351,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ルリジサ種子油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ルリジサ種子油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'retinal',
@@ -6221,7 +8360,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Retinal',
     aliases: ['レチナールデヒド'],
     ingredient_type: '油性成分',
-    categories: ['anti_aging', 'brightening'],
+    categories: ['anti_aging', 'brightening', 'oil_based'],
     safety: {
       irritation: 'high',
       photosensitivity: true,
@@ -6229,7 +8368,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '刺激や乾燥を感じる場合があります。日中は紫外線対策を推奨します。',
     },
     research: [],
-    description: 'レチナールはビタミンA（レチノイド）誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'レチナールはビタミンA（レチノイド）誘導体の油性成分で、ハリ・整肌や透明感ケアや感触調整、処方安定化を目的に配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'moringa_oleifera_seed_oil',
@@ -6238,7 +8377,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Moringa Oleifera Seed Oil',
     aliases: ['モリンガオイル'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing', 'antioxidant'],
+    categories: ['antioxidant', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6246,7 +8385,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ワサビノキ種子油は油性成分として、保湿・整肌・製品安定化補助やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ワサビノキ種子油は油性の基剤成分として使われ、抗酸化・整肌や感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'petrolatum',
@@ -6255,7 +8394,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Petrolatum',
     aliases: ['ペトロラタム'],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6263,7 +8402,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ワセリンは油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ワセリンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'benzyl_benzoate',
@@ -6272,7 +8411,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Benzyl Benzoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6280,7 +8419,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: '安息香酸ベンジルは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: '安息香酸ベンジルは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'evening_primrose_oil',
@@ -6289,7 +8428,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Oenothera Biennis (Evening Primrose) Oil',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6297,7 +8436,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: '月見草油は油性成分として、保湿やエモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: '月見草油は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'hydrogenated_polyisobutene',
@@ -6306,7 +8445,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Hydrogenated Polyisobutene',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6314,7 +8453,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: '水添ポリイソブテンは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: '水添ポリイソブテンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'hydrogenated_polydecene',
@@ -6323,7 +8462,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Hydrogenated Polydecene',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6331,7 +8470,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: '水添ポリデセンは油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: '水添ポリデセンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'hydrogenated_poly_c6_14_olefin',
@@ -6340,7 +8479,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Hydrogenated Poly(C6-14 Olefin)',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6348,7 +8487,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: '水添ポリ（Ｃ６－１４オレフィン）は油性成分として、エモリエント性・感触調整を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: '水添ポリ（Ｃ６－１４オレフィン）は油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'hydrogenated_ubiquinone',
@@ -6357,7 +8496,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Hydrogenated Ubiquinone',
     aliases: ['ユビキノール'],
     ingredient_type: '油性成分',
-    categories: ['antioxidant', 'anti_aging'],
+    categories: ['antioxidant', 'anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6365,7 +8504,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: '水添ユビキノンはコエンザイムQ10誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: '水添ユビキノンはコエンザイムQ10誘導体の油性成分で、抗酸化・整肌やハリ・整肌や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
+    id: 'paraffinum_liquidum',
+    name_cosmetic: '流動パラフィン',
+    name_quasi_drug: '',
+    name_inci: 'Paraffinum Liquidum',
+    aliases: ['ミネラルオイル', '液状パラフィン'],
+    ingredient_type: '油性成分',
+    categories: ['oil_based'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 2,
+      note: '',
+    },
+    research: [],
+    description: '流動パラフィンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'tocopheryl_acetate',
@@ -6374,7 +8530,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Tocopheryl Acetate',
     aliases: ['ビタミンE誘導体'],
     ingredient_type: '油性成分',
-    categories: ['antioxidant', 'anti_aging'],
+    categories: ['antioxidant', 'anti_aging', 'oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6382,7 +8538,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: '酢酸トコフェロールはビタミンE誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: '酢酸トコフェロールはビタミンE誘導体の油性成分で、抗酸化・整肌やハリ・整肌や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'retinyl_acetate',
@@ -6391,7 +8547,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Retinyl Acetate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['anti_aging'],
+    categories: ['anti_aging', 'oil_based'],
     safety: {
       irritation: 'medium',
       photosensitivity: true,
@@ -6399,7 +8555,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '刺激や乾燥を感じる場合があります。日中は紫外線対策を推奨します。',
     },
     research: [],
-    description: '酢酸レチニルはビタミンA（レチノイド）誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: '酢酸レチニルはビタミンA（レチノイド）誘導体の油性成分で、ハリ・整肌や感触調整、処方安定化を目的に配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'c12_15_alkyl_benzoate',
@@ -6408,7 +8564,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'C12-15 Alkyl Benzoate',
     aliases: [],
     ingredient_type: '油性成分',
-    categories: ['moisturizing'],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6416,7 +8572,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: '（Ｃ１２－１５）アルキルベンゾエートは脂肪酸エステル誘導体の油性成分で、エモリエント性や感触調整、処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: '（Ｃ１２－１５）アルキルベンゾエートは脂肪酸エステル誘導体の油性成分で、感触調整や処方安定化を目的に配合されます。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'c13_14_isoparaffin',
@@ -6425,7 +8581,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'C13-14 Isoparaffin',
     aliases: ['増粘補助'],
     ingredient_type: '油性成分',
-    categories: [],
+    categories: ['oil_based'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -6433,7 +8589,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: '（Ｃ１３－１４）イソパラフィンは油性成分として、エモリエント性・感触調整を目的に配合されます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
+    description: '（Ｃ１３－１４）イソパラフィンは油性の基剤成分として使われ、感触調整や処方安定化に用いられます。油性感や閉塞感は原料特性と配合量で変わるため、肌質に合わせた選択が重要です。',
   },
   // ── 界面活性剤 ──
   {
@@ -11015,7 +13171,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
         finding: 'α-アルブチン5%＋コウジ酸2%の外用は、標準治療と比較して副作用が少なく再発傾向が低い可能性が示された。',
       },
     ],
-    description: 'α-アルブチンは処方安定化や品質維持、美白・透明感ケアなどの目的で用いられる成分です。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'α-アルブチンは処方補助または整肌目的で用いられる成分で、透明感ケアを意図して配合されることがあります。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'alpha_lipoic_acid',
@@ -11032,7 +13188,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '肌状態により刺激を感じる場合があります。',
     },
     research: [],
-    description: 'α-リポ酸は処方安定化や品質維持、整肌・製品安定化補助・ハリ・弾力感ケアなどの目的で用いられる成分です。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'α-リポ酸は処方補助または整肌目的で用いられる成分で、抗酸化・整肌やハリ・整肌を意図して配合されることがあります。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'beta_arbutin',
@@ -11049,7 +13205,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'β-アルブチンは皮膚コンディショニング目的で用いられる誘導体成分で、透明感ケアを意図して配合されることがあります。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'β-アルブチンは処方補助または整肌目的で用いられる成分で、透明感ケアを意図して配合されることがあります。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'botanical_extract_109',
@@ -11066,7 +13222,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アカツメクサ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'アカツメクサ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'acrylates_copolymer',
@@ -11134,7 +13290,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アサイー果実エキスは植物由来のエキス成分で、整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'アサイー果実エキスは植物由来のエキス成分で、抗酸化・整肌やハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'asiaticoside',
@@ -11151,7 +13307,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アシアチコシドは処方安定化や品質維持、肌荒れ防止・整肌・ハリ・弾力感ケアなどの目的で用いられる成分です。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'アシアチコシドは処方補助または整肌目的で用いられる成分で、整肌やハリ・整肌を意図して配合されることがあります。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'asiatic_acid',
@@ -11168,7 +13324,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アシアチン酸は処方安定化や品質維持、肌荒れ防止・整肌・ハリ・弾力感ケアなどの目的で用いられる成分です。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'アシアチン酸は処方補助または整肌目的で用いられる成分で、整肌やハリ・整肌を意図して配合されることがあります。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'botanical_extract_219',
@@ -11185,7 +13341,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アシタバ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'アシタバ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_255',
@@ -11202,7 +13358,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アシュワガンダ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'アシュワガンダ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'potassium_ascorbyl_tocopheryl_phosphate',
@@ -11371,7 +13527,14 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       comedogenic: 0,
       note: '',
     },
-    research: [],
+    research: [
+      {
+        title: 'Acetyl Hexapeptide-8 in Cosmeceuticals—A Review of Skin Delivery, Efficacy, and Safety',
+        journal: 'Cosmetics',
+        year: 2025,
+        finding: 'AH-8の送達・有効性・安全性に関する前臨床/臨床報告を総括。',
+      },
+    ],
     description: 'アセチルヘキサペプチド-8はペプチド誘導体で、ハリ・整肌や皮膚コンディショニング目的で配合される成分です。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
@@ -11389,7 +13552,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アセロラ果実エキスは植物由来のエキス成分で、美白・透明感ケア・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'アセロラ果実エキスは植物由来のエキス成分で、透明感ケアや抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'azelaic_acid',
@@ -11411,6 +13574,12 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
         journal: 'International Journal of Dermatology',
         year: 1991,
         finding: '20%アゼライン酸外用が肝斑で有効性を示し、4%ハイドロキノンと比較して同等の結果が報告された。',
+      },
+      {
+        title: 'Azelaic Acid Versus Hydroquinone for Managing Patients With Melasma: Systematic Review and Meta-Analysis of Randomized Controlled Trials',
+        journal: 'Cureus',
+        year: 2023,
+        finding: 'メラズマに対し、アゼライン酸がMASI低下でハイドロキノンに優る可能性を示唆（差は条件依存）。',
       },
     ],
     description: 'アゼライン酸はアゼライン酸誘導体で、透明感ケア・角質ケア・整肌や皮膚コンディショニング目的で配合される成分です。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
@@ -11447,7 +13616,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アボカド果実エキスは植物由来のエキス成分で、保湿・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'アボカド果実エキスは植物由来のエキス成分で、保湿や抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'butyl_methoxydibenzoylmethane',
@@ -11456,7 +13625,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Butyl Methoxydibenzoylmethane',
     aliases: [],
     ingredient_type: 'その他',
-    categories: [],
+    categories: ['uv_filter'],
     safety: {
       irritation: 'medium',
       photosensitivity: false,
@@ -11464,7 +13633,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '肌状態により刺激を感じる場合があります。',
     },
     research: [],
-    description: 'アボベンゾンは処方安定化や品質維持、整肌などの目的で用いられる成分です。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'アボベンゾンは紫外線吸収剤として、主にUVA（UVA1中心）をカバーする目的で配合される日焼け止め成分です。単剤ではカバー範囲が限られるため、複数のUVフィルターを組み合わせて広域（UVA/UVB）化することがあります。',
   },
   {
     id: 'botanical_extract_025',
@@ -11481,7 +13650,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アムラ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'アムラ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_111',
@@ -11498,7 +13667,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アルニカ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'アルニカ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_123',
@@ -11515,7 +13684,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アロエベラ花エキスは植物由来のエキス成分で、保湿・肌荒れ防止・整肌・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'アロエベラ花エキスは植物由来のエキス成分で、保湿・整肌・抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'aloe_vera_leaf_extract',
@@ -11532,7 +13701,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アロエベラ葉エキスは植物由来のエキス成分で、保湿・肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'アロエベラ葉エキスは植物由来のエキス成分で、保湿や整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_012',
@@ -11549,7 +13718,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アンズ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'アンズ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_285',
@@ -11566,7 +13735,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アンズ種子エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'アンズ種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_212',
@@ -11583,7 +13752,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アーティチョーク葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'アーティチョーク葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_295',
@@ -11600,7 +13769,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'アーモンド種子エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'アーモンド種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_073',
@@ -11617,7 +13786,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'イザヨイバラ果実エキスは植物由来のエキス成分で、美白・透明感ケア・整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'イザヨイバラ果実エキスは植物由来のエキス成分で、透明感ケア・抗酸化・整肌・ハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_081',
@@ -11634,7 +13803,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'イザヨイバラ花エキスは植物由来のエキス成分で、美白・透明感ケア・整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'イザヨイバラ花エキスは植物由来のエキス成分で、透明感ケア・抗酸化・整肌・ハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'isobutylparaben',
@@ -11668,7 +13837,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'イタドリ根エキスは植物由来のエキス成分で、肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'イタドリ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_268',
@@ -11685,7 +13854,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'イチゴ種子エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'イチゴ種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_027',
@@ -11702,7 +13871,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'イチジク果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'イチジク果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_180',
@@ -11719,7 +13888,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'イチョウ葉エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'イチョウ葉エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_227',
@@ -11736,7 +13905,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'イラクサ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'イラクサ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_253',
@@ -11753,7 +13922,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ウイキョウ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ウイキョウ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_229',
@@ -11770,7 +13939,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ウコン根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ウコン根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_060',
@@ -11787,7 +13956,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ウメ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ウメ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_085',
@@ -11804,7 +13973,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ウメ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ウメ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_168',
@@ -11821,7 +13990,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ウメ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ウメ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_063',
@@ -11838,7 +14007,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ウンシュウミカン果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ウンシュウミカン果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_176',
@@ -11855,7 +14024,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ウンシュウミカン葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ウンシュウミカン葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_144',
@@ -11872,7 +14041,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'エキナセア花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'エキナセア花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_283',
@@ -11889,7 +14058,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'エゴマ種子エキスは植物由来のエキス成分で、肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'エゴマ種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_153',
@@ -11906,7 +14075,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'エゴマ花エキスは植物由来のエキス成分で、肌荒れ防止・整肌・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'エゴマ花エキスは植物由来のエキス成分で、整肌や抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_163',
@@ -11923,7 +14092,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'エゴマ葉エキスは植物由来のエキス成分で、肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'エゴマ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_241',
@@ -11940,7 +14109,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'エゾウコギ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'エゾウコギ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'ethylparaben',
@@ -11983,7 +14152,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ethylhexyl Triazone',
     aliases: ['Uvinul T 150'],
     ingredient_type: 'その他',
-    categories: [],
+    categories: ['uv_filter'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -11991,7 +14160,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'エチルヘキシルトリアゾンは機能性誘導体で、皮膚コンディショニングや処方安定化目的で配合される成分です。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'エチルヘキシルトリアゾンは紫外線吸収剤として、主にUVBをカバーする目的で配合される日焼け止め成分です。単剤ではカバー範囲が限られるため、複数のUVフィルターを組み合わせて広域（UVA/UVB）化することがあります。',
   },
   {
     id: 'botanical_extract_047',
@@ -12008,7 +14177,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'エルダーベリー果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'エルダーベリー果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_097',
@@ -12025,7 +14194,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'エルダー花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'エルダー花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'scutellaria_root_extract',
@@ -12042,7 +14211,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オウゴン根エキスは植物由来のエキス成分で、美白・透明感ケア・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'オウゴン根エキスは植物由来のエキス成分で、透明感ケアや抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_115',
@@ -12059,7 +14228,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オオバコ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'オオバコ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_223',
@@ -12076,7 +14245,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オオバコ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'オオバコ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+  },
+  {
+    id: 'oxybenzone_3',
+    name_cosmetic: 'オキシベンゾン-3',
+    name_quasi_drug: '',
+    name_inci: 'Benzophenone-3',
+    aliases: ['オキシベンゾン'],
+    ingredient_type: 'その他',
+    categories: ['uv_filter'],
+    safety: {
+      irritation: 'medium',
+      photosensitivity: false,
+      comedogenic: 0,
+      note: '',
+    },
+    research: [],
+    description: 'オキシベンゾン-3は紫外線吸収剤として、主にUVA/UVBをカバーする目的で配合される日焼け止め成分です。単剤ではカバー範囲が限られるため、複数のUVフィルターを組み合わせて広域（UVA/UVB）化することがあります。',
   },
   {
     id: 'octocrylene',
@@ -12085,7 +14271,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Octocrylene',
     aliases: [],
     ingredient_type: 'その他',
-    categories: [],
+    categories: ['uv_filter'],
     safety: {
       irritation: 'medium',
       photosensitivity: false,
@@ -12093,7 +14279,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '肌状態により刺激を感じる場合があります。',
     },
     research: [],
-    description: 'オクトクリレンは処方安定化や品質維持、整肌などの目的で用いられる成分です。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'オクトクリレンは紫外線吸収剤として、主にUVB（UVA2も一部）をカバーする目的で配合される日焼け止め成分です。単剤ではカバー範囲が限られるため、複数のUVフィルターを組み合わせて広域（UVA/UVB）化することがあります。',
   },
   {
     id: 'botanical_extract_211',
@@ -12127,7 +14313,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オタネニンジン根エキスは植物由来のエキス成分で、ハリ・弾力感ケア・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'オタネニンジン根エキスは植物由来のエキス成分で、ハリ・整肌や抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_135',
@@ -12144,7 +14330,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オトギリソウ花エキスは植物由来のエキス成分で、肌荒れ防止・整肌・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'オトギリソウ花エキスは植物由来のエキス成分で、整肌や抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_224',
@@ -12161,7 +14347,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オトギリソウ葉エキスは植物由来のエキス成分で、肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'オトギリソウ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'oligopeptide_1',
@@ -12195,7 +14381,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オリーブ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'オリーブ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_172',
@@ -12212,7 +14398,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オリーブ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'オリーブ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_192',
@@ -12229,7 +14415,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オレガノ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'オレガノ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'botanical_extract_002',
@@ -12246,7 +14432,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'オレンジ果実エキスは植物由来のエキス成分で、美白・透明感ケア・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'オレンジ果実エキスは植物由来のエキス成分で、透明感ケアや抗酸化・整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'orange_peel_extract',
@@ -12263,7 +14449,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '刺激や乾燥を感じる場合があります。日中は紫外線対策を推奨します。',
     },
     research: [],
-    description: 'オレンジ果皮エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'オレンジ果皮エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_292',
@@ -12280,7 +14466,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'オレンジ種子エキスは植物由来のエキス成分で、美白・透明感ケアや皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'オレンジ種子エキスは植物由来のエキス成分で、透明感ケアや皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_107',
@@ -12297,7 +14483,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'オレンジ花エキスは植物由来のエキス成分で、美白・透明感ケア・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'オレンジ花エキスは植物由来のエキス成分で、透明感ケアや抗酸化・整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_300',
@@ -12314,7 +14500,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'オーク樹皮エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'オーク樹皮エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'kaolin',
@@ -12348,7 +14534,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カカオ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'カカオ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_279',
@@ -12365,7 +14551,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カカオ種子エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'カカオ種子エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_215',
@@ -12382,7 +14568,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カキドオシ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'カキドオシ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_187',
@@ -12399,7 +14585,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カキ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'カキ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_023',
@@ -12416,7 +14602,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カシス果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'カシス果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'caprylhydroxamic_acid',
@@ -12467,7 +14653,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'カボス果実エキスは植物由来のエキス成分で、美白・透明感ケア・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'カボス果実エキスは植物由来のエキス成分で、透明感ケアや抗酸化・整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_270',
@@ -12484,7 +14670,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カボチャ種子エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'カボチャ種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'chamomile_flower_extract',
@@ -12501,7 +14687,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カミツレ花エキスは植物由来のエキス成分で、肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'カミツレ花エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_043',
@@ -12518,7 +14704,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カムカム果実エキスは植物由来のエキス成分で、美白・透明感ケア・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'カムカム果実エキスは植物由来のエキス成分で、透明感ケアや抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_280',
@@ -12535,7 +14721,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '精油様成分を含む場合があり、敏感肌では刺激に注意。',
     },
     research: [],
-    description: 'カラシナ種子エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'カラシナ種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'oat_kernel_extract',
@@ -12552,7 +14738,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カラスムギ穀粒エキスは植物由来のエキス成分で、保湿・肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'カラスムギ穀粒エキスは植物由来のエキス成分で、保湿や整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_203',
@@ -12569,7 +14755,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カリフラワー葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'カリフラワー葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_050',
@@ -12586,7 +14772,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カリン果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'カリン果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'carbomer',
@@ -12620,7 +14806,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カワラヨモギ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'カワラヨモギ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_239',
@@ -12637,7 +14823,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カンキョウ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'カンキョウ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'licorice_root_extract',
@@ -12654,7 +14840,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'カンゾウ根エキスは植物由来のエキス成分で、美白・透明感ケア・肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'カンゾウ根エキスは植物由来のエキス成分で、透明感ケアや整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_122',
@@ -12671,7 +14857,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ガーベラ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ガーベラ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_032',
@@ -12688,7 +14874,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'キウイ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'キウイ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_245',
@@ -12705,7 +14891,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'キキョウ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'キキョウ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_112',
@@ -12722,7 +14908,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'キク花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'キク花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_200',
@@ -12739,7 +14925,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'キャベツ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'キャベツ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'cucumber_fruit_extract',
@@ -12807,7 +14993,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'キンカン果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'キンカン果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_134',
@@ -12824,7 +15010,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'キンセンカ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'キンセンカ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_083',
@@ -12841,7 +15027,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'キンモクセイ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'キンモクセイ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'citric_acid',
@@ -12858,7 +15044,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '刺激や乾燥を感じる場合があります。日中は紫外線対策を推奨します。',
     },
     research: [],
-    description: 'クエン酸は処方安定化や品質維持、角質ケアなどの目的で用いられる成分です。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'クエン酸は処方補助または整肌目的で用いられる成分で、角質ケアを意図して配合されることがあります。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'sodium_citrate',
@@ -12892,7 +15078,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'クコシ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'クコシ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_024',
@@ -12909,7 +15095,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'クコ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'クコ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_243',
@@ -12926,7 +15112,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'クズ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'クズ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_104',
@@ -12943,7 +15129,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'クチナシ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'クチナシ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_164',
@@ -12960,7 +15146,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'クマザサ葉エキスは植物由来のエキス成分で、肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'クマザサ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_190',
@@ -12977,7 +15163,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'クマツヅラ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'クマツヅラ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_018',
@@ -12994,7 +15180,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'クランベリー果実エキスは植物由来のエキス成分で、整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'クランベリー果実エキスは植物由来のエキス成分で、抗酸化・整肌やハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_266',
@@ -13011,7 +15197,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'クランベリー種子エキスは植物由来のエキス成分で、整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'クランベリー種子エキスは植物由来のエキス成分で、抗酸化・整肌やハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_294',
@@ -13028,7 +15214,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'クルミ種子エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'クルミ種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_213',
@@ -13045,7 +15231,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'クレソン葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'クレソン葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'chlorphenesin',
@@ -13079,7 +15265,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'クワ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'クワ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_184',
@@ -13096,7 +15282,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'グァバ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'グァバ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_040',
@@ -13113,7 +15299,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'グアバ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'グアバ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'glabridin',
@@ -13130,7 +15316,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '肌状態により刺激を感じる場合があります。',
     },
     research: [],
-    description: 'グラブリジンは処方安定化や品質維持、美白・透明感ケア・肌荒れ防止・整肌などの目的で用いられる成分です。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'グラブリジンは処方補助または整肌目的で用いられる成分で、透明感ケアや整肌を意図して配合されることがあります。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'glycolic_acid',
@@ -13153,8 +15339,20 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
         year: 1998,
         finding: '5%グリコール酸外用を継続使用することで、光老化の一部所見が改善したと報告された。',
       },
+      {
+        title: 'Glycolic acid peel therapy – a current review',
+        journal: 'Clin Cosmet Investig Dermatol',
+        year: 2013,
+        finding: 'グリコール酸ピーリングの臨床研究を整理し、にきび・色素沈着・光老化などへの応用を概説。',
+      },
+      {
+        title: 'The efficacy of glycolic acid for treating wrinkles',
+        journal: 'J Dermatol Sci',
+        year: 2001,
+        finding: '画像解析を用いた評価で、グリコール酸施術がしわ改善に寄与する可能性を示唆。',
+      },
     ],
-    description: 'グリコール酸は処方安定化や品質維持、角質ケア・美白・透明感ケアなどの目的で用いられる成分です。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'グリコール酸は処方補助または整肌目的で用いられる成分で、角質ケアや透明感ケアを意図して配合されることがあります。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'glycyrrhizic_acid',
@@ -13171,7 +15369,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'グリチルリチン酸は処方安定化や品質維持、肌荒れ防止・整肌などの目的で用いられる成分です。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'グリチルリチン酸は処方補助または整肌目的で用いられる成分で、整肌を意図して配合されることがあります。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'dipotassium_glycyrrhizate_alt',
@@ -13188,7 +15386,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'グリチルリチン酸ジカリウムは処方安定化や品質維持、肌荒れ防止・整肌などの目的で用いられる成分です。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'グリチルリチン酸ジカリウムは処方補助または整肌目的で用いられる成分で、整肌を意図して配合されることがあります。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'gluconolactone',
@@ -13205,7 +15403,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '刺激や乾燥を感じる場合があります。日中は紫外線対策を推奨します。',
     },
     research: [],
-    description: 'グルコノラクトンは処方安定化や品質維持、角質ケア・保湿などの目的で用いられる成分です。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'グルコノラクトンは処方補助または整肌目的で用いられる成分で、角質ケアや保湿を意図して配合されることがあります。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'glutathione_disodium',
@@ -13239,7 +15437,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'グレープフルーツ果実エキスは植物由来のエキス成分で、美白・透明感ケア・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'グレープフルーツ果実エキスは植物由来のエキス成分で、透明感ケアや抗酸化・整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'grapefruit_seed_extract',
@@ -13256,7 +15454,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '肌状態により刺激を感じる場合があります。',
     },
     research: [],
-    description: 'グレープフルーツ種子エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'グレープフルーツ種子エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'botanical_extract_137',
@@ -13273,7 +15471,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'グレープフルーツ花エキスは植物由来のエキス成分で、美白・透明感ケア・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'グレープフルーツ花エキスは植物由来のエキス成分で、透明感ケアや抗酸化・整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_177',
@@ -13290,7 +15488,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'グレープフルーツ葉エキスは植物由来のエキス成分で、美白・透明感ケアや皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'グレープフルーツ葉エキスは植物由来のエキス成分で、透明感ケアや皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'magnesium_aluminum_silicate',
@@ -13341,7 +15539,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ケール葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ケール葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_217',
@@ -13358,7 +15556,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ゲットウ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ゲットウ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_252',
@@ -13375,7 +15573,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ゲンチアナ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ゲンチアナ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'kojic_acid',
@@ -13392,7 +15590,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '肌状態により刺激を感じる場合があります。',
     },
     research: [],
-    description: 'コウジ酸は処方安定化や品質維持、美白・透明感ケアなどの目的で用いられる成分です。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'コウジ酸は処方補助または整肌目的で用いられる成分で、透明感ケアを意図して配合されることがあります。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'botanical_extract_058',
@@ -13409,7 +15607,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'コケモモ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'コケモモ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_057',
@@ -13426,7 +15624,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ココヤシ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ココヤシ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'tocopheryl_succinate',
@@ -13460,7 +15658,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'コメヌカエキスは植物由来のエキス成分で、保湿・美白・透明感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'コメヌカエキスは植物由来のエキス成分で、保湿や透明感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_196',
@@ -13477,7 +15675,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'コリアンダー葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'コリアンダー葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_237',
@@ -13494,7 +15692,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'コンニャク根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'コンニャク根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'kelp_extract',
@@ -13528,7 +15726,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'コーヒー果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'コーヒー果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_278',
@@ -13545,7 +15743,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'コーヒー種子エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'コーヒー種子エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_246',
@@ -13562,7 +15760,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ゴシュユ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ゴシュユ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_230',
@@ -13579,7 +15777,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ゴボウ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ゴボウ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_262',
@@ -13596,7 +15794,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ゴマ種子エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ゴマ種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_210',
@@ -13613,7 +15811,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ゴーヤ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ゴーヤ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_258',
@@ -13630,7 +15828,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ゴールデンシール根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ゴールデンシール根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_014',
@@ -13647,7 +15845,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'サクランボ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'サクランボ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_084',
@@ -13664,7 +15862,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'サクラ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'サクラ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_165',
@@ -13681,7 +15879,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ササ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ササ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_235',
@@ -13698,7 +15896,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'サツマイモ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'サツマイモ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_298',
@@ -13715,7 +15913,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'サフラワー種子エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'サフラワー種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_102',
@@ -13732,7 +15930,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'サフラン花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'サフラン花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_244',
@@ -13749,7 +15947,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'サラシア根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'サラシア根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'ethylhexyl_salicylate',
@@ -13783,7 +15981,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'サンザシ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'サンザシ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_120',
@@ -13800,7 +15998,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'サンシュユ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'サンシュユ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'pomegranate_extract',
@@ -13817,7 +16015,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ザクロ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ザクロ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_265',
@@ -13834,7 +16032,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ザクロ種子エキスは植物由来のエキス成分で、整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ザクロ種子エキスは植物由来のエキス成分で、抗酸化・整肌やハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_282',
@@ -13851,7 +16049,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'シソ種子エキスは植物由来のエキス成分で、肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'シソ種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_152',
@@ -13868,7 +16066,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'シソ花エキスは植物由来のエキス成分で、肌荒れ防止・整肌・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'シソ花エキスは植物由来のエキス成分で、整肌や抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_162',
@@ -13885,7 +16083,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'シソ葉エキスは植物由来のエキス成分で、肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'シソ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_220',
@@ -13902,7 +16100,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'シナノキ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'シナノキ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_299',
@@ -13919,7 +16117,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '精油様成分を含む場合があり、敏感肌では刺激に注意。',
     },
     research: [],
-    description: 'シナモン樹皮エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'シナモン樹皮エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'botanical_extract_119',
@@ -13936,7 +16134,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'シモツケ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'シモツケ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'peony_root_extract',
@@ -13953,7 +16151,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'シャクヤク根エキスは植物由来のエキス成分で、ハリ・弾力感ケア・肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'シャクヤク根エキスは植物由来のエキス成分で、ハリ・整肌や整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_088',
@@ -13970,7 +16168,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'シャクヤク花エキスは植物由来のエキス成分で、肌荒れ防止・整肌・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'シャクヤク花エキスは植物由来のエキス成分で、整肌や抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_228',
@@ -13987,7 +16185,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ショウガ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ショウガ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'silica',
@@ -14021,7 +16219,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'シロツメクサ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'シロツメクサ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_045',
@@ -14038,7 +16236,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'シーバックソーン果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'シーバックソーン果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'diethylamino_hydroxybenzoyl_hexyl_benzoate',
@@ -14047,7 +16245,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Diethylamino Hydroxybenzoyl Hexyl Benzoate',
     aliases: ['Uvinul A Plus'],
     ingredient_type: 'その他',
-    categories: [],
+    categories: ['uv_filter'],
     safety: {
       irritation: 'medium',
       photosensitivity: false,
@@ -14055,7 +16253,24 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '肌状態により刺激を感じる場合があります。',
     },
     research: [],
-    description: 'ジエチルアミノヒドロキシベンゾイルヘキシルベンゾエートは機能性誘導体で、皮膚コンディショニングや処方安定化目的で配合される成分です。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'ジエチルアミノヒドロキシベンゾイルヘキシルベンゾエートは紫外線吸収剤として、主にUVA（UVA1中心）をカバーする目的で配合される日焼け止め成分です。単剤ではカバー範囲が限られるため、複数のUVフィルターを組み合わせて広域（UVA/UVB）化することがあります。',
+  },
+  {
+    id: 'dioxybenzone',
+    name_cosmetic: 'ジオキシベンゾン',
+    name_quasi_drug: '',
+    name_inci: 'Benzophenone-8',
+    aliases: [],
+    ingredient_type: 'その他',
+    categories: ['uv_filter'],
+    safety: {
+      irritation: 'medium',
+      photosensitivity: false,
+      comedogenic: 0,
+      note: '',
+    },
+    research: [],
+    description: 'ジオキシベンゾンは紫外線吸収剤として、主にUVA/UVBをカバーする目的で配合される日焼け止め成分です。単剤ではカバー範囲が限られるため、複数のUVフィルターを組み合わせて広域（UVA/UVB）化することがあります。',
   },
   {
     id: 'botanical_extract_236',
@@ -14072,7 +16287,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ジャガイモ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ジャガイモ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_082',
@@ -14089,7 +16304,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ジャスミン花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ジャスミン花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_149',
@@ -14106,7 +16321,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ジャーマンカモミール花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ジャーマンカモミール花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_100',
@@ -14123,7 +16338,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'スイカズラ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'スイカズラ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_035',
@@ -14140,7 +16355,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'スイカ果実エキスは植物由来のエキス成分で、保湿・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'スイカ果実エキスは植物由来のエキス成分で、保湿や抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_216',
@@ -14157,7 +16372,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'スギナ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'スギナ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_041',
@@ -14174,7 +16389,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'スターフルーツ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'スターフルーツ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_006',
@@ -14191,7 +16406,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'スダチ果実エキスは植物由来のエキス成分で、美白・透明感ケア・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'スダチ果実エキスは植物由来のエキス成分で、透明感ケアや抗酸化・整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_140',
@@ -14208,7 +16423,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'スダチ花エキスは植物由来のエキス成分で、美白・透明感ケア・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'スダチ花エキスは植物由来のエキス成分で、透明感ケアや抗酸化・整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_021',
@@ -14225,7 +16440,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ストロベリー果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ストロベリー果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'spirulina_extract',
@@ -14242,7 +16457,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'スピルリナエキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'スピルリナエキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_161',
@@ -14259,7 +16474,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '精油様成分を含む場合があり、敏感肌では刺激に注意。',
     },
     research: [],
-    description: 'スペアミント葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'スペアミント葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'botanical_extract_106',
@@ -14276,7 +16491,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'スミレ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'スミレ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_013',
@@ -14293,7 +16508,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'スモモ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'スモモ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_136',
@@ -14310,7 +16525,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'セイヨウオトギリソウ花エキスは植物由来のエキス成分で、肌荒れ防止・整肌・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'セイヨウオトギリソウ花エキスは植物由来のエキス成分で、整肌や抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_179',
@@ -14327,7 +16542,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'セイヨウキズタ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'セイヨウキズタ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_240',
@@ -14344,7 +16559,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'セイヨウタンポポ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'セイヨウタンポポ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_214',
@@ -14361,7 +16576,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'セイヨウタンポポ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'セイヨウタンポポ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_148',
@@ -14378,7 +16593,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'セイヨウノコギリソウ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'セイヨウノコギリソウ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'peppermint_leaf_extract',
@@ -14395,7 +16610,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '肌状態により刺激を感じる場合があります。',
     },
     research: [],
-    description: 'セイヨウハッカ葉エキスは植物由来のエキス成分で、肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'セイヨウハッカ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'cetyl_tranexamate_hcl',
@@ -14429,7 +16644,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'セロリ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'セロリ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_238',
@@ -14446,7 +16661,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'センキュウ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'センキュウ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_094',
@@ -14463,7 +16678,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'セージ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'セージ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'sage_leaf_extract',
@@ -14480,7 +16695,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '肌状態により刺激を感じる場合があります。',
     },
     research: [],
-    description: 'セージ葉エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'セージ葉エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'botanical_extract_091',
@@ -14497,7 +16712,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ゼラニウム花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ゼラニウム花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_260',
@@ -14514,7 +16729,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ソウハクヒ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ソウハクヒ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'potassium_sorbate',
@@ -14548,7 +16763,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '肌状態により刺激を感じる場合があります。',
     },
     research: [],
-    description: 'タイムエキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'タイムエキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'botanical_extract_093',
@@ -14565,7 +16780,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'タイム花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'タイム花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'botanical_extract_156',
@@ -14582,7 +16797,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'タイム葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'タイム葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'bamboo_extract',
@@ -14599,7 +16814,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'タケノコ皮エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'タケノコ皮エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'talc',
@@ -14633,7 +16848,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'タンカン果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'タンカン果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_113',
@@ -14650,7 +16865,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'タンポポ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'タンポポ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_256',
@@ -14667,7 +16882,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ターメリック根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ターメリック根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_232',
@@ -14684,7 +16899,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ダイコン根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ダイコン根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'glycine_soja_seed_extract',
@@ -14701,7 +16916,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ダイズ種子エキスは植物由来のエキス成分で、ハリ・弾力感ケア・美白・透明感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ダイズ種子エキスは植物由来のエキス成分で、ハリ・整肌や透明感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_132',
@@ -14718,7 +16933,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ダマスクバラ花エキスは植物由来のエキス成分で、保湿・整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ダマスクバラ花エキスは植物由来のエキス成分で、保湿・抗酸化・整肌・ハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_273',
@@ -14735,7 +16950,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'チア種子エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'チア種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_257',
@@ -14752,7 +16967,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'チコリ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'チコリ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'camellia_sinensis_leaf_extract',
@@ -14769,7 +16984,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'チャ葉エキスは植物由来のエキス成分で、整肌・製品安定化補助・肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'チャ葉エキスは植物由来のエキス成分で、抗酸化・整肌や整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_086',
@@ -14786,7 +17001,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ツバキ花エキスは植物由来のエキス成分で、保湿・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ツバキ花エキスは植物由来のエキス成分で、保湿や抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'centella_asiatica',
@@ -14802,8 +17017,15 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       comedogenic: 0,
       note: '',
     },
-    research: [],
-    description: 'ツボクサエキスは植物由来のエキス成分で、肌荒れ防止・整肌・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    research: [
+      {
+        title: 'A Prospective Randomized, Controlled, Double-Blind Trial of the Efficacy Using Centella Cream for Scar Improvement',
+        journal: 'Evid Based Complement Alternat Med',
+        year: 2018,
+        finding: 'ツボクサエキス配合クリームが、STSGドナー部位の瘢痕評価（色調等）でプラセボより改善。',
+      },
+    ],
+    description: 'ツボクサエキスは植物由来のエキス成分で、整肌やハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'centella_triterpenes',
@@ -14820,7 +17042,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ツボクサトリテルペン類は処方安定化や品質維持、肌荒れ防止・整肌・ハリ・弾力感ケアなどの目的で用いられる成分です。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ツボクサトリテルペン類は処方補助または整肌目的で用いられる成分で、整肌やハリ・整肌を意図して配合されることがあります。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'centella_asiatica_leaf_extract',
@@ -14837,7 +17059,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ツボクサ葉エキスは植物由来のエキス成分で、肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ツボクサ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_124',
@@ -14854,7 +17076,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ツユクサ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ツユクサ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_150',
@@ -14871,7 +17093,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '精油様成分を含む場合があり、敏感肌では刺激に注意。',
     },
     research: [],
-    description: 'ティーツリー花エキスは植物由来のエキス成分で、肌荒れ防止・整肌・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'ティーツリー花エキスは植物由来のエキス成分で、整肌や抗酸化・整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'botanical_extract_159',
@@ -14888,7 +17110,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '精油様成分を含む場合があり、敏感肌では刺激に注意。',
     },
     research: [],
-    description: 'ティーツリー葉エキスは植物由来のエキス成分で、肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'ティーツリー葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'botanical_extract_198',
@@ -14905,7 +17127,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ディル葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ディル葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'deoxyarbutin',
@@ -14922,7 +17144,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'デオキシアルブチンは皮膚コンディショニング目的で用いられる誘導体成分で、透明感ケアを意図して配合されることがあります。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'デオキシアルブチンは処方補助または整肌目的で用いられる成分で、透明感ケアを意図して配合されることがあります。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_066',
@@ -14939,7 +17161,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'デコポン果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'デコポン果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'dehydroacetic_acid',
@@ -14990,7 +17212,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '精油様成分を含む場合があり、敏感肌では刺激に注意。',
     },
     research: [],
-    description: 'トウガラシ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'トウガラシ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'calendula_flower_extract',
@@ -15007,7 +17229,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'トウキンセンカ花エキスは植物由来のエキス成分で、肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'トウキンセンカ花エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'angelica_acutiloba_root_extract',
@@ -15024,7 +17246,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'トウキ根エキスは植物由来のエキス成分で、美白・透明感ケア・肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'トウキ根エキスは植物由来のエキス成分で、透明感ケアや整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'tocopheryl_phosphate',
@@ -15058,7 +17280,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'トチュウ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'トチュウ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_034',
@@ -15075,7 +17297,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'トマト果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'トマト果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_271',
@@ -15092,7 +17314,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'トマト種子エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'トマト種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_207',
@@ -15109,7 +17331,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'トマト葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'トマト葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'panthenyl_triacetate',
@@ -15142,7 +17364,14 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       comedogenic: 0,
       note: '',
     },
-    research: [],
+    research: [
+      {
+        title: 'The effect of topical tripeptide-copper complex on healing of ischemic open wounds',
+        journal: 'J Am Vet Med Assoc',
+        year: 2003,
+        finding: 'トリペプチド銅複合体外用で創傷治癒が促進されたと報告（前臨床）。',
+      },
+    ],
     description: 'トリペプチド-1銅はペプチド誘導体で、ハリ・整肌や整肌や皮膚コンディショニング目的で配合される成分です。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
@@ -15177,7 +17406,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '肌状態により刺激を感じる場合があります。',
     },
     research: [],
-    description: 'ドクダミエキスは植物由来のエキス成分で、肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'ドクダミエキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'botanical_extract_154',
@@ -15194,7 +17423,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ドクダミ花エキスは植物由来のエキス成分で、肌荒れ防止・整肌・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ドクダミ花エキスは植物由来のエキス成分で、整肌や抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_155',
@@ -15211,7 +17440,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ドクダミ葉エキスは植物由来のエキス成分で、肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ドクダミ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_039',
@@ -15228,7 +17457,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ドラゴンフルーツ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ドラゴンフルーツ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_010',
@@ -15245,7 +17474,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ナシ果実エキスは植物由来のエキス成分で、保湿・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ナシ果実エキスは植物由来のエキス成分で、保湿や抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_288',
@@ -15296,7 +17525,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ナス葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ナス葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_056',
@@ -15313,7 +17542,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ナツメヤシ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ナツメヤシ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_026',
@@ -15330,7 +17559,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ナツメ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ナツメ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'niacinamide_n_oxide',
@@ -15398,7 +17627,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ニワトコ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ニワトコ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_231',
@@ -15415,7 +17644,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ニンジン根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ニンジン根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_069',
@@ -15432,7 +17661,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'ネロリオレンジ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'ネロリオレンジ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_178',
@@ -15449,7 +17678,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'ネロリオレンジ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'ネロリオレンジ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_108',
@@ -15466,7 +17695,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'ネロリ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'ネロリ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_225',
@@ -15483,7 +17712,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ノコギリソウ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ノコギリソウ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_077',
@@ -15500,7 +17729,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ノニ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ノニ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_133',
@@ -15517,7 +17746,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ノバラ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ノバラ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_098',
@@ -15534,7 +17763,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ハイビスカス花エキスは植物由来のエキス成分で、整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ハイビスカス花エキスは植物由来のエキス成分で、抗酸化・整肌やハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_048',
@@ -15551,7 +17780,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ハスカップ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ハスカップ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_099',
@@ -15568,7 +17797,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ハス花エキスは植物由来のエキス成分で、保湿・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ハス花エキスは植物由来のエキス成分で、保湿や抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_188',
@@ -15590,9 +17819,9 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
   {
     id: 'botanical_extract_261',
     name_cosmetic: 'ハトムギ種子エキス',
-    name_quasi_drug: 'ヨクイニンエキス',
+    name_quasi_drug: '',
     name_inci: '',
-    aliases: ['ハトムギエキス', 'ハトムギ', 'ヨクイニンエキス', 'ヨクイニン'],
+    aliases: ['ハトムギエキス', 'ハトムギ'],
     ingredient_type: 'その他',
     categories: [],
     safety: {
@@ -15602,7 +17831,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ハトムギ種子エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ハトムギ種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_222',
@@ -15619,7 +17848,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ハトムギ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ハトムギ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_147',
@@ -15636,7 +17865,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ハマギク花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ハマギク花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_080',
@@ -15653,7 +17882,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ハマナス花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ハマナス花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_251',
@@ -15670,7 +17899,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ハマボウフウ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ハマボウフウ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_125',
@@ -15687,7 +17916,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ハマメリス花エキスは植物由来のエキス成分で、肌荒れ防止・整肌・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ハマメリス花エキスは植物由来のエキス成分で、整肌や抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'witch_hazel_leaf_extract',
@@ -15738,7 +17967,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'バジル葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'バジル葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_031',
@@ -15755,7 +17984,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'バナナ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'バナナ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_131',
@@ -15772,7 +18001,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'バラ花エキスは植物由来のエキス成分で、保湿・整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'バラ花エキスは植物由来のエキス成分で、保湿・抗酸化・整肌・ハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_254',
@@ -15789,7 +18018,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'バレリアン根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'バレリアン根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_028',
@@ -15806,7 +18035,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パイナップル果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'パイナップル果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_195',
@@ -15823,7 +18052,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パセリ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'パセリ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_042',
@@ -15840,7 +18069,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パッションフルーツ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'パッションフルーツ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_029',
@@ -15857,7 +18086,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パパイヤ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'パパイヤ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'apps',
@@ -15975,7 +18204,14 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       comedogenic: 1,
       note: '',
     },
-    research: [],
+    research: [
+      {
+        title: 'Topical palmitoyl pentapeptide provides improvement in photoaged human facial skin',
+        journal: 'Int J Cosmet Sci',
+        year: 2005,
+        finding: 'Pal-KTTKS配合で小じわ等の自己評価/客観評価が改善したと報告。',
+      },
+    ],
     description: 'パルミトイルペンタペプチド-4はペプチド誘導体で、ハリ・整肌や皮膚コンディショニング目的で配合される成分です。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
@@ -16027,7 +18263,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'パール柑果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'パール柑果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'sh_oligopeptide_1',
@@ -16111,7 +18347,14 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       comedogenic: 1,
       note: 'レチノイド様成分のため刺激に注意。',
     },
-    research: [],
+    research: [
+      {
+        title: 'Efficacy of Topical Hydroxypinacolone Retinoate‐Peptide Formulation Compared with Ablative Laser Treatment for Photodamage',
+        journal: 'Dermatology and Therapy',
+        year: 2024,
+        finding: 'HPR+ペプチドの外用を16週使用し、光老化指標の改善と忍容性を評価。',
+      },
+    ],
     description: 'ヒドロキシピナコロンレチノエートはビタミンA（レチノイド）誘導体で、ハリ・整肌や皮膚コンディショニング目的で配合される成分です。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
@@ -16129,7 +18372,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヒナギク花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ヒナギク花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_263',
@@ -16146,7 +18389,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヒマワリ種子エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ヒマワリ種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_130',
@@ -16163,7 +18406,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヒメフウロ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ヒメフウロ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_114',
@@ -16180,7 +18423,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヒース花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ヒース花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'bis_ethyloxyphenol_methoxyphenyl_triazine',
@@ -16189,7 +18432,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine',
     aliases: ['Tinosorb S'],
     ingredient_type: 'その他',
-    categories: [],
+    categories: ['uv_filter'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -16197,7 +18440,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ビスエチルヘキシルオキシフェノールメトキシフェニルトリアジンは機能性誘導体で、皮膚コンディショニングや処方安定化目的で配合される成分です。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'ビスエチルヘキシルオキシフェノールメトキシフェニルトリアジンは紫外線防御成分として、主にUVA/UVBをカバーする目的で配合される日焼け止め成分です。単剤ではカバー範囲が限られるため、複数のUVフィルターを組み合わせて広域（UVA/UVB）化することがあります。',
   },
   {
     id: 'botanical_extract_142',
@@ -16214,7 +18457,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'ビターオレンジ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'ビターオレンジ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_054',
@@ -16231,7 +18474,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ビルベリー果実エキスは植物由来のエキス成分で、美白・透明感ケア・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ビルベリー果実エキスは植物由来のエキス成分で、透明感ケアや抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_141',
@@ -16248,7 +18491,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ビワ花エキスは植物由来のエキス成分で、保湿・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ビワ花エキスは植物由来のエキス成分で、保湿や抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_166',
@@ -16282,7 +18525,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ビート根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ビート根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_297',
@@ -16299,7 +18542,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ピスタチオ種子エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ピスタチオ種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_209',
@@ -16316,7 +18559,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ピーマン葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ピーマン葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_281',
@@ -16333,7 +18576,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'フェヌグリーク種子エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'フェヌグリーク種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'phenethyl_alcohol',
@@ -16384,7 +18627,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '肌状態により刺激を感じる場合があります。',
     },
     research: [],
-    description: 'フェルラ酸は処方安定化や品質維持、整肌・製品安定化補助・美白・透明感ケアなどの目的で用いられる成分です。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'フェルラ酸は処方補助または整肌目的で用いられる成分で、抗酸化・整肌や透明感ケアを意図して配合されることがあります。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'botanical_extract_197',
@@ -16401,7 +18644,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'フェンネル葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'フェンネル葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_118',
@@ -16418,7 +18661,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'フジ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'フジ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_129',
@@ -16435,7 +18678,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'フヨウ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'フヨウ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'fullerene',
@@ -16452,7 +18695,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'フラーレンは処方安定化や品質維持、整肌・製品安定化補助・ハリ・弾力感ケアなどの目的で用いられる成分です。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'フラーレンは処方補助または整肌目的で用いられる成分で、抗酸化・整肌やハリ・整肌を意図して配合されることがあります。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'butylparaben',
@@ -16472,6 +18715,23 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     description: 'ブチルパラベンは処方安定化や品質維持、整肌などの目的で用いられる成分です。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
+    id: 'avobenzone',
+    name_cosmetic: 'ブチルメトキシジベンゾイルメタン',
+    name_quasi_drug: '',
+    name_inci: 'Butyl Methoxydibenzoylmethane',
+    aliases: ['アボベンゾン'],
+    ingredient_type: 'その他',
+    categories: ['uv_filter'],
+    safety: {
+      irritation: 'medium',
+      photosensitivity: false,
+      comedogenic: 0,
+      note: '',
+    },
+    research: [],
+    description: 'ブチルメトキシジベンゾイルメタンは紫外線吸収剤として、主にUVA（UVA1中心）をカバーする目的で配合される日焼け止め成分です。単剤ではカバー範囲が限られるため、複数のUVフィルターを組み合わせて広域（UVA/UVB）化することがあります。',
+  },
+  {
     id: 'botanical_extract_015',
     name_cosmetic: 'ブドウ果実エキス',
     name_quasi_drug: '',
@@ -16486,7 +18746,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ブドウ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ブドウ果実エキスは植物由来のエキス成分で、抗酸化・整肌やハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_264',
@@ -16503,7 +18763,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ブドウ種子エキスは植物由来のエキス成分で、整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ブドウ種子エキスは植物由来のエキス成分で、抗酸化・整肌やハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_171',
@@ -16520,7 +18780,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ブドウ葉エキスは植物由来のエキス成分で、整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ブドウ葉エキスは植物由来のエキス成分で、抗酸化・整肌やハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_020',
@@ -16537,7 +18797,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ブラックベリー果実エキスは植物由来のエキス成分で、整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ブラックベリー果実エキスは植物由来のエキス成分で、抗酸化・整肌やハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_009',
@@ -16554,7 +18814,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'ブラッドオレンジ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'ブラッドオレンジ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_017',
@@ -16571,7 +18831,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ブルーベリー果実エキスは植物由来のエキス成分で、整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ブルーベリー果実エキスは植物由来のエキス成分で、抗酸化・整肌やハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_145',
@@ -16588,7 +18848,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ブルーマロウ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ブルーマロウ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_202',
@@ -16605,7 +18865,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ブロッコリー葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ブロッコリー葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'retinyl_propionate',
@@ -16656,7 +18916,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '肌状態により刺激を感じる場合があります。',
     },
     research: [],
-    description: 'プロポリスエキスは植物由来のエキス成分で、整肌・製品安定化補助・肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'プロポリスエキスは植物由来のエキス成分で、抗酸化・整肌や整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'hexanoyl_dipeptide_3_norleucine_acetate',
@@ -16690,7 +18950,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヘンプ種子エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ヘンプ種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_296',
@@ -16707,7 +18967,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヘーゼルナッツ種子エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ヘーゼルナッツ種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'betaine_salicylate',
@@ -16741,7 +19001,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ベチバー根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ベチバー根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_103',
@@ -16758,7 +19018,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ベニバナ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ベニバナ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_007',
@@ -16775,7 +19035,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'ベルガモット果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'ベルガモット果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'benzyl_alcohol',
@@ -16826,7 +19086,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '精油様成分を含む場合があり、敏感肌では刺激に注意。',
     },
     research: [],
-    description: 'ペパーミント葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'ペパーミント葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'peptide_complex',
@@ -16860,7 +19120,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ホウレンソウ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ホウレンソウ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_116',
@@ -16877,7 +19137,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ホップ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ホップ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_226',
@@ -16894,7 +19154,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ホップ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ホップ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_284',
@@ -16945,7 +19205,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ボタン花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ボタン花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'polyacrylamide',
@@ -16965,6 +19225,23 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     description: 'ポリアクリルアミドは処方安定化や品質維持、整肌などの目的で用いられる成分です。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
+    id: 'polyurethane_62',
+    name_cosmetic: 'ポリウレタン-62',
+    name_quasi_drug: '',
+    name_inci: 'Polyurethane-62',
+    aliases: ['皮膜形成剤'],
+    ingredient_type: 'その他',
+    categories: [],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 0,
+      note: '',
+    },
+    research: [],
+    description: 'ポリウレタン-62は処方安定化や品質維持、整肌などの目的で用いられる成分です。原料規格や配合量により、使用感や安定性が調整されます。',
+  },
+  {
     id: 'botanical_extract_067',
     name_cosmetic: 'ポンカン果実エキス',
     name_quasi_drug: '',
@@ -16979,7 +19256,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ポンカン果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ポンカン果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'mica',
@@ -17013,7 +19290,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'マカダミア種子エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'マカダミア種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_242',
@@ -17030,7 +19307,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'マカ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'マカ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_046',
@@ -17047,7 +19324,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'マキベリー果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'マキベリー果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'morus_alba_root_extract',
@@ -17064,7 +19341,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'マグワ根皮エキスは植物由来のエキス成分で、美白・透明感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'マグワ根皮エキスは植物由来のエキス成分で、透明感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_193',
@@ -17081,7 +19358,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'マジョラム葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'マジョラム葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_016',
@@ -17098,7 +19375,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'マスカット果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'マスカット果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_277',
@@ -17115,7 +19392,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '精油様成分を含む場合があり、敏感肌では刺激に注意。',
     },
     research: [],
-    description: 'マスタード種子エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'マスタード種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'botanical_extract_121',
@@ -17132,7 +19409,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'マツヨイグサ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'マツヨイグサ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_182',
@@ -17149,7 +19426,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'マテ葉エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'マテ葉エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'madecassoside',
@@ -17166,7 +19443,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'マデカッソシドは処方安定化や品質維持、肌荒れ防止・整肌・ハリ・弾力感ケアなどの目的で用いられる成分です。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'マデカッソシドは処方補助または整肌目的で用いられる成分で、整肌やハリ・整肌を意図して配合されることがあります。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'botanical_extract_076',
@@ -17183,7 +19460,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'マルベリー果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'マルベリー果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_186',
@@ -17200,7 +19477,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'マルベリー葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'マルベリー葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_052',
@@ -17217,7 +19494,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'マルメロ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'マルメロ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_096',
@@ -17234,7 +19511,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'マロニエ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'マロニエ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_030',
@@ -17251,7 +19528,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'マンゴー果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'マンゴー果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_008',
@@ -17268,7 +19545,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'マンダリンオレンジ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'マンダリンオレンジ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'mandelic_acid',
@@ -17285,7 +19562,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '刺激や乾燥を感じる場合があります。日中は紫外線対策を推奨します。',
     },
     research: [],
-    description: 'マンデル酸は処方安定化や品質維持、角質ケア・美白・透明感ケアなどの目的で用いられる成分です。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'マンデル酸は処方補助または整肌目的で用いられる成分で、角質ケアや透明感ケアを意図して配合されることがあります。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_062',
@@ -17302,7 +19579,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミカン果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ミカン果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_175',
@@ -17319,7 +19596,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミカン葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ミカン葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_128',
@@ -17336,7 +19613,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ミモザ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ミモザ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'myristoyl_hexapeptide_16',
@@ -17387,7 +19664,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ムラサキ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ムラサキ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'methylparaben',
@@ -17413,7 +19690,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Methylene Bis-Benzotriazolyl Tetramethylbutylphenol',
     aliases: ['Tinosorb M'],
     ingredient_type: 'その他',
-    categories: [],
+    categories: ['uv_filter'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -17421,7 +19698,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'メチレンビスベンゾトリアゾリルテトラメチルブチルフェノールは機能性誘導体で、皮膚コンディショニングや処方安定化目的で配合される成分です。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: 'メチレンビスベンゾトリアゾリルテトラメチルブチルフェノールは紫外線散乱剤（分散型・吸収/散乱）として、主にUVA/UVBをカバーする目的で配合される日焼け止め成分です。単剤ではカバー範囲が限られるため、複数のUVフィルターを組み合わせて広域（UVA/UVB）化することがあります。',
   },
   {
     id: 'ethylhexyl_methoxycinnamate',
@@ -17430,7 +19707,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Ethylhexyl Methoxycinnamate',
     aliases: ['オクチノキサート', 'Octinoxate'],
     ingredient_type: 'その他',
-    categories: [],
+    categories: ['uv_filter'],
     safety: {
       irritation: 'medium',
       photosensitivity: false,
@@ -17438,7 +19715,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '肌状態により刺激を感じる場合があります。',
     },
     research: [],
-    description: 'メトキシケイヒ酸エチルヘキシルは機能性誘導体で、皮膚コンディショニングや処方安定化目的で配合される成分です。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'メトキシケイヒ酸エチルヘキシルは紫外線吸収剤として、主にUVBをカバーする目的で配合される日焼け止め成分です。単剤ではカバー範囲が限られるため、複数のUVフィルターを組み合わせて広域（UVA/UVB）化することがあります。',
   },
   {
     id: 'botanical_extract_095',
@@ -17455,7 +19732,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'メリッサ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'メリッサ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_157',
@@ -17472,7 +19749,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'メリッサ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'メリッサ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_036',
@@ -17489,7 +19766,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'メロン果実エキスは植物由来のエキス成分で、保湿・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'メロン果実エキスは植物由来のエキス成分で、保湿や抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_011',
@@ -17506,7 +19783,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'モモ果実エキスは植物由来のエキス成分で、保湿・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'モモ果実エキスは植物由来のエキス成分で、保湿や抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_286',
@@ -17557,7 +19834,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'モリンガ種子エキスは植物由来のエキス成分で、整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'モリンガ種子エキスは植物由来のエキス成分で、抗酸化・整肌やハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_181',
@@ -17574,7 +19851,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'モリンガ葉エキスは植物由来のエキス成分で、整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'モリンガ葉エキスは植物由来のエキス成分で、抗酸化・整肌やハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_089',
@@ -17591,7 +19868,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヤグルマギク花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ヤグルマギク花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_259',
@@ -17608,7 +19885,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヤマノイモ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ヤマノイモ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_126',
@@ -17625,7 +19902,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヤマブキ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ヤマブキ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_059',
@@ -17642,7 +19919,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヤマモモ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ヤマモモ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'saxifraga_sarmentosa_extract',
@@ -17659,7 +19936,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ユキノシタエキスは植物由来のエキス成分で、美白・透明感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ユキノシタエキスは植物由来のエキス成分で、透明感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_061',
@@ -17676,7 +19953,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ユスラウメ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ユスラウメ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_004',
@@ -17693,7 +19970,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'ユズ果実エキスは植物由来のエキス成分で、美白・透明感ケア・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'ユズ果実エキスは植物由来のエキス成分で、透明感ケアや抗酸化・整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_289',
@@ -17710,7 +19987,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'ユズ種子エキスは植物由来のエキス成分で、美白・透明感ケアや皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'ユズ種子エキスは植物由来のエキス成分で、透明感ケアや皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_139',
@@ -17727,7 +20004,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'ユズ花エキスは植物由来のエキス成分で、美白・透明感ケア・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'ユズ花エキスは植物由来のエキス成分で、透明感ケアや抗酸化・整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_174',
@@ -17744,7 +20021,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'ユズ葉エキスは植物由来のエキス成分で、美白・透明感ケアや皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'ユズ葉エキスは植物由来のエキス成分で、透明感ケアや皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_051',
@@ -17761,7 +20038,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ユチャ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ユチャ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_105',
@@ -17778,7 +20055,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ユリ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ユリ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_151',
@@ -17795,7 +20072,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '精油様成分を含む場合があり、敏感肌では刺激に注意。',
     },
     research: [],
-    description: 'ユーカリ花エキスは植物由来のエキス成分で、肌荒れ防止・整肌・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'ユーカリ花エキスは植物由来のエキス成分で、整肌や抗酸化・整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'botanical_extract_158',
@@ -17812,7 +20089,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '精油様成分を含む場合があり、敏感肌では刺激に注意。',
     },
     research: [],
-    description: 'ユーカリ葉エキスは植物由来のエキス成分で、肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'ユーカリ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'artemisia_princeps_leaf_extract',
@@ -17829,7 +20106,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ヨモギ葉エキスは植物由来のエキス成分で、肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ヨモギ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_037',
@@ -17846,7 +20123,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ライチ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ライチ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_001',
@@ -17863,7 +20140,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'ライム果実エキスは植物由来のエキス成分で、美白・透明感ケア・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'ライム果実エキスは植物由来のエキス成分で、透明感ケアや抗酸化・整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_291',
@@ -17880,7 +20157,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'ライム種子エキスは植物由来のエキス成分で、美白・透明感ケアや皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'ライム種子エキスは植物由来のエキス成分で、透明感ケアや皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'lactobionic_acid',
@@ -17897,7 +20174,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '刺激や乾燥を感じる場合があります。日中は紫外線対策を推奨します。',
     },
     research: [],
-    description: 'ラクトビオン酸は処方安定化や品質維持、角質ケア・保湿などの目的で用いられる成分です。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'ラクトビオン酸は処方補助または整肌目的で用いられる成分で、角質ケアや保湿を意図して配合されることがあります。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_019',
@@ -17914,7 +20191,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ラズベリー果実エキスは植物由来のエキス成分で、整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ラズベリー果実エキスは植物由来のエキス成分で、抗酸化・整肌やハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_267',
@@ -17931,7 +20208,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ラズベリー種子エキスは植物由来のエキス成分で、整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ラズベリー種子エキスは植物由来のエキス成分で、抗酸化・整肌やハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'lavender_flower_extract',
@@ -17948,7 +20225,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '肌状態により刺激を感じる場合があります。',
     },
     research: [],
-    description: 'ラベンダー花エキスは植物由来のエキス成分で、肌荒れ防止・整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'ラベンダー花エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'retinyl_linoleate',
@@ -17982,7 +20259,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リンゴ果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'リンゴ果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_287',
@@ -17999,7 +20276,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リンゴ種子エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'リンゴ種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_169',
@@ -18016,7 +20293,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リンゴ葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'リンゴ葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'malic_acid',
@@ -18033,7 +20310,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '刺激や乾燥を感じる場合があります。日中は紫外線対策を推奨します。',
     },
     research: [],
-    description: 'リンゴ酸は処方安定化や品質維持、角質ケアなどの目的で用いられる成分です。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'リンゴ酸は処方補助または整肌目的で用いられる成分で、角質ケアを意図して配合されることがあります。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_143',
@@ -18050,7 +20327,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リンデン花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'リンデン花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_221',
@@ -18067,7 +20344,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リンデン葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'リンデン葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_117',
@@ -18084,7 +20361,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'リンドウ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'リンドウ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'dipotassium_phosphate',
@@ -18134,7 +20411,20 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       comedogenic: 0,
       note: '',
     },
-    research: [],
+    research: [
+      {
+        title: 'Inhibitory effect of magnesium l-ascorbyl-2-phosphate (VC-PMG) on melanogenesis',
+        journal: 'J Am Acad Dermatol',
+        year: 1996,
+        finding: 'VC-PMGがメラニン生成を抑制し、肝斑/老人性色素斑で明るさ改善が一部症例で有意。',
+      },
+      {
+        title: 'Magnesium ascorbyl phosphate vesicular carriers for clinically improved stability and melasma treatment',
+        journal: 'Drug Delivery',
+        year: 2022,
+        finding: 'MAPを含むベシクルゲルでメラニンレベルが臨床的に低下し、色素沈着への有用性が示唆。',
+      },
+    ],
     description: 'リン酸アスコルビルMgはビタミンC誘導体で、透明感ケアや抗酸化・整肌や皮膚コンディショニング目的で配合される成分です。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
@@ -18151,7 +20441,14 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       comedogenic: 0,
       note: '',
     },
-    research: [],
+    research: [
+      {
+        title: 'Sodium L-ascorbyl-2-phosphate 5% lotion for the treatment of acne',
+        journal: 'J Cosmet Dermatol',
+        year: 2010,
+        finding: 'APS 5%ローションはニキビ治療で有効性が示され、単剤選択肢になり得ると報告。',
+      },
+    ],
     description: 'リン酸アスコルビルNaはビタミンC誘導体で、透明感ケアや抗酸化・整肌や皮膚コンディショニング目的で配合される成分です。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
@@ -18169,7 +20466,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ルイボス葉エキスは植物由来のエキス成分で、整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ルイボス葉エキスは植物由来のエキス成分で、抗酸化・整肌やハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_248',
@@ -18186,7 +20483,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ルバーブ根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ルバーブ根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'resveratrol',
@@ -18203,7 +20500,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '肌状態により刺激を感じる場合があります。',
     },
     research: [],
-    description: 'レスベラトロールは処方安定化や品質維持、整肌・製品安定化補助・ハリ・弾力感ケアなどの目的で用いられる成分です。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'レスベラトロールは処方補助または整肌目的で用いられる成分で、抗酸化・整肌やハリ・整肌を意図して配合されることがあります。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'botanical_extract_205',
@@ -18220,7 +20517,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'レタス葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'レタス葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'retinyl_retinoate',
@@ -18254,7 +20551,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'レモングラス葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'レモングラス葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'lemon_fruit_extract',
@@ -18271,7 +20568,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '刺激や乾燥を感じる場合があります。日中は紫外線対策を推奨します。',
     },
     research: [],
-    description: 'レモン果実エキスは植物由来のエキス成分で、美白・透明感ケア・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'レモン果実エキスは植物由来のエキス成分で、透明感ケアや抗酸化・整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_290',
@@ -18288,7 +20585,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'レモン種子エキスは植物由来のエキス成分で、美白・透明感ケアや皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'レモン種子エキスは植物由来のエキス成分で、透明感ケアや皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_138',
@@ -18305,7 +20602,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'レモン花エキスは植物由来のエキス成分で、美白・透明感ケア・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'レモン花エキスは植物由来のエキス成分で、透明感ケアや抗酸化・整肌や皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_173',
@@ -18322,7 +20619,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '柑橘由来成分は配合条件により刺激を感じる場合があるため、日中は日焼け止め併用を推奨。',
     },
     research: [],
-    description: 'レモン葉エキスは植物由来のエキス成分で、美白・透明感ケアや皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: 'レモン葉エキスは植物由来のエキス成分で、透明感ケアや皮膚コンディショニング目的で配合されます。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_127',
@@ -18339,7 +20636,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'レンゲ花エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'レンゲ花エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_234',
@@ -18356,7 +20653,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'レンコン根エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'レンコン根エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_038',
@@ -18373,7 +20670,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ロンガン果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ロンガン果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_072',
@@ -18390,7 +20687,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ローズヒップ果実エキスは植物由来のエキス成分で、美白・透明感ケア・整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ローズヒップ果実エキスは植物由来のエキス成分で、透明感ケア・抗酸化・整肌・ハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_092',
@@ -18407,7 +20704,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ローズマリー花エキスは植物由来のエキス成分で、整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ローズマリー花エキスは植物由来のエキス成分で、抗酸化・整肌やハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'rosemary_leaf_extract',
@@ -18424,7 +20721,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '肌状態により刺激を感じる場合があります。',
     },
     research: [],
-    description: 'ローズマリー葉エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'ローズマリー葉エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'botanical_extract_079',
@@ -18441,7 +20738,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ローズ花エキスは植物由来のエキス成分で、保湿・整肌・製品安定化補助・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ローズ花エキスは植物由来のエキス成分で、保湿・抗酸化・整肌・ハリ・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_053',
@@ -18458,7 +20755,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ローブッシュブルーベリー果実エキスは植物由来のエキス成分で、整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ローブッシュブルーベリー果実エキスは植物由来のエキス成分で、抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'botanical_extract_078',
@@ -18475,7 +20772,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: 'ローマカミツレ花エキスは植物由来のエキス成分で、肌荒れ防止・整肌・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: 'ローマカミツレ花エキスは植物由来のエキス成分で、整肌や抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'royal_jelly_extract',
@@ -18492,7 +20789,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '肌状態により刺激を感じる場合があります。',
     },
     research: [],
-    description: 'ローヤルゼリーエキスは植物由来のエキス成分で、保湿・ハリ・弾力感ケアや皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
+    description: 'ローヤルゼリーエキスは植物由来のエキス成分で、保湿やハリ・整肌や皮膚コンディショニング目的で配合されます。濃度や処方設計によっては、肌状態により刺激を感じることがあります。',
   },
   {
     id: 'lactic_acid',
@@ -18509,7 +20806,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '刺激や乾燥を感じる場合があります。日中は紫外線対策を推奨します。',
     },
     research: [],
-    description: '乳酸は処方安定化や品質維持、角質ケア・保湿などの目的で用いられる成分です。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: '乳酸は処方補助または整肌目的で用いられる成分で、角質ケアや保湿を意図して配合されることがあります。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'botanical_extract_272',
@@ -18526,7 +20823,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: '亜麻種子エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: '亜麻種子エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'calcium_chloride',
@@ -18628,7 +20925,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: '月桃葉エキスは植物由来のエキス成分で、皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: '月桃葉エキスは植物由来のエキス成分で、整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'potassium_hydroxide',
@@ -18679,7 +20976,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: '海藻エキスは植物由来のエキス成分で、保湿・整肌・製品安定化補助や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
+    description: '海藻エキスは植物由来のエキス成分で、保湿や抗酸化・整肌や皮膚コンディショニング目的で配合されます。原料の産地や抽出溶媒、抽出条件により、色調や香りが異なる場合があります。',
   },
   {
     id: 'tartaric_acid',
@@ -18696,7 +20993,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '刺激や乾燥を感じる場合があります。日中は紫外線対策を推奨します。',
     },
     research: [],
-    description: '酒石酸は処方安定化や品質維持、角質ケアなどの目的で用いられる成分です。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
+    description: '酒石酸は処方補助または整肌目的で用いられる成分で、角質ケアを意図して配合されることがあります。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
   },
   {
     id: 'titanium_dioxide',
@@ -18705,7 +21002,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_inci: 'Titanium Dioxide',
     aliases: ['紫外線散乱剤'],
     ingredient_type: 'その他',
-    categories: [],
+    categories: ['uv_filter'],
     safety: {
       irritation: 'low',
       photosensitivity: false,
@@ -18713,7 +21010,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: '酸化チタンは処方安定化や品質維持、整肌などの目的で用いられる成分です。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: '酸化チタンは紫外線散乱剤として、主にUVB〜UVA2中心をカバーする目的で配合される日焼け止め成分です。単剤ではカバー範囲が限られるため、複数のUVフィルターを組み合わせて広域（UVA/UVB）化することがあります。',
   },
   {
     id: 'zinc_oxide',
@@ -18721,6 +21018,23 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
     name_quasi_drug: '',
     name_inci: 'Zinc Oxide',
     aliases: ['紫外線散乱剤'],
+    ingredient_type: 'その他',
+    categories: ['uv_filter'],
+    safety: {
+      irritation: 'low',
+      photosensitivity: false,
+      comedogenic: 0,
+      note: '',
+    },
+    research: [],
+    description: '酸化亜鉛は紫外線散乱剤として、主にUVA〜UVB（UVA1まで）をカバーする目的で配合される日焼け止め成分です。単剤ではカバー範囲が限られるため、複数のUVフィルターを組み合わせて広域（UVA/UVB）化することがあります。',
+  },
+  {
+    id: 'iron_oxides',
+    name_cosmetic: '酸化鉄',
+    name_quasi_drug: '',
+    name_inci: 'Iron Oxides',
+    aliases: [],
     ingredient_type: 'その他',
     categories: [],
     safety: {
@@ -18730,7 +21044,7 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       note: '',
     },
     research: [],
-    description: '酸化亜鉛は処方安定化や品質維持、整肌などの目的で用いられる成分です。原料規格や配合量により、使用感や安定性が調整されます。',
+    description: '酸化鉄は処方安定化や品質維持、整肌などの目的で用いられる成分です。原料規格や配合量により、使用感や安定性が調整されます。',
   },
   {
     id: 'ethyl_ascorbic_acid',
@@ -18746,24 +21060,20 @@ export const INGREDIENTS_DB: IngredientEntry[] = [
       comedogenic: 0,
       note: '高濃度では刺激を感じることがあります。',
     },
-    research: [],
+    research: [
+      {
+        title: 'Topical Delivery of 3-O-ethyl l-ascorbic Acid from Complex Formulations',
+        journal: 'Pharmaceutical Technology in Hospital Pharmacy',
+        year: 2020,
+        finding: '3-O-エチルアスコルビン酸の皮膚透過性を処方設計で最適化できる可能性を検討。',
+      },
+      {
+        title: 'Lipid-Based Gels for Delivery of 3-O-Ethyl L-Ascorbic acid in Hydrogel and Bigel Systems',
+        journal: 'Pharmaceutics',
+        year: 2024,
+        finding: 'ETVCを10%含むリピッドゲルで放出・皮膚透過をin vitroで評価し、基材により挙動が異なることを報告。',
+      },
+    ],
     description: '３－Ｏ－エチルアスコルビン酸はビタミンC誘導体で、透明感ケア・抗酸化・整肌・ハリ・整肌や皮膚コンディショニング目的で配合される成分です。日中使用時は紫外線対策を前提に、配合量や併用成分が調整されることがあります。',
-  },
-  {
-    id: 'potassium_soap_base',
-    name_cosmetic: 'カリ含有石ケン素地',
-    name_quasi_drug: 'カリ含有石ケン素地',
-    name_inci: 'Potassium Cocoate (etc.)',
-    aliases: ['カリ含有石鹸素地', 'カリ石ケン素地', 'カリ石鹸素地', '石ケン素地', '石鹸素地'],
-    ingredient_type: '界面活性剤',
-    categories: [],
-    safety: {
-      irritation: 'medium',
-      photosensitivity: false,
-      comedogenic: 0,
-      note: '洗浄力が強いため、敏感肌の方は注意が必要です。',
-    },
-    research: [],
-    description: 'カリ含有石ケン素地は脂肪酸のカリウム塩を主成分とする界面活性剤です。液体石鹸や洗顔料のベースとして使用され、泡立ちが良く洗浄力に優れています。',
   },
 ];
