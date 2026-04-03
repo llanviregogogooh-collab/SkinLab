@@ -320,9 +320,11 @@ export default function App() {
 
   const openIngredientDetail = async (entry: IngredientEntry | null) => {
     if (!entry) return;
-    detailAdCounterRef.current += 1;
-    if (detailAdCounterRef.current % INTERSTITIAL_DETAIL_INTERVAL === 0) {
-      await showInterstitial();
+    if (!isPremium) {
+      detailAdCounterRef.current += 1;
+      if (detailAdCounterRef.current % INTERSTITIAL_DETAIL_INTERVAL === 0) {
+        await showInterstitial();
+      }
     }
     setSelectedIngredient(entry);
   };
